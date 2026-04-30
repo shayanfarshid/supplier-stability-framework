@@ -59,7 +59,8 @@ def style_order_table(df):
 
 def supplier_profile_page(df, metrics_df, md_df):
     suppliers = sorted(df["supplier_name"].unique())
-    selected = st.sidebar.selectbox("Select Supplier", suppliers)
+    st.sidebar.markdown("### 🔍 Select a Supplier")
+    selected = st.sidebar.selectbox("", suppliers)
 
     s_metrics = metrics_df[metrics_df["supplier_name"] == selected].iloc[0]
     s_md = md_df[md_df["supplier_name"] == selected] if not md_df.empty else pd.DataFrame()
@@ -84,19 +85,19 @@ def supplier_profile_page(df, metrics_df, md_df):
 
     m1, m2, m3 = st.columns(3)
     with m1:
-        st.markdown(kpi_card("% Lines Late Arrived", f"{s_metrics['pct_late_arrived']:.1f}%", "Late but eventually received"), unsafe_allow_html=True)
+        st.markdown(kpi_card("% Lines Late Arrived", f"{s_metrics['pct_late_arrived']:.1f}%", "Lower is better — 0% = perfect"), unsafe_allow_html=True)
     with m2:
-        subtitle = "Open parts beyond commit+4 days"
+        subtitle = "All clear — no overdue open orders"
         if s_metrics['count_open_late'] > 0:
-            subtitle = "⚠ Open late exposure present"
+            subtitle = "⚠ Parts ordered but still not received"
         st.markdown(kpi_card("Open Late Parts", f"{int(s_metrics['count_open_late'])}", subtitle), unsafe_allow_html=True)
     with m3:
-        st.markdown(kpi_card("Avg Days Late", f"{s_metrics['avg_days_late']:.1f}", "Late-arrived lines only"), unsafe_allow_html=True)
+        st.markdown(kpi_card("Avg Days Late", f"{s_metrics['avg_days_late']:.1f}", "Lower is better — 0 = always on time"), unsafe_allow_html=True)
 
     monthly = compute_monthly_friction(df, selected)
     fig = monthly_friction_line(monthly, selected)
     st.plotly_chart(fig, use_container_width=True)
-    render_caption("The monthly series reveals whether friction is trending downward, worsening over time, or oscillating unpredictably.")
+    render_caption("📈 Red dashed line = warning threshold. Spikes above it = trouble. Flat near zero = this supplier is solid.")
 
     st.markdown("### Order History")
     view = sdf[["order_id", "component_category", "component_criticality", "request_date", "commit_date", "received_date",
@@ -106,17 +107,17 @@ def supplier_profile_page(df, metrics_df, md_df):
     st.dataframe(style_order_table(view.head(200)), use_container_width=True, height=500)
 
     if not s_md.empty:
-        st.markdown("### MD Fault Attribution")
+        st.markdown("### Material Discrepancy Fault Attribution")
         mdrow = s_md.iloc[0]
         c1, c2, c3, c4 = st.columns(4)
-        c1.markdown(kpi_card("Total MDAs", int(mdrow['open_mdas']), "Quality events in period"), unsafe_allow_html=True)
-        c2.markdown(kpi_card("Supplier Fault Count", int(mdrow['supplier_fault_count']), "Attributed to supplier"), unsafe_allow_html=True)
+        c1.markdown(kpi_card("Total Quality Events", int(mdrow['open_mdas']), "Material discrepancy events logged"), unsafe_allow_html=True)
+        c2.markdown(kpi_card("Supplier Fault Count", int(mdrow['supplier_fault_count']), "Events attributed to supplier"), unsafe_allow_html=True)
         c3.markdown(kpi_card("% Supplier Fault", f"{mdrow['pct_supplier_fault']:.1f}%", mdrow['md_flag']), unsafe_allow_html=True)
-        c4.markdown(kpi_card("Total Rework Cost", fmt_money(mdrow['total_rework_cost_usd']), "Supplier-fault events only"), unsafe_allow_html=True)
+        c4.markdown(kpi_card("Total Rework Cost", fmt_money(mdrow['total_rework_cost_usd']), "Cost of fixing supplier-caused defects"), unsafe_allow_html=True)
         fig_md = md_fault_bar(mdrow['fault_breakdown'])
         if fig_md:
             st.plotly_chart(fig_md, use_container_width=True)
-            render_caption("The horizontal breakdown shows which defect modes dominate supplier-attributed quality failures.")
+            render_caption("The horizontal breakdown shows which defect types dominate supplier-caused quality failures.")
 
 
 def period_analysis_page(df):
@@ -148,9 +149,9 @@ def period_analysis_page(df):
     summary = summary.rename(columns={
         'total_lines_ordered':'Lines', 'pct_late_arrived':'% Late', 'count_open_late':'Open Late',
         'planning_score':'Planning Score', 'friction_index':'Friction Index', 'grade':'Grade',
-        'total_spend_usd':'Spend', 'at_risk_spend_usd':'At-Risk Spend', 'open_mdas':'MD Events', 'md_flag':'MD Flag'
+        'total_spend_usd':'Spend', 'at_risk_spend_usd':'At-Risk Spend', 'open_mdas':'Discrepancy Events', 'md_flag':'Quality Flag'
     })
-    show = summary[['supplier_name','Lines','% Late','Open Late','Planning Score','Friction Index','Grade','Spend','At-Risk Spend','MD Events','MD Flag']].copy()
+    show = summary[['supplier_name','Lines','% Late','Open Late','Planning Score','Friction Index','Grade','Spend','At-Risk Spend','Discrepancy Events','Quality Flag']].copy()
     show = show.rename(columns={'supplier_name':'Supplier'})
 
     st.markdown("## Period Analysis")
@@ -170,29 +171,24 @@ def period_analysis_page(df):
 
 def methodology_page():
     st.markdown("## The Problem This Framework Solves")
-    st.write("Standard procurement scorecards often reduce supplier performance to a single on-time delivery percentage, but that simplification breaks down in advanced manufacturing environments where shortages propagate across constrained production schedules. A supplier that performs well on routine demand can still create major disruption if failures cluster around critical-path components.")
-    st.write("Traditional dashboards also collapse very different failure conditions into the same bucket. A part that arrives three days late is inconvenient; a part that remains missing thirty days past due can stop builds, trigger expedites, and force planners to reshuffle labor, capacity, and customer commitments.")
-    st.write("The framework shown in this application addresses that deep-tier visibility gap by distinguishing mild delay from severe disruption, and by treating commitment integrity as a performance variable in its own right. In practice, a supplier that consistently promises dates far beyond requested need dates introduces friction before a delivery is even missed.")
+    st.write("Most procurement dashboards reduce a supplier to a single on-time delivery percentage. That works fine for routine purchasing, but it breaks down fast in advanced manufacturing — where one missing critical part can stop an entire production line.")
+    st.write("A supplier can be 'on-time' 95% of the time and still cause serious damage if those failures keep hitting the same high-stakes components. And there's a big difference between a part that showed up 3 days late and a part that still hasn't arrived 30 days after it was due.")
+    st.write("This framework was built to close that gap — distinguishing nuisance delays from genuine supply risk, and tracking whether a supplier's promises are even realistic in the first place.")
 
-    st.markdown("## The Friction Index — Design Rationale")
-    st.latex(r"Planning\ Score = \max(0, 1 - (\overline{Commit\ Date - Request\ Date} \times 0.02))")
-    st.write("The Planning Score measures commitment integrity. When a supplier repeatedly commits well beyond the requested need date, the score falls, reflecting that the supplier is not truly supporting production timing even if it later ships to its own extended promise date.")
-    st.latex(r"Volume\ Weight = (\frac{supplier\_line\_count}{max\_line\_count} \times 0.5) + 0.5")
-    st.write("Volume Weight scales operational impact. A problematic supplier with two lines matters less than a problematic supplier feeding hundreds of order lines into the plant, so the framework raises the influence of higher-volume relationships.")
-    st.latex(r"Severity\ Factor = 1 + (proportion\ of\ lates\ over\ 20\ days \times 2)")
-    st.write("Severity is treated non-linearly because long delays cross operational thresholds. Once lateness stretches beyond a few days, teams often incur premium freight, schedule churn, expediting effort, and elevated management attention.")
-    st.latex(r"Friction\ Index = ((\%\ Late\ Arrived + (\%\ Open\ Late \times 8)) / Planning\ Score) \times Volume\ Weight \times Severity\ Factor")
-    st.write("The 8× multiplier on open-late lines reflects that a missing part is categorically worse than a part that eventually arrived late. Dividing by Planning Score amplifies delivery failure when it coexists with weak commitment integrity, which is more realistic than simply adding the two effects together.")
+    st.markdown("## How the Friction Index Works")
+    st.write("The Friction Index is a composite score that combines four things: how often a supplier is late, how many parts are still missing entirely, how realistic their delivery promises are, and how severe the worst delays tend to be.")
+    st.write("Missing parts are weighted much more heavily than parts that arrived late — because a part that hasn't arrived at all can stop production, while a part that arrived a few days late usually just causes rescheduling. Lower scores are better. Zero means a supplier has had no late activity at all.")
+    st.write("The score is also amplified when a supplier consistently promises delivery dates that are far beyond what the buyer needs — because unrealistic promising combined with late delivery compounds the damage.")
 
-    st.markdown("## The MD Fault Attribution System")
-    st.write("Material discrepancy tracking becomes far more useful when defect counts are paired with causality. Distinguishing supplier-responsible events from transit, handling, or downstream integration issues lets procurement teams separate true supplier quality instability from noise in the broader fulfillment chain.")
-    st.write("The framework therefore tracks event count, supplier-fault share, rework cost, and days lost. The 50 percent flag threshold is intentionally practical: once the majority of quality events are supplier-attributed, the relationship warrants structured corrective action rather than passive monitoring.")
+    st.markdown("## Material Discrepancy Fault Attribution")
+    st.write("When a part arrives with a quality problem — wrong dimensions, damaged, or wrong part entirely — it matters a lot whether that was the supplier's fault or something that happened in transit or handling downstream.")
+    st.write("This system tracks each quality event and records who was responsible. Once more than half of a supplier's quality events are their fault, the system flags them for corrective action. It also tracks the total rework cost and production time lost, so you can see the financial impact, not just the event count.")
 
     st.markdown("## Framework Portability")
-    st.write("This framework is designed to travel across ERP environments rather than depend on one company’s system architecture. Any organization able to export Supplier Name, Request Date, Commit Date, Received Date, and a quality-event log can operationalize the same scoring logic whether the source platform is SAP, Oracle, NetSuite, or a custom stack.")
+    st.write("This scoring system works with any standard ERP data export — SAP, Oracle, NetSuite, or custom systems. As long as you have five fields — Supplier Name, Request Date, Commit Date, Received Date, and a quality event log — you can run this framework on your own data.")
 
-    st.markdown("## A Note on Synthetic Data")
-    st.write("All data in this application is synthetically generated for demonstration purposes. It does not represent any real organization, supplier, project, procurement operation, or historical performance record.")
+    st.markdown("## About This Demo")
+    st.write("All supplier names, order data, and performance numbers shown here are entirely synthetic and randomly generated. They don't represent any real company, supplier relationship, or procurement history.")
 
 
 def dashboard_page(df, metrics_df):
@@ -203,30 +199,30 @@ def dashboard_page(df, metrics_df):
     total_at_risk = metrics_df['at_risk_spend_usd'].sum()
 
     k1, k2, k3, k4 = st.columns(4)
-    k1.markdown(kpi_card("Total Suppliers Monitored", total_suppliers, "Distinct suppliers in synthetic portfolio"), unsafe_allow_html=True)
-    k2.markdown(kpi_card("Critical / At-Risk Suppliers", critical_at_risk, "Friction Index greater than 20"), unsafe_allow_html=True)
-    k3.markdown(kpi_card("Portfolio Avg Friction Index", f"{portfolio_avg:.2f}", "Weighted by supplier line volume"), unsafe_allow_html=True)
-    k4.markdown(kpi_card("Total At-Risk Spend USD", fmt_money(total_at_risk), "Late-arrived and open-late lines"), unsafe_allow_html=True)
+    k1.markdown(kpi_card("Total Suppliers Monitored", total_suppliers, "Suppliers tracked in this portfolio"), unsafe_allow_html=True)
+    k2.markdown(kpi_card("Critical / At-Risk Suppliers", critical_at_risk, "⚠️ These need your attention now"), unsafe_allow_html=True)
+    k3.markdown(kpi_card("Portfolio Avg Friction Index", f"{portfolio_avg:.2f}", "Lower is better — 0 is perfect"), unsafe_allow_html=True)
+    k4.markdown(kpi_card("Total At-Risk Spend USD", fmt_money(total_at_risk), "$ tied to delayed or missing parts"), unsafe_allow_html=True)
 
     fig1 = friction_bar_chart(metrics_df)
     st.plotly_chart(fig1, use_container_width=True)
-    render_caption("Suppliers at the top combine the highest operational friction with the greatest need for intervention priority.")
+    render_caption("📊 Longer bar = more friction. Shorter = healthier supplier. Anything red or dark-red needs action soon.")
 
     c1, c2 = st.columns(2)
     with c1:
         fig2 = scatter_planning_vs_friction(metrics_df)
         st.plotly_chart(fig2, use_container_width=True)
-        render_caption("Suppliers in the upper-left quadrant combine low commitment integrity with high friction, making them the highest-priority intervention targets.")
+        render_caption("📍 Upper-left is the danger zone — suppliers who over-promise AND under-deliver. Each dot's size shows how many orders they handle.")
     with c2:
         fig3 = spend_treemap(metrics_df)
         st.plotly_chart(fig3, use_container_width=True)
-        render_caption("Larger blocks indicate where supplier instability overlaps with higher dollar exposure across the portfolio.")
+        render_caption("💰 Bigger block = more $ spent with that supplier. Red/dark blocks are risky suppliers eating a large share of your budget.")
 
 
 def sidebar_intro():
     st.sidebar.markdown("# ⚙️ Supplier Stability Scoring Framework")
     st.sidebar.markdown("### A Deep-Tier Risk Analytics Demo")
-    st.sidebar.markdown("This portfolio application demonstrates a field-portable supplier analytics framework using entirely synthetic procurement data. It is designed to show how late delivery risk and material discrepancy causality can be scored beyond standard on-time metrics.")
+    st.sidebar.markdown("Track which suppliers are causing headaches — late deliveries, missing parts, and quality issues — all in one place. Built as a demo with fake data, but the scoring logic works on any real ERP export.")
     st.sidebar.markdown("---")
 
 def main():
@@ -236,10 +232,7 @@ def main():
     sidebar_intro()
     page = st.sidebar.radio("Navigation", ["Dashboard Overview", "Supplier Deep-Dive", "Period Analysis", "Methodology"])
     st.sidebar.markdown("---")
-    st.sidebar.caption("Synthetic demonstration data — not representative of any real organization.")
     st.sidebar.caption("v1.0 · sfarshid.me · Synthetic Data Only")
-
-    st.markdown("<div style='color:#94a3b8;margin-bottom:10px;'>Synthetic demonstration data — not representative of any real organization.</div>", unsafe_allow_html=True)
 
     if page == "Dashboard Overview":
         dashboard_page(df, metrics_df)
@@ -250,7 +243,7 @@ def main():
     else:
         methodology_page()
 
-    st.markdown("<div class='footer-custom'>Synthetic demonstration data only. Framework developed by Shayan Farshid. sfarshid.me</div>", unsafe_allow_html=True)
+    st.markdown("<div class='footer-custom'>Synthetic demonstration data only. Framework developed by Shayan F. · sfarshid.me</div>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
