@@ -35,8 +35,8 @@ def friction_bar_chart(metrics_df):
             "Lines Ordered: %{customdata[1]}<extra></extra>"
         )
     ))
-    fig.update_xaxis(title="Friction Index →")
-    fig.update_yaxis(tickfont=dict(size=9))
+    fig.update_xaxes(title="Friction Index →")
+    fig.update_yaxes(tickfont=dict(size=9))
     _apply_layout(fig, "Supplier Friction Index Ranking", height=max(500, len(df) * 20))
     return fig
 
@@ -76,8 +76,8 @@ def scatter_planning_vs_friction(metrics_df):
             )
         ))
 
-    fig.update_xaxis(title="Planning Score (1.0 = perfect commitment integrity)", range=[0, 1.05])
-    fig.update_yaxis(title="Friction Index (log scale)", type="log")
+    fig.update_xaxes(title="Planning Score (1.0 = perfect commitment integrity)", range=[0, 1.05])
+    fig.update_yaxes(title="Friction Index (log scale)", type="log")
     fig.add_vline(x=0.5, line_dash="dot", line_color="#475569", annotation_text="Commitment boundary",
                   annotation_font_color="#64748b", annotation_font_size=10)
     _apply_layout(fig, "Planning Score vs. Friction Index", height=480)
@@ -122,8 +122,8 @@ def monthly_friction_line(monthly_df, supplier_name):
         fill="tozeroy", fillcolor="rgba(13,148,136,0.08)",
         hovertemplate="Month: %{x}<br>Friction Index: %{y:.3f}<extra></extra>"
     ))
-    fig.update_xaxis(title="Month", tickangle=-30)
-    fig.update_yaxis(title="Friction Index")
+    fig.update_xaxes(title="Month", tickangle=-30)
+    fig.update_yaxes(title="Friction Index")
     _apply_layout(fig, f"Monthly Friction Index — {supplier_name}", height=350)
     return fig
 
@@ -141,7 +141,7 @@ def md_fault_bar(fault_breakdown: dict):
         textfont=dict(color="#f1f5f9"),
         hovertemplate="%{y}: %{x} events<extra></extra>"
     ))
-    fig.update_xaxis(title="Count")
+    fig.update_xaxes(title="Count")
     _apply_layout(fig, "MD Fault Type Breakdown", height=280)
     return fig
 
@@ -170,7 +170,7 @@ def qoq_comparison_bar(metrics_by_quarter: dict, top_n=15):
             hovertemplate="<b>%{x}</b><br>" + q_label + ": %{y:.2f}<extra></extra>"
         ))
     fig.update_layout(barmode="group")
-    fig.update_xaxis(tickangle=-35)
-    fig.update_yaxis(title="Friction Index")
+    fig.update_xaxes(tickangle=-35)
+    fig.update_yaxes(title="Friction Index")
     _apply_layout(fig, "Quarter-over-Quarter Friction Index Comparison (Top Suppliers by Volume)", height=430)
     return fig
