@@ -6,7 +6,7 @@ This framework provides a data-driven approach to evaluating supplier performanc
 
 ---
 
-## 📊 Core Methodology
+## Core Methodology
 
 The framework utilizes a composite scoring logic to identify performance trends and operational risks before they impact production.
 
@@ -32,7 +32,7 @@ A precision tracking system for material quality and logistical setbacks.
 
 ---
 
-## 🚀 Local Deployment
+## Local Deployment
 
 To run this application locally, ensure you have Python 3.8+ installed and follow these steps:
 
