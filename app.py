@@ -64,8 +64,10 @@ def style_order_table(df):
 
 def supplier_profile_page(df, metrics_df, md_df):
     suppliers = sorted(df["supplier_name"].unique())
+    default_supplier = "Badlands Components LLC"
+    default_index = suppliers.index(default_supplier) if default_supplier in suppliers else 0
     st.sidebar.markdown("### Select a Supplier")
-    selected = st.sidebar.selectbox("", suppliers)
+    selected = st.sidebar.selectbox("", suppliers, index=default_index)
 
     s_metrics = metrics_df[metrics_df["supplier_name"] == selected].iloc[0]
     s_md = md_df[md_df["supplier_name"] == selected] if not md_df.empty else pd.DataFrame()
