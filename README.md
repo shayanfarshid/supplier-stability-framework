@@ -1,4 +1,4 @@
-# 🏗️ Supplier Stability Scoring Framework
+# Supplier Stability Scoring Framework
 
 **A high-fidelity analytical tool for quantifying and optimizing supply chain reliability in advanced manufacturing.**
 
@@ -26,9 +26,9 @@ A precision tracking system for material quality and logistical setbacks.
 
 | Feature | Description |
 | :--- | :--- |
-| **⚡ Real-Time Visualization** | Built with **Streamlit** and **Plotly** for interactive, high-impact data storytelling and trend analysis. |
-| **🧩 ERP Portability** | Designed to be platform-agnostic; maps seamlessly to standard exports regardless of ERP systems- **SAP, Oracle, SYSPRO or Microsoft Dynamics**. |
-| **🧪 Deterministic Simulation** | Includes a robust synthetic data generator to demonstrate framework capabilities without exposing proprietary information. |
+| ** Real-Time Visualization** | Built with **Streamlit** and **Plotly** for interactive, high-impact data storytelling and trend analysis. |
+| ** ERP Portability** | Designed to be platform-agnostic; maps seamlessly to standard exports regardless of ERP systems- **SAP, Oracle, SYSPRO or Microsoft Dynamics**. |
+| ** Deterministic Simulation** | Includes a robust synthetic data generator to demonstrate framework capabilities without exposing proprietary information. |
 
 ---
 
@@ -40,7 +40,6 @@ To run this application locally, ensure you have Python 3.8+ installed and follo
    ```bash
    pip install -r requirements.txt
 
-This application shows a composite supplier stability scoring framework developed for advanced manufacturing supply chains. The framework implements two analytical tools: (1) the Friction Index System, a multi-variable supplier performance scoring methodology that weights missing parts 8× more heavily than late-arrived parts and amplifies scores for suppliers with poor commitment integrity; and (2) an MD (Material Discrepancy) Fault Attribution System for tracking material quality events and supplier fault rates. All data shown is synthetically generated. The framework is designed to be portable to any manufacturing organization's standard ERP data exports.
 
 
 ## Local Run
@@ -58,3 +57,5 @@ streamlit run app.py
 - `charts.py` — Plotly visual builders
 - `styles.py` — theme, CSS, badges, KPI card helpers
 - `requirements.txt` — Python dependencies
+
+** Evidence Note: ** Scoring weights and logic are based on industry-standard manufacturing lead-time variables and are designed to amplify visibility into high-risk supplier behaviors.
