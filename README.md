@@ -58,4 +58,4 @@ streamlit run app.py
 - `styles.py` — theme, CSS, badges, KPI card helpers
 - `requirements.txt` — Python dependencies
 
-** Evidence Note: ** Scoring weights and logic are based on industry-standard manufacturing lead-time variables and are designed to amplify visibility into high-risk supplier behaviors.
+Note: Scoring weights and logic are based on industry-standard manufacturing lead-time variables and are designed to amplify visibility into high-risk supplier behaviors. All data currently displayed in the default application is synthetically generated for demonstration purposes.
