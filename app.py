@@ -264,28 +264,28 @@ def dashboard_page(df, metrics_df):
 
     k1, k2, k3, k4 = st.columns(4)
     k1.markdown(kpi_card("Suppliers Monitored",   total_suppliers,               "Active suppliers in the synthetic portfolio"), unsafe_allow_html=True)
-    k2.markdown(kpi_card("Elevated Risk Suppliers", critical_at_risk,             "Friction Index exceeding threshold of 20"), unsafe_allow_html=True)
-    k3.markdown(kpi_card("Portfolio Friction Index", f"{portfolio_avg:.2f}",       "Volume-weighted composite score across all suppliers"), unsafe_allow_html=True)
-    k4.markdown(kpi_card("At-Risk Spend Exposure",  fmt_money(total_at_risk),     "Spend on open-late and late-arrived order lines"), unsafe_allow_html=True)
+    k2.markdown(kpi_card("Elevated Risk Suppliers", critical_at_risk,             "Suppliers with a Friction Index above the critical 20-point threshold."), unsafe_allow_html=True)
+    k3.markdown(kpi_card("Portfolio Friction Index", f"{portfolio_avg:.2f}",       "The volume-weighted average Friction Index for the entire portfolio."), unsafe_allow_html=True)
+    k4.markdown(kpi_card("At-Risk Spend Exposure",  fmt_money(total_at_risk),     "Total capital currently tied to late or unfulfilled orders."), unsafe_allow_html=True)
 
     st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
     section_header("Supplier Friction Ranking",
-        "Ranked by Friction Index. Suppliers above the threshold warrant prioritized review and corrective engagement.")
+        "Ranked by Friction Index. Suppliers exceeding the threshold require immediate performance reviews and corrective action plans.")
     fig1 = friction_bar_chart(metrics_df)
     st.plotly_chart(fig1, use_container_width=True)
 
     st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
     section_header("Risk Distribution",
-        "Commitment integrity versus operational friction, and portfolio spend concentration by supplier.")
+        "Commitment Integrity vs. Operational Friction. A direct view of supplier reliability against spend concentration.")
     c1, c2 = st.columns(2)
     with c1:
         fig2 = scatter_planning_vs_friction(metrics_df)
         st.plotly_chart(fig2, use_container_width=True)
-        render_caption("Commitment integrity (x-axis) versus Friction Index (y-axis). Upper-left quadrant: low planning integrity combined with high delivery risk. Bubble size reflects order volume.")
+        render_caption("Mapping Commitment Integrity (x-axis) against Friction Index (y-axis). The upper-left quadrant identifies 'promises made vs. promises broken.' Bubble size indicates total order volume.")
     with c2:
         fig3 = spend_treemap(metrics_df)
         st.plotly_chart(fig3, use_container_width=True)
-        render_caption("Portfolio spend distribution by supplier, sized by total order value. Color encodes performance grade. Red blocks represent elevated spend concentration in high-risk relationships.")
+        render_caption("Portfolio Spend by Supplier Grade. Sized by order value and color-coded by performance. Red blocks highlight where high spend meets high-risk relationships.")
 
 
 def sidebar_intro():
