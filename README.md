@@ -22,7 +22,7 @@ A precision tracking system for material quality and logistical setbacks.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 | Feature | Description |
 | :--- | :--- |
