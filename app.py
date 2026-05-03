@@ -13,7 +13,7 @@ from styles import CSS, COLORS, kpi_card, grade_badge
 
 st.set_page_config(
     page_title="Supplier Stability Framework | S. Farshid",
-    page_icon="⚙️",
+    page_icon="S",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -22,9 +22,11 @@ st.markdown(CSS, unsafe_allow_html=True)
 
 @st.cache_data
 def load_data():
-    df = generate_dataset(seed=42, n_rows=500)
+    import os
+    csv_path = os.path.join(os.path.dirname(__file__), "supplier_order_lines.csv")
+    df = pd.read_csv(csv_path)
     for col in ["order_date", "request_date", "commit_date", "received_date"]:
-        df[col] = pd.to_datetime(df[col])
+        df[col] = pd.to_datetime(df[col], errors="coerce")
     return df
 
 @st.cache_data
@@ -246,7 +248,7 @@ def dashboard_page(df, metrics_df):
 
 
 def sidebar_intro():
-    st.sidebar.markdown("# ⚙️ Supplier Stability Framework")
+    st.sidebar.markdown("# Supplier Stability Framework")
     st.sidebar.markdown("**A Deep-Tier Risk Analytics Demo**")
     st.sidebar.markdown(
         "<p style='font-size:12px;color:#64748b;line-height:1.6;margin-top:4px;'>"
