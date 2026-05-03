@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from io import StringIO
 
-from data_generator import generate_dataset
 from analytics import compute_friction_metrics, compute_md_metrics, compute_monthly_friction
 from charts import (
     friction_bar_chart, scatter_planning_vs_friction, spend_treemap,
@@ -66,7 +64,7 @@ def style_order_table(df):
 
 def supplier_profile_page(df, metrics_df, md_df):
     suppliers = sorted(df["supplier_name"].unique())
-    st.sidebar.markdown("### 🔍 Select a Supplier")
+    st.sidebar.markdown("### Select a Supplier")
     selected = st.sidebar.selectbox("", suppliers)
 
     s_metrics = metrics_df[metrics_df["supplier_name"] == selected].iloc[0]
@@ -158,7 +156,7 @@ def period_analysis_page(df):
     summary = fr.merge(md[['supplier_name', 'open_mdas', 'md_flag']] if not md.empty else pd.DataFrame(columns=['supplier_name','open_mdas','md_flag']),
                        on='supplier_name', how='left')
     summary['open_mdas'] = summary['open_mdas'].fillna(0).astype(int)
-    summary['md_flag'] = summary['md_flag'].fillna('✅ PASS')
+    summary['md_flag'] = summary['md_flag'].fillna('PASS')
     summary = summary.rename(columns={
         'total_lines_ordered':'Lines', 'pct_late_arrived':'% Late', 'count_open_late':'Open Late',
         'planning_score':'Planning Score', 'friction_index':'Friction Index', 'grade':'Grade',
@@ -266,7 +264,7 @@ def main():
     sidebar_intro()
     page = st.sidebar.radio("Navigation", ["Portfolio Overview", "Supplier Deep-Dive", "Period Analysis", "Methodology"])
     st.sidebar.markdown("---")
-    st.sidebar.caption("v1.0 · sfarshid.me · Synthetic Data Only")
+    st.sidebar.caption("v1.1 · sfarshid.me · Synthetic Data Only")
 
     if page == "Portfolio Overview":
         dashboard_page(df, metrics_df)
