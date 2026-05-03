@@ -40,7 +40,6 @@ def generate_dataset(seed=42, n_rows=500):
             all_suppliers.append(name)
             profile_map[name] = profile
 
-    # Assign volume weights — high-volume for some, low for others
     volume_weights = {}
     for name in all_suppliers:
         profile = profile_map[name]
@@ -50,15 +49,13 @@ def generate_dataset(seed=42, n_rows=500):
             volume_weights[name] = rng.integers(5, 18)
         elif profile == "WATCH":
             volume_weights[name] = rng.integers(10, 35)
-        else:  # CRITICAL
+        else:
             volume_weights[name] = rng.integers(15, 50)
 
-    # Force a few high-volume suppliers for realism
     high_vol = rng.choice(all_suppliers, size=6, replace=False)
     for s in high_vol:
         volume_weights[s] += rng.integers(30, 80)
 
-    total_weight = sum(volume_weights.values())
     supplier_probs = np.array([volume_weights[s] for s in all_suppliers], dtype=float)
     supplier_probs /= supplier_probs.sum()
 
@@ -76,6 +73,9 @@ def generate_dataset(seed=42, n_rows=500):
     start_date = date(2024, 1, 1)
     end_date = date(2026, 3, 31)
     date_range = (end_date - start_date).days
+
+    # Alpine-specific: track order count to inject realistic slips on ~20% of lines
+    alpine_order_count = 0
 
     rows = []
     for i in range(n_rows):
@@ -103,10 +103,21 @@ def generate_dataset(seed=42, n_rows=500):
         qty = int(rng.exponential(20)) + 1
         qty = min(qty, 200)
 
-        # Received date logic
         open_late = False
         received_date = None
-        if profile == "EXCELLENT":
+
+        if supplier == "Alpine Fabrications Inc":
+            # ~20% of Alpine lines arrive 5-10 days past commit — enough to cross the >4 threshold
+            # Remaining 80% arrive on time or 1-2 days early/late (below threshold)
+            alpine_order_count += 1
+            if rng.random() < 0.20:
+                recv_offset = int(rng.integers(5, 11))  # 5 to 10 days late — triggers >4
+            else:
+                recv_offset = int(rng.integers(-2, 4))  # -2 to +3 days — stays below threshold
+            received_date = commit_date + timedelta(days=recv_offset)
+            if received_date < order_date:
+                received_date = order_date + timedelta(days=1)
+        elif profile == "EXCELLENT":
             recv_offset = int(rng.integers(-2, 3))
             received_date = commit_date + timedelta(days=recv_offset)
             if received_date < order_date:
@@ -136,12 +147,11 @@ def generate_dataset(seed=42, n_rows=500):
         days_late = None
         if received_date is not None:
             delta = (received_date - commit_date).days
-            is_late_arrived = delta > 4
+            is_late_arrived = delta > 4   # framework threshold — do not change
             days_late = max(0, delta)
 
         is_open_late = open_late and (today > commit_date + timedelta(days=4))
 
-        # MD events — concentrated in WATCH/CRITICAL
         md_probs = {"EXCELLENT": 0.03, "ACCEPTABLE": 0.10, "WATCH": 0.28, "CRITICAL": 0.42}
         has_md = rng.random() < md_probs[profile]
         md_fault_type = None
@@ -185,3 +195,13 @@ def generate_dataset(seed=42, n_rows=500):
     df = pd.DataFrame(rows)
     df["line_spend_usd"] = df["qty_ordered"] * df["unit_cost_usd"]
     return df
+
+
+if __name__ == "__main__":
+    import os
+    df = generate_dataset()
+    out_path = os.path.join(os.path.dirname(__file__), "supplier_order_lines.csv")
+    df.to_csv(out_path, index=False)
+    print(f"Generated {len(df)} rows -> {out_path}")
+    alpine = df[df['supplier_name'] == 'Alpine Fabrications Inc']
+    print(f"Alpine: {len(alpine)} lines, {alpine['is_late_arrived'].sum()} late (>{len(alpine)*0.15:.0f} expected)")

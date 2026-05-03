@@ -35,14 +35,6 @@ def compute_friction_metrics(df, start_date=None, end_date=None, categories=None
     if d.empty:
         return pd.DataFrame()
 
-    # Recompute is_late_arrived using threshold > 0 (any delay past commit = late)
-    d = d.copy()
-    received = pd.to_datetime(d["received_date"], errors="coerce")
-    commit   = pd.to_datetime(d["commit_date"],   errors="coerce")
-    delta_days = (received - commit).dt.days
-    d["is_late_arrived"] = delta_days > 0
-    d["days_late"] = delta_days.clip(lower=0)
-
     max_lines = d.groupby("supplier_name").size().max()
 
     records = []
@@ -133,14 +125,6 @@ def compute_md_metrics(df, start_date=None, end_date=None, categories=None,
 def compute_monthly_friction(df, supplier_name):
     grp = df[df["supplier_name"] == supplier_name].copy()
     grp["month"] = pd.to_datetime(grp["order_date"]).dt.to_period("M")
-
-    # Recompute lateness with consistent threshold (> 0)
-    received = pd.to_datetime(grp["received_date"], errors="coerce")
-    commit   = pd.to_datetime(grp["commit_date"],   errors="coerce")
-    delta    = (received - commit).dt.days
-    grp["is_late_arrived"] = delta > 0
-    grp["days_late"] = delta.clip(lower=0)
-
     max_lines = len(grp)
     records = []
     for month, mgrp in grp.groupby("month"):
