@@ -1,502 +1,518 @@
-order_id,order_date,supplier_name,component_category,component_criticality,qty_ordered,unit_cost_usd,request_date,commit_date,received_date,is_late_arrived,is_open_late,days_late,has_md_event,md_fault_type,is_supplier_fault,cost_of_rework_usd,days_lost_to_md,project_number,quarter,line_spend_usd
-PO-2025-00001,2025-05-20,Ridgeline Hydraulics,Electrical,High,13,5111.09,2025-06-08,2025-06-15,2025-06-16,False,False,1.0,False,,,,,PRJ-4837,Q2-2025,66444.17
-PO-2024-00002,2024-09-13,Lowland Metal Works,Optical,High,3,48635.58,2024-10-24,2024-11-23,2024-12-01,True,False,8.0,True,Poor Workmanship,False,,20.0,PRJ-2978,Q3-2024,145906.74
-PO-2025-00003,2025-08-20,Helix Precision Mfg,Mechanical,Standard,85,4145.03,2025-09-24,2025-09-23,2025-09-21,False,False,0.0,False,,,,,PRJ-6635,Q3-2025,352327.55
-PO-2026-00004,2026-01-08,Riverton Manufacturing,Electrical,Standard,17,2441.65,2026-03-19,2026-04-05,2026-05-16,True,False,41.0,False,,,,,PRJ-4837,Q1-2026,41508.05
-PO-2025-00005,2025-11-23,Hollowpoint Alloys Inc,Mechanical,Standard,9,3455.12,2026-02-08,2026-03-01,2026-03-06,True,False,5.0,False,,,,,PRJ-7715,Q4-2025,31096.079999999998
-PO-2024-00006,2024-12-31,Western Alloy Fab,Structural,Standard,18,1824.71,2025-01-16,2025-01-28,2025-01-27,False,False,0.0,False,,,,,PRJ-4837,Q4-2024,32844.78
-PO-2024-00007,2024-05-15,Crestfall Components,Electrical,Standard,12,992.78,2024-07-07,2024-07-29,2024-07-31,False,False,2.0,False,,,,,PRJ-7715,Q2-2024,11913.36
-PO-2025-00008,2025-05-03,Dusk Manufacturing Co,Optical,High,33,2975.85,2025-05-29,2025-06-24,2025-06-25,False,False,1.0,False,,,,,PRJ-5166,Q2-2025,98203.05
-PO-2024-00009,2024-01-06,Summit Hydraulics LLC,Thermal Management,Standard,69,2594.84,2024-03-12,2024-03-15,2024-03-17,False,False,2.0,False,,,,,PRJ-5721,Q1-2024,179043.96000000002
-PO-2024-00010,2024-05-21,Keystone Bearing Systems,Mechanical,Standard,45,4768.51,2024-08-03,2024-08-05,2024-08-05,False,False,0.0,False,,,,,PRJ-7715,Q2-2024,214582.95
-PO-2025-00011,2025-04-18,BlueSky Structural Inc,Structural,Standard,15,678.54,2025-07-05,2025-07-07,2025-07-07,False,False,0.0,False,,,,,PRJ-5458,Q2-2025,10178.099999999999
-PO-2024-00012,2024-07-14,Dusk Manufacturing Co,Mechanical,Standard,33,4817.76,2024-09-04,2024-09-27,2024-09-29,False,False,2.0,True,Poor Workmanship,True,6629.42,16.0,PRJ-6687,Q3-2024,158986.08000000002
-PO-2025-00013,2025-05-31,Summit Hydraulics LLC,Hydraulic,High,3,4563.34,2025-06-19,2025-06-17,2025-06-18,False,False,1.0,False,,,,,PRJ-8845,Q2-2025,13690.02
-PO-2024-00014,2024-03-13,Eagle Ridge Components,Electrical,Critical,13,4046.33,2024-04-23,2024-05-07,2024-05-08,False,False,1.0,False,,,,,PRJ-3255,Q1-2024,52602.29
-PO-2024-00015,2024-02-02,Crestline Tooling Co,Hydraulic,Standard,12,660.27,2024-03-15,2024-03-20,2024-03-20,False,False,0.0,False,,,,,PRJ-4837,Q1-2024,7923.24
-PO-2025-00016,2025-03-16,Apex Precision Components,Thermal Management,Standard,48,5928.01,2025-04-29,2025-04-29,2025-05-01,False,False,2.0,False,,,,,PRJ-4837,Q1-2025,284544.48
-PO-2025-00017,2025-12-19,Badlands Components LLC,Optical,High,28,45299.18,2026-01-22,2026-03-03,2026-03-20,True,False,17.0,False,,,,,PRJ-2978,Q4-2025,1268377.04
-PO-2026-00018,2026-03-06,Badlands Components LLC,Hydraulic,Standard,2,1554.45,2026-05-15,2026-06-26,2026-08-01,True,False,36.0,False,,,,,PRJ-6635,Q1-2026,3108.9
-PO-2024-00019,2024-08-28,Apex Precision Components,Mechanical,Standard,4,1041.29,2024-11-06,2024-11-02,2024-11-02,False,False,0.0,False,,,,,PRJ-3691,Q3-2024,4165.16
-PO-2024-00020,2024-07-24,Polaris Metals Group,Thermal Management,Standard,11,723.61,2024-10-04,2024-10-02,2024-09-30,False,False,0.0,False,,,,,PRJ-7027,Q3-2024,7959.71
-PO-2025-00021,2025-05-21,Lowland Metal Works,Mechanical,Standard,15,1619.63,2025-07-06,2025-08-05,2025-08-07,False,False,2.0,True,Wrong Part Delivered,True,1843.6,25.0,PRJ-5721,Q2-2025,24294.45
-PO-2026-00022,2026-02-07,Apex Precision Components,Thermal Management,Standard,54,3815.88,2026-04-29,2026-04-24,2026-04-26,False,False,2.0,False,,,,,PRJ-2978,Q1-2026,206057.52000000002
-PO-2025-00023,2025-10-19,Western Alloy Fab,Hydraulic,High,12,6763.29,2025-12-08,2025-12-22,2025-12-23,False,False,1.0,False,,,,,PRJ-5458,Q4-2025,81159.48
-PO-2025-00024,2025-04-29,NorthStar Electro-Mech,Electrical,Critical,11,11820.45,2025-05-29,2025-05-27,2025-05-28,False,False,1.0,False,,,,,PRJ-5721,Q2-2025,130024.95000000001
-PO-2026-00025,2026-01-20,Apex Precision Components,Hydraulic,High,11,332.38,2026-02-16,2026-02-14,2026-02-13,False,False,0.0,False,,,,,PRJ-5458,Q1-2026,3656.18
-PO-2024-00026,2024-10-10,Bayside Precision LLC,Hydraulic,High,41,6046.21,2024-11-08,2024-11-21,2024-11-21,False,False,0.0,True,Supplier BOM Error,True,388.33,25.0,PRJ-6687,Q4-2024,247894.61000000002
-PO-2024-00027,2024-12-07,Riverton Manufacturing,Mechanical,Critical,66,3791.25,2025-01-15,2025-03-03,2025-04-03,True,False,31.0,True,Poor Workmanship,True,11624.47,14.0,PRJ-4837,Q4-2024,250222.5
-PO-2024-00028,2024-08-31,Badlands Components LLC,Thermal Management,Critical,10,1197.15,2024-10-26,2024-11-13,2024-12-21,True,False,38.0,False,,,,,PRJ-5458,Q3-2024,11971.5
-PO-2025-00029,2025-04-09,NorthStar Electro-Mech,Mechanical,High,15,2579.9,2025-07-06,2025-07-04,2025-07-04,False,False,0.0,False,,,,,PRJ-7027,Q2-2025,38698.5
-PO-2025-00030,2025-02-02,Dusk Manufacturing Co,Optical,High,6,18640.55,2025-04-24,2025-05-14,2025-05-14,False,False,0.0,True,Wrong Part Delivered,False,,8.0,PRJ-7715,Q1-2025,111843.29999999999
-PO-2025-00031,2025-06-13,NorthStar Electro-Mech,Electrical,High,25,13411.17,2025-08-20,2025-08-21,2025-08-20,False,False,0.0,False,,,,,PRJ-6635,Q2-2025,335279.25
-PO-2025-00032,2025-02-02,Western Alloy Fab,Optical,Standard,4,555.25,2025-04-22,2025-04-25,2025-04-24,False,False,0.0,False,,,,,PRJ-3255,Q1-2025,2221.0
-PO-2024-00033,2024-08-05,Greystone Fabrications,Electrical,Standard,51,1591.03,2024-09-23,2024-10-21,2024-10-25,False,False,4.0,False,,,,,PRJ-2978,Q3-2024,81142.53
-PO-2025-00034,2025-03-06,Crestfall Components,Thermal Management,High,11,3056.17,2025-05-13,2025-05-27,2025-06-16,True,False,20.0,False,,,,,PRJ-5166,Q1-2025,33617.87
-PO-2024-00035,2024-05-17,Bayside Precision LLC,Electrical,Standard,36,4544.0,2024-06-03,2024-06-27,2024-06-27,False,False,0.0,False,,,,,PRJ-5721,Q2-2024,163584.0
-PO-2025-00036,2025-12-03,Trident Industrial Parts,Structural,Standard,18,1327.09,2026-02-07,2026-02-17,2026-02-18,False,False,1.0,False,,,,,PRJ-5458,Q4-2025,23887.62
-PO-2024-00037,2024-10-13,Crestfall Components,Structural,High,1,1935.9,2025-01-09,2025-01-18,2025-01-18,False,False,0.0,False,,,,,PRJ-6687,Q4-2024,1935.9
-PO-2024-00038,2024-12-01,Hollowpoint Alloys Inc,Hydraulic,Standard,16,6838.79,2024-12-17,2024-12-29,2024-12-31,False,False,2.0,True,Wrong Part Delivered,False,,24.0,PRJ-3691,Q4-2024,109420.64
-PO-2025-00039,2025-01-18,NorthStar Electro-Mech,Electrical,Standard,1,2882.85,2025-03-07,2025-03-10,2025-03-10,False,False,0.0,False,,,,,PRJ-5166,Q1-2025,2882.85
-PO-2025-00040,2025-05-01,Horizon Mech Solutions,Mechanical,Standard,12,1465.78,2025-05-18,2025-05-19,2025-05-18,False,False,0.0,False,,,,,PRJ-5721,Q2-2025,17589.36
-PO-2025-00041,2025-05-11,BlueSky Structural Inc,Hydraulic,Standard,4,3961.06,2025-05-26,2025-06-01,2025-06-02,False,False,1.0,False,,,,,PRJ-5721,Q2-2025,15844.24
-PO-2025-00042,2025-07-13,Horizon Mech Solutions,Structural,High,21,381.04,2025-10-05,2025-10-18,2025-10-17,False,False,0.0,False,,,,,PRJ-3691,Q3-2025,8001.84
-PO-2024-00043,2024-08-25,Tri-State Fabricators Inc,Mechanical,Critical,44,2472.36,2024-10-15,2024-10-25,2024-10-26,False,False,1.0,False,,,,,PRJ-2978,Q3-2024,108783.84000000001
-PO-2025-00044,2025-04-08,Granite Valley Mfg,Optical,Standard,27,15620.92,2025-07-07,2025-07-14,2025-07-15,False,False,1.0,True,Surface Finish Defect,True,6340.1,3.0,PRJ-4837,Q2-2025,421764.84
-PO-2024-00045,2024-05-23,Bayside Precision LLC,Structural,Standard,44,1189.5,2024-07-21,2024-08-10,2024-08-10,False,False,0.0,False,,,,,PRJ-8845,Q2-2024,52338.0
-PO-2026-00046,2026-02-12,Riverton Manufacturing,Thermal Management,Standard,44,5270.01,2026-03-18,2026-04-13,2026-05-02,True,False,19.0,False,,,,,PRJ-8845,Q1-2026,231880.44
-PO-2025-00047,2025-01-31,Ridgeline Hydraulics,Thermal Management,Standard,12,2599.89,2025-02-15,2025-02-19,2025-02-19,False,False,0.0,False,,,,,PRJ-6687,Q1-2025,31198.68
-PO-2024-00048,2024-06-08,Apex Precision Components,Structural,High,22,855.28,2024-06-22,2024-06-17,2024-06-16,False,False,0.0,False,,,,,PRJ-8845,Q2-2024,18816.16
-PO-2024-00049,2024-10-03,Bayside Precision LLC,Structural,Standard,12,218.87,2024-12-26,2025-01-02,2025-01-04,False,False,2.0,True,Dimension Non-Conformance,False,,21.0,PRJ-7715,Q4-2024,2626.44
-PO-2025-00050,2025-01-27,Stratos Machined Parts,Optical,High,19,28317.73,2025-02-16,2025-02-13,2025-02-14,False,False,1.0,False,,,,,PRJ-2978,Q1-2025,538036.87
-PO-2024-00051,2024-09-17,Mesa Components Corp,Thermal Management,High,19,4131.07,2024-12-04,2024-12-16,2024-12-19,False,False,3.0,False,,,,,PRJ-8845,Q3-2024,78490.32999999999
-PO-2024-00052,2024-04-13,NorthStar Electro-Mech,Hydraulic,High,23,5216.59,2024-05-03,2024-05-03,2024-05-05,False,False,2.0,False,,,,,PRJ-7027,Q2-2024,119981.57
-PO-2024-00053,2024-10-01,Dusk Manufacturing Co,Thermal Management,Standard,43,677.78,2024-12-17,2025-01-08,2025-01-09,False,False,1.0,True,Wrong Part Delivered,True,5994.61,10.0,PRJ-6635,Q4-2024,29144.539999999997
-PO-2024-00054,2024-07-27,Bayside Precision LLC,Electrical,High,68,3505.58,2024-09-11,2024-09-30,2024-10-16,True,False,16.0,False,,,,,PRJ-7715,Q3-2024,238379.44
-PO-2025-00055,2025-10-25,Alpine Fabrications Inc,Hydraulic,High,76,5614.46,2025-11-23,2025-11-18,2025-11-18,False,False,0.0,False,,,,,PRJ-6687,Q4-2025,426698.96
-PO-2024-00056,2024-04-17,Bayside Precision LLC,Thermal Management,High,4,3841.04,2024-06-02,2024-06-12,2024-06-14,False,False,2.0,False,,,,,PRJ-5458,Q2-2024,15364.16
-PO-2026-00057,2026-02-09,BlueSky Structural Inc,Thermal Management,Standard,14,3807.13,2026-05-06,2026-05-19,2026-05-18,False,False,0.0,False,,,,,PRJ-5458,Q1-2026,53299.82
-PO-2026-00058,2026-03-12,Foxridge Assemblies,Mechanical,Standard,17,3996.31,2026-05-21,2026-06-06,2026-06-07,False,False,1.0,True,Supplier BOM Error,False,,11.0,PRJ-2978,Q1-2026,67937.27
-PO-2025-00059,2025-05-16,Granite Valley Mfg,Optical,Critical,12,7838.63,2025-07-13,2025-07-18,2025-07-18,False,False,0.0,True,Damaged in Transit,True,7722.24,10.0,PRJ-5721,Q2-2025,94063.56
-PO-2025-00060,2025-09-10,Crestfall Components,Optical,Standard,29,12170.96,2025-11-26,2025-12-26,2026-01-03,True,False,8.0,False,,,,,PRJ-7027,Q3-2025,352957.83999999997
-PO-2024-00061,2024-07-03,Meridian Fastener Corp,Hydraulic,High,9,1817.8,2024-09-11,2024-09-15,2024-09-14,False,False,0.0,False,,,,,PRJ-6687,Q3-2024,16360.199999999999
-PO-2024-00062,2024-04-08,BlueSky Structural Inc,Thermal Management,High,35,944.12,2024-05-23,2024-05-28,2024-05-27,False,False,0.0,False,,,,,PRJ-5458,Q2-2024,33044.2
-PO-2026-00063,2026-03-11,Stratos Machined Parts,Hydraulic,High,13,5119.41,2026-05-18,2026-05-20,2026-05-18,False,False,0.0,False,,,,,PRJ-8845,Q1-2026,66552.33
-PO-2024-00064,2024-01-10,Bayside Precision LLC,Electrical,Standard,65,5025.86,2024-02-11,2024-03-06,2024-03-08,False,False,2.0,False,,,,,PRJ-5458,Q1-2024,326680.89999999997
-PO-2026-00065,2026-03-29,Stratos Machined Parts,Structural,Critical,67,1998.38,2026-06-02,2026-05-28,2026-05-30,False,False,2.0,False,,,,,PRJ-5458,Q1-2026,133891.46000000002
-PO-2025-00066,2025-08-23,NorthStar Electro-Mech,Structural,Standard,11,1021.24,2025-11-12,2025-11-14,2025-11-14,False,False,0.0,False,,,,,PRJ-4837,Q3-2025,11233.64
-PO-2024-00067,2024-01-14,Dusk Manufacturing Co,Optical,High,31,47706.52,2024-04-11,2024-05-04,2024-05-03,False,False,0.0,False,,,,,PRJ-7715,Q1-2024,1478902.1199999999
-PO-2024-00068,2024-01-16,Alpine Fabrications Inc,Hydraulic,Standard,5,7453.27,2024-02-17,2024-02-17,2024-02-17,False,False,0.0,False,,,,,PRJ-7715,Q1-2024,37266.350000000006
-PO-2024-00069,2024-03-02,Riverton Manufacturing,Electrical,High,26,13299.12,2024-05-16,2024-06-07,,False,True,,False,,,,,PRJ-6687,Q1-2024,345777.12
-PO-2024-00070,2024-11-23,NorthStar Electro-Mech,Optical,High,18,21117.46,2024-12-30,2025-01-02,2025-01-04,False,False,2.0,False,,,,,PRJ-7715,Q4-2024,380114.27999999997
-PO-2025-00071,2025-11-05,Delta Machining Group,Structural,Critical,10,844.3,2025-12-14,2025-12-25,2025-12-26,False,False,1.0,False,,,,,PRJ-3691,Q4-2025,8443.0
-PO-2026-00072,2026-03-13,Apex Precision Components,Hydraulic,Standard,61,1695.93,2026-04-17,2026-04-13,2026-04-11,False,False,0.0,False,,,,,PRJ-7027,Q1-2026,103451.73000000001
-PO-2025-00073,2025-12-17,Riverton Manufacturing,Thermal Management,Standard,20,4053.97,2026-03-10,2026-04-03,,False,True,,False,,,,,PRJ-4837,Q4-2025,81079.4
-PO-2025-00074,2025-10-14,Redwood Stampings Inc,Thermal Management,Standard,17,814.5,2026-01-01,2026-01-01,2025-12-31,False,False,0.0,False,,,,,PRJ-2978,Q4-2025,13846.5
-PO-2025-00075,2025-08-06,Delta Machining Group,Structural,Standard,21,272.67,2025-09-17,2025-10-01,2025-10-02,False,False,1.0,False,,,,,PRJ-2978,Q3-2025,5726.070000000001
-PO-2025-00076,2025-08-15,Pacific Alloy Works,Hydraulic,High,30,1256.1,2025-09-04,2025-09-03,2025-09-05,False,False,2.0,False,,,,,PRJ-3691,Q3-2025,37683.0
-PO-2025-00077,2025-12-19,Riverton Manufacturing,Mechanical,High,12,1834.89,2026-01-26,2026-02-16,2026-02-20,False,False,4.0,True,Supplier BOM Error,True,3423.51,23.0,PRJ-8845,Q4-2025,22018.68
-PO-2025-00078,2025-01-21,Ridgeline Hydraulics,Hydraulic,High,7,1339.59,2025-03-21,2025-03-26,2025-03-27,False,False,1.0,False,,,,,PRJ-3255,Q1-2025,9377.13
-PO-2025-00079,2025-08-10,NorthStar Electro-Mech,Optical,High,2,36474.45,2025-10-13,2025-10-16,2025-10-17,False,False,1.0,False,,,,,PRJ-2978,Q3-2025,72948.9
-PO-2026-00080,2026-03-12,NorthStar Electro-Mech,Structural,Standard,38,450.88,2026-05-05,2026-05-06,2026-05-08,False,False,2.0,False,,,,,PRJ-5721,Q1-2026,17133.44
-PO-2025-00081,2025-05-16,Ironwood Tooling Group,Hydraulic,Critical,22,1128.03,2025-07-02,2025-07-06,2025-07-06,False,False,0.0,False,,,,,PRJ-6635,Q2-2025,24816.66
-PO-2025-00082,2025-01-16,Greystone Fabrications,Mechanical,Standard,32,1828.48,2025-02-28,2025-03-11,2025-03-11,False,False,0.0,True,Surface Finish Defect,True,1968.36,24.0,PRJ-4837,Q1-2025,58511.36
-PO-2025-00083,2025-09-11,NorthStar Electro-Mech,Electrical,Critical,16,8832.96,2025-11-22,2025-11-22,2025-11-22,False,False,0.0,False,,,,,PRJ-5166,Q3-2025,141327.36
-PO-2024-00084,2024-02-02,Bayside Precision LLC,Structural,Standard,22,1424.83,2024-02-18,2024-03-16,2024-03-26,True,False,10.0,False,,,,,PRJ-3691,Q1-2024,31346.26
-PO-2024-00085,2024-06-23,Apex Precision Components,Structural,High,16,1122.23,2024-08-29,2024-08-26,2024-08-28,False,False,2.0,False,,,,,PRJ-8845,Q2-2024,17955.68
-PO-2024-00086,2024-04-02,BlueSky Structural Inc,Electrical,Standard,8,11660.81,2024-04-22,2024-05-06,2024-05-07,False,False,1.0,False,,,,,PRJ-4837,Q2-2024,93286.48
-PO-2026-00087,2026-01-05,Dusk Manufacturing Co,Electrical,Standard,30,441.59,2026-02-05,2026-02-21,2026-02-23,False,False,2.0,True,Poor Workmanship,True,4174.87,1.0,PRJ-8845,Q1-2026,13247.699999999999
-PO-2025-00088,2025-06-05,Apex Precision Components,Electrical,Standard,5,11215.42,2025-08-17,2025-08-17,2025-08-18,False,False,1.0,False,,,,,PRJ-6687,Q2-2025,56077.1
-PO-2024-00089,2024-10-30,Keystone Bearing Systems,Thermal Management,High,8,351.25,2025-01-22,2025-01-27,2025-01-29,False,False,2.0,False,,,,,PRJ-8845,Q4-2024,2810.0
-PO-2024-00090,2024-08-07,NorthStar Electro-Mech,Electrical,Critical,35,4324.2,2024-10-29,2024-11-02,2024-11-02,False,False,0.0,False,,,,,PRJ-5721,Q3-2024,151347.0
-PO-2025-00091,2025-09-27,Bayside Precision LLC,Electrical,Critical,105,4735.93,2025-11-26,2025-12-14,2025-12-23,True,False,9.0,False,,,,,PRJ-7027,Q3-2025,497272.65
-PO-2024-00092,2024-12-25,Greystone Fabrications,Structural,High,45,1548.67,2025-02-01,2025-02-24,2025-03-16,True,False,20.0,False,,,,,PRJ-6635,Q4-2024,69690.15000000001
-PO-2024-00093,2024-06-24,Western Alloy Fab,Electrical,High,5,5152.45,2024-08-09,2024-08-15,2024-08-14,False,False,0.0,False,,,,,PRJ-2978,Q2-2024,25762.25
-PO-2025-00094,2025-09-02,Timberline Fasteners,Thermal Management,Critical,24,2926.16,2025-09-28,2025-10-05,2025-10-05,False,False,0.0,False,,,,,PRJ-5458,Q3-2025,70227.84
-PO-2025-00095,2025-12-11,Riverton Manufacturing,Structural,High,40,142.11,2026-02-20,2026-03-03,2026-03-26,True,False,23.0,False,,,,,PRJ-8845,Q4-2025,5684.400000000001
-PO-2025-00096,2025-12-03,Vega Electronics Ltd,Optical,Standard,8,34984.76,2026-01-31,2026-01-26,2026-01-25,False,False,0.0,False,,,,,PRJ-3255,Q4-2025,279878.08
-PO-2025-00097,2025-12-16,BlueSky Structural Inc,Mechanical,Standard,9,4891.95,2026-03-05,2026-03-06,2026-03-10,False,False,4.0,False,,,,,PRJ-5458,Q4-2025,44027.549999999996
-PO-2024-00098,2024-01-09,Delta Machining Group,Structural,Standard,18,749.82,2024-02-21,2024-02-24,2024-02-24,False,False,0.0,False,,,,,PRJ-3691,Q1-2024,13496.76
-PO-2024-00099,2024-04-15,Hollowpoint Alloys Inc,Mechanical,High,5,2436.74,2024-06-16,2024-07-12,2024-07-14,False,False,2.0,False,,,,,PRJ-3255,Q2-2024,12183.699999999999
-PO-2025-00100,2025-10-05,NorthStar Electro-Mech,Electrical,High,12,14150.76,2025-11-22,2025-11-24,2025-11-22,False,False,0.0,False,,,,,PRJ-6635,Q4-2025,169809.12
-PO-2026-00101,2026-01-26,Greystone Fabrications,Thermal Management,High,14,3663.17,2026-02-22,2026-03-04,2026-03-03,False,False,0.0,True,Wrong Part Delivered,True,2464.59,3.0,PRJ-5458,Q1-2026,51284.380000000005
-PO-2026-00102,2026-02-23,Greystone Fabrications,Mechanical,Standard,28,4558.16,2026-03-31,2026-04-22,,False,True,,False,,,,,PRJ-6635,Q1-2026,127628.48
-PO-2026-00103,2026-03-26,Greystone Fabrications,Mechanical,Standard,22,4292.07,2026-06-20,2026-07-09,2026-07-11,False,False,2.0,True,Poor Workmanship,True,6276.06,9.0,PRJ-5721,Q1-2026,94425.54
-PO-2024-00104,2024-05-21,Polaris Metals Group,Hydraulic,Critical,8,4883.49,2024-08-02,2024-07-29,2024-07-29,False,False,0.0,False,,,,,PRJ-7027,Q2-2024,39067.92
-PO-2024-00105,2024-09-27,BlueSky Structural Inc,Electrical,High,5,4394.69,2024-12-20,2025-01-01,2025-01-06,True,False,5.0,False,,,,,PRJ-8845,Q3-2024,21973.449999999997
-PO-2025-00106,2025-09-17,Mesa Components Corp,Structural,Standard,26,1740.67,2025-10-28,2025-11-03,2025-11-03,False,False,0.0,False,,,,,PRJ-5166,Q3-2025,45257.42
-PO-2025-00107,2025-02-14,Dusk Manufacturing Co,Electrical,High,10,3037.72,2025-04-07,2025-05-03,2025-05-02,False,False,0.0,False,,,,,PRJ-7715,Q1-2025,30377.199999999997
-PO-2025-00108,2025-08-18,BlueSky Structural Inc,Electrical,Standard,13,14410.51,2025-09-01,2025-09-03,2025-09-03,False,False,0.0,False,,,,,PRJ-6635,Q3-2025,187336.63
-PO-2025-00109,2025-06-09,Greystone Fabrications,Structural,Standard,2,1035.1,2025-09-05,2025-09-13,2025-09-14,False,False,1.0,False,,,,,PRJ-3255,Q2-2025,2070.2
-PO-2024-00110,2024-07-03,Mesa Components Corp,Electrical,Standard,2,8865.24,2024-08-31,2024-09-07,2024-09-06,False,False,0.0,False,,,,,PRJ-6635,Q3-2024,17730.48
-PO-2024-00111,2024-04-04,Alpine Fabrications Inc,Structural,High,19,599.13,2024-06-21,2024-06-22,2024-06-23,False,False,1.0,False,,,,,PRJ-6687,Q2-2024,11383.47
-PO-2024-00112,2024-09-23,BlueSky Structural Inc,Mechanical,High,30,2654.63,2024-11-30,2024-12-06,2024-12-07,False,False,1.0,False,,,,,PRJ-7027,Q3-2024,79638.90000000001
-PO-2024-00113,2024-07-24,BlueSky Structural Inc,Electrical,Critical,7,7560.35,2024-08-31,2024-09-05,2024-09-04,False,False,0.0,False,,,,,PRJ-8845,Q3-2024,52922.450000000004
-PO-2024-00114,2024-10-10,Polaris Metals Group,Structural,Standard,24,426.76,2024-12-07,2024-12-10,2024-12-10,False,False,0.0,False,,,,,PRJ-7715,Q4-2024,10242.24
-PO-2024-00115,2024-11-02,Lakewood Electro Systems,Structural,High,4,1236.33,2025-01-12,2025-01-25,2025-01-25,False,False,0.0,False,,,,,PRJ-6635,Q4-2024,4945.32
-PO-2025-00116,2025-11-29,NorthStar Electro-Mech,Thermal Management,Standard,7,5750.35,2026-01-20,2026-01-24,2026-01-24,False,False,0.0,False,,,,,PRJ-8845,Q4-2025,40252.450000000004
-PO-2024-00117,2024-04-23,Dusk Manufacturing Co,Electrical,High,68,6144.27,2024-06-24,2024-07-22,2024-08-09,True,False,18.0,False,,,,,PRJ-2978,Q2-2024,417810.36000000004
-PO-2024-00118,2024-08-26,Greystone Fabrications,Structural,Standard,20,71.0,2024-11-24,2024-12-20,2025-01-02,True,False,13.0,False,,,,,PRJ-3691,Q3-2024,1420.0
-PO-2025-00119,2025-05-24,Bayside Precision LLC,Hydraulic,High,5,5903.13,2025-08-14,2025-08-27,2025-09-06,True,False,10.0,True,Supplier BOM Error,False,,16.0,PRJ-5458,Q2-2025,29515.65
-PO-2025-00120,2025-04-07,Crestfall Components,Mechanical,Standard,19,3792.67,2025-05-15,2025-05-31,2025-06-14,True,False,14.0,False,,,,,PRJ-5458,Q2-2025,72060.73
-PO-2025-00121,2025-07-06,Dusk Manufacturing Co,Electrical,Critical,2,12096.58,2025-08-20,2025-09-10,2025-09-24,True,False,14.0,False,,,,,PRJ-3691,Q3-2025,24193.16
-PO-2025-00122,2025-07-19,Greystone Fabrications,Mechanical,High,7,386.12,2025-08-19,2025-08-24,2025-09-09,True,False,16.0,False,,,,,PRJ-7027,Q3-2025,2702.84
-PO-2024-00123,2024-05-12,Badlands Components LLC,Thermal Management,High,11,4900.7,2024-07-11,2024-08-08,2024-09-06,True,False,29.0,True,Poor Workmanship,True,6537.1,23.0,PRJ-7715,Q2-2024,53907.7
-PO-2025-00124,2025-08-13,Meridian Fastener Corp,Structural,Critical,6,1190.25,2025-10-11,2025-10-06,2025-10-04,False,False,0.0,False,,,,,PRJ-3255,Q3-2025,7141.5
-PO-2025-00125,2025-04-10,Summit Hydraulics LLC,Thermal Management,High,40,3469.17,2025-05-25,2025-05-20,2025-05-18,False,False,0.0,False,,,,,PRJ-7715,Q2-2025,138766.8
-PO-2025-00126,2025-03-14,Bayside Precision LLC,Mechanical,Standard,36,2818.72,2025-05-06,2025-05-14,2025-05-13,False,False,0.0,False,,,,,PRJ-5458,Q1-2025,101473.92
-PO-2024-00127,2024-11-14,Bayside Precision LLC,Electrical,Standard,104,11061.72,2025-02-12,2025-02-17,2025-02-18,False,False,1.0,False,,,,,PRJ-4837,Q4-2024,1150418.88
-PO-2025-00128,2025-07-17,Apex Precision Components,Thermal Management,High,4,966.01,2025-10-12,2025-10-11,2025-10-09,False,False,0.0,False,,,,,PRJ-7027,Q3-2025,3864.04
-PO-2024-00129,2024-03-10,Vega Electronics Ltd,Mechanical,Standard,49,1228.1,2024-04-02,2024-04-01,2024-03-31,False,False,0.0,False,,,,,PRJ-3255,Q1-2024,60176.899999999994
-PO-2025-00130,2025-01-19,NorthStar Electro-Mech,Mechanical,Critical,14,1451.28,2025-03-16,2025-03-20,2025-03-19,False,False,0.0,False,,,,,PRJ-6635,Q1-2025,20317.92
-PO-2025-00131,2025-08-01,Cascade Tooling Solutions,Optical,Critical,19,40344.42,2025-10-20,2025-10-18,2025-10-17,False,False,0.0,False,,,,,PRJ-6687,Q3-2025,766543.98
-PO-2025-00132,2025-05-27,BlueSky Structural Inc,Structural,High,4,1968.59,2025-08-11,2025-08-21,2025-08-21,False,False,0.0,False,,,,,PRJ-5166,Q2-2025,7874.36
-PO-2025-00133,2025-12-18,Apex Precision Components,Thermal Management,Standard,7,3078.95,2026-03-04,2026-03-09,2026-03-11,False,False,2.0,False,,,,,PRJ-6687,Q4-2025,21552.649999999998
-PO-2024-00134,2024-05-11,Redwood Stampings Inc,Mechanical,High,3,466.15,2024-08-06,2024-08-20,2024-08-19,False,False,0.0,False,,,,,PRJ-8845,Q2-2024,1398.4499999999998
-PO-2025-00135,2025-10-24,Foxridge Assemblies,Thermal Management,Standard,27,4318.59,2025-12-07,2026-01-01,2026-01-02,False,False,1.0,False,,,,,PRJ-5166,Q4-2025,116601.93000000001
-PO-2024-00136,2024-03-11,Greystone Fabrications,Electrical,High,23,180.91,2024-04-10,2024-04-21,2024-04-28,True,False,7.0,False,,,,,PRJ-7027,Q1-2024,4160.93
-PO-2026-00137,2026-01-30,Redwood Stampings Inc,Electrical,High,6,11084.12,2026-04-01,2026-04-13,2026-04-13,False,False,0.0,False,,,,,PRJ-6635,Q1-2026,66504.72
-PO-2025-00138,2025-10-09,Keystone Bearing Systems,Thermal Management,Critical,8,5384.05,2025-11-27,2025-11-24,2025-11-24,False,False,0.0,False,,,,,PRJ-6635,Q4-2025,43072.4
-PO-2024-00139,2024-07-04,Prairie Industrial Supply,Electrical,High,25,1175.9,2024-08-06,2024-08-06,2024-08-07,False,False,1.0,False,,,,,PRJ-3691,Q3-2024,29397.500000000004
-PO-2026-00140,2026-03-22,Zenith Alloy Solutions,Thermal Management,Standard,1,5995.64,2026-04-08,2026-04-13,2026-04-13,False,False,0.0,False,,,,,PRJ-4837,Q1-2026,5995.64
-PO-2024-00141,2024-10-07,Delta Machining Group,Mechanical,Standard,78,4744.76,2024-11-04,2024-11-13,2024-11-21,True,False,8.0,False,,,,,PRJ-3691,Q4-2024,370091.28
-PO-2025-00142,2025-10-22,BlueSky Structural Inc,Thermal Management,High,22,2626.67,2025-12-15,2025-12-26,2025-12-26,False,False,0.0,True,Surface Finish Defect,False,,19.0,PRJ-3255,Q4-2025,57786.740000000005
-PO-2025-00143,2025-04-14,Timberline Fasteners,Electrical,Standard,39,3006.54,2025-05-24,2025-06-01,2025-06-01,False,False,0.0,False,,,,,PRJ-8845,Q2-2025,117255.06
-PO-2024-00144,2024-04-20,Greystone Fabrications,Thermal Management,Standard,31,1222.85,2024-05-23,2024-05-31,2024-05-31,False,False,0.0,False,,,,,PRJ-2978,Q2-2024,37908.35
-PO-2024-00145,2024-10-05,Apex Precision Components,Electrical,Critical,27,3272.85,2025-01-02,2025-01-06,2025-01-06,False,False,0.0,False,,,,,PRJ-6687,Q4-2024,88366.95
-PO-2025-00146,2025-10-04,NorthStar Electro-Mech,Structural,Standard,28,413.62,2026-01-02,2025-12-30,2025-12-28,False,False,0.0,False,,,,,PRJ-5458,Q4-2025,11581.36
-PO-2024-00147,2024-04-28,Eagle Ridge Components,Structural,High,69,236.83,2024-05-12,2024-05-25,2024-05-26,False,False,1.0,False,,,,,PRJ-5458,Q2-2024,16341.27
-PO-2025-00148,2025-11-08,Dusk Manufacturing Co,Thermal Management,Standard,23,3700.53,2026-01-15,2026-02-05,2026-02-18,True,False,13.0,True,Supplier BOM Error,False,,18.0,PRJ-6687,Q4-2025,85112.19
-PO-2026-00149,2026-01-31,Hollowpoint Alloys Inc,Thermal Management,Standard,5,3765.85,2026-04-29,2026-05-22,2026-05-25,False,False,3.0,False,,,,,PRJ-3691,Q1-2026,18829.25
-PO-2026-00150,2026-02-03,Helix Precision Mfg,Structural,Critical,22,553.95,2026-04-13,2026-04-09,2026-04-09,False,False,0.0,False,,,,,PRJ-8845,Q1-2026,12186.900000000001
-PO-2025-00151,2025-09-23,Lakewood Electro Systems,Structural,High,4,639.64,2025-12-10,2025-12-10,2025-12-11,False,False,1.0,False,,,,,PRJ-5458,Q3-2025,2558.56
-PO-2026-00152,2026-03-04,Helix Precision Mfg,Structural,High,9,1893.73,2026-05-30,2026-05-25,2026-05-27,False,False,2.0,False,,,,,PRJ-5166,Q1-2026,17043.57
-PO-2025-00153,2025-08-16,Delta Machining Group,Structural,High,47,1162.68,2025-10-19,2025-10-21,2025-10-25,False,False,4.0,False,,,,,PRJ-7715,Q3-2025,54645.96000000001
-PO-2025-00154,2025-03-13,Dusk Manufacturing Co,Mechanical,Standard,9,1051.65,2025-04-09,2025-04-30,2025-04-29,False,False,0.0,False,,,,,PRJ-5166,Q1-2025,9464.85
-PO-2025-00155,2025-04-25,Bayside Precision LLC,Hydraulic,Critical,30,5920.04,2025-06-26,2025-07-18,2025-07-17,False,False,0.0,False,,,,,PRJ-7027,Q2-2025,177601.2
-PO-2024-00156,2024-11-22,Stratos Machined Parts,Hydraulic,Critical,1,4310.88,2025-02-18,2025-02-16,2025-02-16,False,False,0.0,False,,,,,PRJ-3691,Q4-2024,4310.88
-PO-2024-00157,2024-10-05,NorthStar Electro-Mech,Thermal Management,Standard,9,3432.78,2024-12-23,2024-12-18,2024-12-18,False,False,0.0,False,,,,,PRJ-4837,Q4-2024,30895.02
-PO-2026-00158,2026-03-27,Greystone Fabrications,Electrical,High,38,6105.68,2026-04-29,2026-05-09,2026-05-10,False,False,1.0,True,Supplier BOM Error,True,6302.33,2.0,PRJ-5721,Q1-2026,232015.84000000003
-PO-2024-00159,2024-07-13,Crestfall Components,Hydraulic,Standard,31,3325.98,2024-09-15,2024-09-27,2024-09-26,False,False,0.0,True,Poor Workmanship,False,,4.0,PRJ-3691,Q3-2024,103105.38
-PO-2025-00160,2025-05-08,Alpine Fabrications Inc,Mechanical,High,13,2427.29,2025-08-05,2025-08-03,2025-08-02,False,False,0.0,False,,,,,PRJ-6687,Q2-2025,31554.77
-PO-2025-00161,2025-11-25,Cascade Tooling Solutions,Electrical,Critical,17,10448.2,2026-02-15,2026-02-13,2026-02-11,False,False,0.0,False,,,,,PRJ-4837,Q4-2025,177619.40000000002
-PO-2025-00162,2025-09-30,BlueSky Structural Inc,Thermal Management,Standard,5,538.46,2025-11-10,2025-11-10,2025-11-10,False,False,0.0,False,,,,,PRJ-3255,Q3-2025,2692.3
-PO-2024-00163,2024-07-02,Lowland Metal Works,Electrical,Standard,3,13824.15,2024-08-21,2024-09-05,2024-09-10,True,False,5.0,False,,,,,PRJ-7715,Q3-2024,41472.45
-PO-2025-00164,2025-08-16,Crestline Tooling Co,Optical,High,27,38221.87,2025-09-10,2025-09-07,2025-09-08,False,False,1.0,False,,,,,PRJ-5721,Q3-2025,1031990.4900000001
-PO-2024-00165,2024-10-02,Meridian Fastener Corp,Structural,Standard,12,832.41,2024-10-29,2024-10-27,2024-10-28,False,False,1.0,False,,,,,PRJ-5721,Q4-2024,9988.92
-PO-2024-00166,2024-10-18,Timberline Fasteners,Mechanical,High,1,2082.17,2024-12-22,2025-01-02,2025-01-03,False,False,1.0,False,,,,,PRJ-8845,Q4-2024,2082.17
-PO-2024-00167,2024-04-13,NorthStar Electro-Mech,Thermal Management,Critical,15,4762.23,2024-05-22,2024-05-25,2024-05-27,False,False,2.0,False,,,,,PRJ-7715,Q2-2024,71433.45
-PO-2024-00168,2024-06-23,Greystone Fabrications,Thermal Management,Standard,2,3173.3,2024-08-11,2024-08-21,2024-08-22,False,False,1.0,True,Supplier BOM Error,True,7303.43,2.0,PRJ-3691,Q2-2024,6346.6
-PO-2025-00169,2025-05-28,Western Alloy Fab,Electrical,Standard,28,2927.33,2025-08-18,2025-08-31,2025-09-01,False,False,1.0,False,,,,,PRJ-8845,Q2-2025,81965.23999999999
-PO-2024-00170,2024-08-23,Summit Hydraulics LLC,Mechanical,Standard,62,2898.78,2024-11-08,2024-11-13,2024-11-15,False,False,2.0,False,,,,,PRJ-5721,Q3-2024,179724.36000000002
-PO-2025-00171,2025-03-26,Keystone Bearing Systems,Mechanical,High,32,3162.95,2025-05-29,2025-05-31,2025-05-30,False,False,0.0,False,,,,,PRJ-5166,Q1-2025,101214.4
-PO-2024-00172,2024-11-27,BlueSky Structural Inc,Thermal Management,Standard,14,349.6,2024-12-14,2024-12-28,2024-12-29,False,False,1.0,False,,,,,PRJ-6635,Q4-2024,4894.400000000001
-PO-2025-00173,2025-07-08,Hollowpoint Alloys Inc,Optical,High,22,34486.23,2025-09-26,2025-10-12,2025-11-23,True,False,42.0,True,Wrong Part Delivered,True,11207.45,18.0,PRJ-3691,Q3-2025,758697.06
-PO-2025-00174,2025-10-20,Hollowpoint Alloys Inc,Hydraulic,Standard,3,1233.53,2025-12-14,2026-01-23,2026-02-11,True,False,19.0,True,Damaged in Transit,True,10869.67,11.0,PRJ-8845,Q4-2025,3700.59
-PO-2024-00175,2024-03-15,Riverton Manufacturing,Thermal Management,Critical,10,3327.77,2024-05-12,2024-06-09,2024-06-21,True,False,12.0,False,,,,,PRJ-5721,Q1-2024,33277.7
-PO-2025-00176,2025-03-15,Bayside Precision LLC,Hydraulic,High,2,2771.02,2025-03-31,2025-04-29,2025-05-03,False,False,4.0,False,,,,,PRJ-6687,Q1-2025,5542.04
-PO-2024-00177,2024-02-09,Delta Machining Group,Optical,Standard,9,41053.23,2024-05-09,2024-05-11,2024-05-10,False,False,0.0,False,,,,,PRJ-3691,Q1-2024,369479.07
-PO-2025-00178,2025-07-28,Dusk Manufacturing Co,Electrical,Standard,8,6783.39,2025-09-06,2025-10-02,2025-10-14,True,False,12.0,False,,,,,PRJ-5458,Q3-2025,54267.12
-PO-2025-00179,2025-11-15,Greystone Fabrications,Structural,High,3,600.66,2025-12-21,2026-01-05,2026-01-04,False,False,0.0,False,,,,,PRJ-5458,Q4-2025,1801.98
-PO-2025-00180,2025-06-02,Polaris Metals Group,Thermal Management,High,17,3088.61,2025-07-27,2025-08-01,2025-07-31,False,False,0.0,False,,,,,PRJ-6635,Q2-2025,52506.37
-PO-2024-00181,2024-03-24,NorthStar Electro-Mech,Electrical,Critical,15,1664.16,2024-04-07,2024-04-05,2024-04-05,False,False,0.0,False,,,,,PRJ-6687,Q1-2024,24962.4
-PO-2024-00182,2024-06-18,Dusk Manufacturing Co,Thermal Management,Standard,20,4006.85,2024-07-11,2024-08-06,2024-08-16,True,False,10.0,False,,,,,PRJ-5166,Q2-2024,80137.0
-PO-2024-00183,2024-08-17,Tri-State Fabricators Inc,Hydraulic,Standard,5,1122.88,2024-09-27,2024-09-28,2024-09-27,False,False,0.0,False,,,,,PRJ-5166,Q3-2024,5614.400000000001
-PO-2025-00184,2025-11-20,Helix Precision Mfg,Hydraulic,Critical,6,365.04,2026-02-16,2026-02-11,2026-02-11,False,False,0.0,False,,,,,PRJ-2978,Q4-2025,2190.2400000000002
-PO-2024-00185,2024-03-22,Badlands Components LLC,Optical,Critical,14,4357.83,2024-06-09,2024-07-09,2024-08-17,True,False,39.0,False,,,,,PRJ-7027,Q1-2024,61009.619999999995
-PO-2025-00186,2025-05-02,Bayside Precision LLC,Hydraulic,High,15,6816.6,2025-05-23,2025-06-20,2025-06-20,False,False,0.0,False,,,,,PRJ-3255,Q2-2025,102249.0
-PO-2024-00187,2024-06-23,Bayside Precision LLC,Electrical,Standard,7,11911.7,2024-07-23,2024-08-03,2024-08-23,True,False,20.0,False,,,,,PRJ-5166,Q2-2024,83381.90000000001
-PO-2025-00188,2025-05-02,Riverton Manufacturing,Thermal Management,High,11,4777.42,2025-06-13,2025-07-17,2025-08-19,True,False,33.0,False,,,,,PRJ-5721,Q2-2025,52551.62
-PO-2024-00189,2024-01-02,Lakewood Electro Systems,Structural,High,17,1801.07,2024-01-20,2024-01-31,2024-02-01,False,False,1.0,False,,,,,PRJ-5721,Q1-2024,30618.19
-PO-2024-00190,2024-06-13,Helix Precision Mfg,Structural,Standard,20,328.64,2024-07-27,2024-07-26,2024-07-27,False,False,1.0,False,,,,,PRJ-3255,Q2-2024,6572.799999999999
-PO-2024-00191,2024-06-29,Meridian Fastener Corp,Optical,Critical,3,28900.13,2024-09-16,2024-09-18,2024-09-19,False,False,1.0,False,,,,,PRJ-6687,Q2-2024,86700.39
-PO-2025-00192,2025-05-29,Riverton Manufacturing,Structural,Standard,27,826.54,2025-06-21,2025-07-21,,False,True,,False,,,,,PRJ-5166,Q2-2025,22316.579999999998
-PO-2024-00193,2024-12-11,Crestfall Components,Mechanical,High,14,1193.81,2024-12-31,2025-01-15,2025-01-18,False,False,3.0,False,,,,,PRJ-5166,Q4-2024,16713.34
-PO-2025-00194,2025-02-19,Hollowpoint Alloys Inc,Structural,Critical,40,889.86,2025-04-30,2025-05-13,2025-05-26,True,False,13.0,False,,,,,PRJ-2978,Q1-2025,35594.4
-PO-2024-00195,2024-02-21,Greystone Fabrications,Hydraulic,Standard,1,4827.69,2024-05-07,2024-06-01,2024-06-12,True,False,11.0,False,,,,,PRJ-5166,Q1-2024,4827.69
-PO-2025-00196,2025-10-16,NorthStar Electro-Mech,Structural,High,7,115.16,2025-12-30,2026-01-01,2026-01-01,False,False,0.0,False,,,,,PRJ-4837,Q4-2025,806.12
-PO-2024-00197,2024-07-01,BlueSky Structural Inc,Electrical,Standard,13,13514.66,2024-07-15,2024-07-30,2024-07-31,False,False,1.0,False,,,,,PRJ-6687,Q3-2024,175690.58
-PO-2025-00198,2025-03-26,Stratos Machined Parts,Structural,Standard,63,1346.99,2025-04-22,2025-04-26,2025-04-26,False,False,0.0,False,,,,,PRJ-5721,Q1-2025,84860.37
-PO-2025-00199,2025-08-21,Prairie Industrial Supply,Mechanical,Standard,15,3867.74,2025-10-04,2025-10-18,2025-10-19,False,False,1.0,False,,,,,PRJ-2978,Q3-2025,58016.1
-PO-2024-00200,2024-08-02,Dusk Manufacturing Co,Mechanical,Critical,7,3940.18,2024-10-12,2024-11-09,2024-11-22,True,False,13.0,False,,,,,PRJ-7715,Q3-2024,27581.26
-PO-2025-00201,2025-05-05,NorthStar Electro-Mech,Electrical,Standard,15,9778.18,2025-06-15,2025-06-12,2025-06-13,False,False,1.0,False,,,,,PRJ-6635,Q2-2025,146672.7
-PO-2025-00202,2025-11-04,Ironwood Tooling Group,Structural,Standard,20,310.32,2026-01-30,2026-02-11,2026-02-10,False,False,0.0,False,,,,,PRJ-6635,Q4-2025,6206.4
-PO-2026-00203,2026-03-11,Apex Precision Components,Hydraulic,High,10,2828.3,2026-04-09,2026-04-05,2026-04-05,False,False,0.0,False,,,,,PRJ-7715,Q1-2026,28283.0
-PO-2025-00204,2025-01-25,Granite Valley Mfg,Electrical,Standard,7,8357.15,2025-03-20,2025-03-23,2025-03-22,False,False,0.0,False,,,,,PRJ-5458,Q1-2025,58500.049999999996
-PO-2024-00205,2024-07-11,Timberline Fasteners,Electrical,Standard,13,14009.59,2024-09-14,2024-09-19,2024-09-19,False,False,0.0,True,Wrong Part Delivered,True,1629.33,22.0,PRJ-4837,Q3-2024,182124.67
-PO-2024-00206,2024-09-14,Apex Precision Components,Optical,Standard,16,8995.26,2024-10-03,2024-10-02,2024-10-01,False,False,0.0,False,,,,,PRJ-6687,Q3-2024,143924.16
-PO-2025-00207,2025-09-21,Apex Precision Components,Electrical,Standard,6,3583.53,2025-10-15,2025-10-12,2025-10-11,False,False,0.0,False,,,,,PRJ-4837,Q3-2025,21501.18
-PO-2024-00208,2024-12-17,Summit Hydraulics LLC,Electrical,High,11,487.52,2025-02-15,2025-02-16,2025-02-18,False,False,2.0,True,Damaged in Transit,False,,1.0,PRJ-8845,Q4-2024,5362.719999999999
-PO-2024-00209,2024-03-26,Alpine Fabrications Inc,Optical,Standard,7,7777.32,2024-05-15,2024-05-17,2024-05-16,False,False,0.0,False,,,,,PRJ-5458,Q1-2024,54441.24
-PO-2026-00210,2026-02-09,Bayside Precision LLC,Mechanical,Critical,44,405.36,2026-04-03,2026-04-20,2026-04-20,False,False,0.0,True,Poor Workmanship,True,5705.72,22.0,PRJ-8845,Q1-2026,17835.84
-PO-2025-00211,2025-06-07,Stratos Machined Parts,Mechanical,Standard,27,4636.45,2025-08-24,2025-08-29,2025-08-31,False,False,2.0,True,Poor Workmanship,False,,25.0,PRJ-5721,Q2-2025,125184.15
-PO-2025-00212,2025-11-19,Badlands Components LLC,Optical,Standard,3,7273.46,2026-01-24,2026-02-26,2026-03-02,False,False,4.0,False,,,,,PRJ-3691,Q4-2025,21820.38
-PO-2024-00213,2024-01-13,Horizon Mech Solutions,Electrical,Critical,18,4716.15,2024-03-21,2024-04-04,2024-04-03,False,False,0.0,False,,,,,PRJ-7715,Q1-2024,84890.7
-PO-2025-00214,2025-09-08,Greystone Fabrications,Hydraulic,Standard,5,3146.28,2025-10-06,2025-10-22,2025-10-21,False,False,0.0,False,,,,,PRJ-6687,Q3-2025,15731.400000000001
-PO-2024-00215,2024-07-25,Canyon Fabricators LLC,Thermal Management,Standard,25,5603.29,2024-09-23,2024-10-03,2024-10-03,False,False,0.0,False,,,,,PRJ-7715,Q3-2024,140082.25
-PO-2024-00216,2024-05-21,Crestline Tooling Co,Structural,Standard,10,1558.82,2024-08-14,2024-08-12,2024-08-13,False,False,1.0,False,,,,,PRJ-6635,Q2-2024,15588.199999999999
-PO-2024-00217,2024-10-12,Greystone Fabrications,Electrical,Critical,6,2719.27,2024-11-25,2024-12-23,2024-12-24,False,False,1.0,False,,,,,PRJ-5166,Q4-2024,16315.619999999999
-PO-2024-00218,2024-10-10,Cascade Tooling Solutions,Optical,Critical,33,20989.07,2024-11-15,2024-11-12,2024-11-14,False,False,2.0,False,,,,,PRJ-3255,Q4-2024,692639.3099999999
-PO-2025-00219,2025-11-18,Delta Machining Group,Structural,Critical,18,1695.61,2025-12-26,2026-01-02,2026-01-03,False,False,1.0,False,,,,,PRJ-4837,Q4-2025,30520.98
-PO-2024-00220,2024-08-01,Dusk Manufacturing Co,Optical,High,2,28554.18,2024-09-06,2024-09-26,2024-09-29,False,False,3.0,False,,,,,PRJ-4837,Q3-2024,57108.36
-PO-2025-00221,2025-01-20,Ironclad Assemblies,Hydraulic,Standard,56,4582.43,2025-02-15,2025-02-12,2025-02-14,False,False,2.0,False,,,,,PRJ-4837,Q1-2025,256616.08000000002
-PO-2026-00222,2026-03-10,Greystone Fabrications,Thermal Management,High,4,2528.13,2026-03-24,2026-04-16,2026-04-18,False,False,2.0,False,,,,,PRJ-6687,Q1-2026,10112.52
-PO-2025-00223,2025-02-10,Summit Hydraulics LLC,Optical,Standard,10,36571.08,2025-05-06,2025-05-01,2025-05-03,False,False,2.0,False,,,,,PRJ-7027,Q1-2025,365710.80000000005
-PO-2024-00224,2024-07-24,Apex Precision Components,Structural,High,2,1479.64,2024-08-14,2024-08-09,2024-08-10,False,False,1.0,False,,,,,PRJ-7027,Q3-2024,2959.28
-PO-2025-00225,2025-03-28,Alpine Fabrications Inc,Structural,Standard,13,259.54,2025-04-29,2025-04-26,2025-04-28,False,False,2.0,False,,,,,PRJ-6687,Q1-2025,3374.0200000000004
-PO-2024-00226,2024-05-12,NorthStar Electro-Mech,Thermal Management,High,25,2368.79,2024-06-20,2024-06-20,2024-06-21,False,False,1.0,False,,,,,PRJ-6635,Q2-2024,59219.75
-PO-2024-00227,2024-12-25,NorthStar Electro-Mech,Hydraulic,Standard,49,3393.46,2025-01-28,2025-01-23,2025-01-23,False,False,0.0,False,,,,,PRJ-3255,Q4-2024,166279.54
-PO-2026-00228,2026-01-13,NorthStar Electro-Mech,Thermal Management,Critical,7,817.67,2026-03-31,2026-04-05,2026-04-05,False,False,0.0,False,,,,,PRJ-6635,Q1-2026,5723.69
-PO-2024-00229,2024-09-05,Apex Precision Components,Electrical,Critical,19,9838.26,2024-10-19,2024-10-24,2024-10-22,False,False,0.0,False,,,,,PRJ-3255,Q3-2024,186926.94
-PO-2025-00230,2025-12-08,Summit Hydraulics LLC,Hydraulic,Standard,14,2940.25,2026-02-14,2026-02-12,2026-02-14,False,False,2.0,False,,,,,PRJ-8845,Q4-2025,41163.5
-PO-2025-00231,2025-03-02,BlueSky Structural Inc,Structural,Critical,36,56.01,2025-05-31,2025-06-13,2025-06-13,False,False,0.0,True,Wrong Part Delivered,True,5830.96,16.0,PRJ-5166,Q1-2025,2016.36
-PO-2025-00232,2025-08-28,Hollowpoint Alloys Inc,Electrical,Standard,46,14892.37,2025-10-05,2025-11-05,2025-11-06,False,False,1.0,True,Surface Finish Defect,True,2020.13,7.0,PRJ-6635,Q3-2025,685049.02
-PO-2026-00233,2026-01-11,Coastal Precision Parts,Thermal Management,Standard,39,2244.45,2026-02-26,2026-03-12,2026-03-16,False,False,4.0,False,,,,,PRJ-5458,Q1-2026,87533.54999999999
-PO-2024-00234,2024-03-25,Riverton Manufacturing,Mechanical,High,7,3612.64,2024-05-24,2024-06-13,,False,True,,False,,,,,PRJ-5458,Q1-2024,25288.48
-PO-2025-00235,2025-10-14,NorthStar Electro-Mech,Electrical,High,40,11412.46,2025-12-24,2025-12-21,2025-12-23,False,False,2.0,False,,,,,PRJ-6635,Q4-2025,456498.39999999997
-PO-2026-00236,2026-03-01,Dusk Manufacturing Co,Mechanical,Standard,4,421.44,2026-05-13,2026-06-08,2026-06-16,True,False,8.0,False,,,,,PRJ-5721,Q1-2026,1685.76
-PO-2024-00237,2024-01-27,Riverton Manufacturing,Structural,Critical,14,205.63,2024-04-14,2024-05-29,,False,True,,False,,,,,PRJ-6687,Q1-2024,2878.8199999999997
-PO-2026-00238,2026-02-27,Bayside Precision LLC,Structural,High,5,1822.5,2026-04-29,2026-05-20,2026-05-19,False,False,0.0,False,,,,,PRJ-4837,Q1-2026,9112.5
-PO-2024-00239,2024-08-27,Bayside Precision LLC,Structural,Standard,78,1497.23,2024-10-02,2024-10-21,2024-10-20,False,False,0.0,False,,,,,PRJ-5166,Q3-2024,116783.94
-PO-2025-00240,2025-08-21,Eagle Ridge Components,Hydraulic,Standard,1,7457.94,2025-10-12,2025-10-18,2025-10-18,False,False,0.0,False,,,,,PRJ-6687,Q3-2025,7457.94
-PO-2024-00241,2024-10-06,NorthStar Electro-Mech,Mechanical,Standard,1,769.84,2024-11-27,2024-11-29,2024-11-27,False,False,0.0,False,,,,,PRJ-6635,Q4-2024,769.84
-PO-2024-00242,2024-08-08,NorthStar Electro-Mech,Mechanical,High,7,3930.07,2024-08-22,2024-08-19,2024-08-20,False,False,1.0,False,,,,,PRJ-7027,Q3-2024,27510.49
-PO-2024-00243,2024-10-06,Stratos Machined Parts,Mechanical,Critical,19,628.47,2024-11-25,2024-11-24,2024-11-24,False,False,0.0,False,,,,,PRJ-3255,Q4-2024,11940.93
-PO-2026-00244,2026-02-25,NorthStar Electro-Mech,Thermal Management,Standard,38,293.42,2026-03-19,2026-03-18,2026-03-16,False,False,0.0,False,,,,,PRJ-4837,Q1-2026,11149.960000000001
-PO-2025-00245,2025-04-23,Bayside Precision LLC,Hydraulic,High,18,4692.85,2025-07-10,2025-08-05,2025-08-11,True,False,6.0,False,,,,,PRJ-7715,Q2-2025,84471.3
-PO-2024-00246,2024-06-12,Ridgeline Hydraulics,Mechanical,Standard,26,4414.98,2024-08-17,2024-08-22,2024-08-26,False,False,4.0,False,,,,,PRJ-5721,Q2-2024,114789.47999999998
-PO-2024-00247,2024-07-12,Ironclad Assemblies,Thermal Management,Standard,31,5789.52,2024-08-04,2024-07-31,2024-08-02,False,False,2.0,False,,,,,PRJ-6635,Q3-2024,179475.12000000002
-PO-2024-00248,2024-12-13,Dusk Manufacturing Co,Thermal Management,Critical,41,5649.62,2025-02-10,2025-02-23,2025-03-05,True,False,10.0,False,,,,,PRJ-6687,Q4-2024,231634.41999999998
-PO-2025-00249,2025-02-24,Foxridge Assemblies,Thermal Management,Critical,4,739.99,2025-04-24,2025-05-13,2025-05-23,True,False,10.0,False,,,,,PRJ-2978,Q1-2025,2959.96
-PO-2024-00250,2024-11-02,Dusk Manufacturing Co,Hydraulic,High,21,2078.33,2024-12-24,2025-01-11,2025-01-24,True,False,13.0,True,Surface Finish Defect,True,5233.1,22.0,PRJ-8845,Q4-2024,43644.93
-PO-2026-00251,2026-01-13,Prairie Industrial Supply,Thermal Management,Standard,3,4282.43,2026-03-27,2026-03-29,2026-03-30,False,False,1.0,False,,,,,PRJ-6635,Q1-2026,12847.29
-PO-2024-00252,2024-10-29,Foxridge Assemblies,Structural,Critical,70,1217.48,2025-01-03,2025-01-30,2025-01-31,False,False,1.0,True,Wrong Part Delivered,True,11285.99,17.0,PRJ-3255,Q4-2024,85223.6
-PO-2025-00253,2025-10-16,Pacific Alloy Works,Thermal Management,Critical,2,4509.7,2025-11-04,2025-11-02,2025-10-31,False,False,0.0,False,,,,,PRJ-8845,Q4-2025,9019.4
-PO-2024-00254,2024-11-28,Meridian Fastener Corp,Hydraulic,Standard,3,4089.66,2025-02-03,2025-02-03,2025-02-03,False,False,0.0,False,,,,,PRJ-3691,Q4-2024,12268.98
-PO-2024-00255,2024-10-28,Apex Precision Components,Mechanical,Standard,37,1923.44,2024-12-31,2024-12-29,2024-12-28,False,False,0.0,False,,,,,PRJ-6635,Q4-2024,71167.28
-PO-2024-00256,2024-07-08,Crestfall Components,Electrical,High,17,7652.96,2024-08-21,2024-08-27,2024-08-26,False,False,0.0,False,,,,,PRJ-5721,Q3-2024,130100.32
-PO-2025-00257,2025-01-28,Delta Machining Group,Structural,Standard,1,1388.1,2025-03-01,2025-03-03,2025-03-04,False,False,1.0,False,,,,,PRJ-4837,Q1-2025,1388.1
-PO-2025-00258,2025-08-27,Lakeview Thermal Systems,Structural,Standard,39,1285.14,2025-10-01,2025-10-06,2025-10-14,True,False,8.0,False,,,,,PRJ-5721,Q3-2025,50120.46000000001
-PO-2024-00259,2024-11-29,Cascade Tooling Solutions,Structural,Critical,11,1443.49,2025-01-23,2025-01-18,2025-01-19,False,False,1.0,False,,,,,PRJ-5166,Q4-2024,15878.39
-PO-2026-00260,2026-01-13,Mesa Components Corp,Hydraulic,High,19,6308.75,2026-02-22,2026-03-05,2026-03-05,False,False,0.0,False,,,,,PRJ-5458,Q1-2026,119866.25
-PO-2025-00261,2025-07-21,BlueSky Structural Inc,Electrical,High,31,5821.86,2025-09-05,2025-09-16,2025-09-17,False,False,1.0,False,,,,,PRJ-3255,Q3-2025,180477.66
-PO-2025-00262,2025-11-29,Mesa Components Corp,Thermal Management,Critical,15,4295.6,2026-01-24,2026-01-27,2026-01-28,False,False,1.0,False,,,,,PRJ-5458,Q4-2025,64434.00000000001
-PO-2025-00263,2025-10-02,NorthStar Electro-Mech,Optical,Standard,11,40091.54,2025-11-04,2025-11-02,2025-11-04,False,False,2.0,False,,,,,PRJ-6687,Q4-2025,441006.94
-PO-2024-00264,2024-11-16,NorthStar Electro-Mech,Mechanical,High,24,533.4,2024-12-08,2024-12-10,2024-12-11,False,False,1.0,False,,,,,PRJ-7715,Q4-2024,12801.599999999999
-PO-2024-00265,2024-07-20,NorthStar Electro-Mech,Hydraulic,Critical,22,1037.45,2024-09-23,2024-09-23,2024-09-25,False,False,2.0,False,,,,,PRJ-2978,Q3-2024,22823.9
-PO-2024-00266,2024-06-04,Western Alloy Fab,Optical,High,25,42165.57,2024-07-02,2024-07-13,2024-07-14,False,False,1.0,False,,,,,PRJ-4837,Q2-2024,1054139.25
-PO-2025-00267,2025-12-14,Foxridge Assemblies,Mechanical,High,6,3539.91,2026-01-12,2026-01-25,2026-01-24,False,False,0.0,False,,,,,PRJ-2978,Q4-2025,21239.46
-PO-2024-00268,2024-09-06,Bayside Precision LLC,Structural,Standard,10,1171.43,2024-11-09,2024-11-27,2024-11-27,False,False,0.0,True,Damaged in Transit,True,8018.29,19.0,PRJ-3255,Q3-2024,11714.300000000001
-PO-2024-00269,2024-04-30,Dusk Manufacturing Co,Mechanical,High,24,554.02,2024-06-13,2024-07-02,2024-07-14,True,False,12.0,False,,,,,PRJ-8845,Q2-2024,13296.48
-PO-2026-00270,2026-01-01,Foxridge Assemblies,Hydraulic,High,17,3919.89,2026-03-15,2026-04-03,2026-04-11,True,False,8.0,False,,,,,PRJ-7715,Q1-2026,66638.13
-PO-2024-00271,2024-12-15,Greystone Fabrications,Optical,Standard,1,10569.72,2025-01-19,2025-01-30,2025-01-31,False,False,1.0,True,Dimension Non-Conformance,True,3565.62,19.0,PRJ-2978,Q4-2024,10569.72
-PO-2025-00272,2025-02-02,Bayside Precision LLC,Mechanical,Standard,10,928.58,2025-03-08,2025-03-16,2025-03-29,True,False,13.0,False,,,,,PRJ-7027,Q1-2025,9285.800000000001
-PO-2024-00273,2024-01-11,Apex Precision Components,Electrical,Critical,41,14590.82,2024-02-09,2024-02-09,2024-02-08,False,False,0.0,False,,,,,PRJ-3255,Q1-2024,598223.62
-PO-2024-00274,2024-09-13,NorthStar Electro-Mech,Electrical,Standard,11,11409.92,2024-11-24,2024-11-27,2024-11-27,False,False,0.0,False,,,,,PRJ-6635,Q3-2024,125509.12
-PO-2024-00275,2024-07-26,Pacific Alloy Works,Thermal Management,High,9,2490.24,2024-09-13,2024-09-08,2024-09-07,False,False,0.0,False,,,,,PRJ-6635,Q3-2024,22412.159999999996
-PO-2024-00276,2024-03-13,BlueSky Structural Inc,Optical,High,48,39465.6,2024-05-02,2024-05-02,2024-05-07,True,False,5.0,False,,,,,PRJ-8845,Q1-2024,1894348.7999999998
-PO-2024-00277,2024-05-29,Bayside Precision LLC,Optical,Standard,18,32808.47,2024-08-17,2024-09-04,2024-09-20,True,False,16.0,False,,,,,PRJ-5166,Q2-2024,590552.46
-PO-2024-00278,2024-11-27,Lowland Metal Works,Optical,High,16,7750.74,2024-12-13,2025-01-01,2025-01-13,True,False,12.0,True,Dimension Non-Conformance,True,1826.2,12.0,PRJ-7715,Q4-2024,124011.84
-PO-2024-00279,2024-12-22,Redwood Stampings Inc,Hydraulic,Critical,15,5479.11,2025-02-17,2025-02-19,2025-02-20,False,False,1.0,False,,,,,PRJ-5458,Q4-2024,82186.65
-PO-2025-00280,2025-05-28,Greystone Fabrications,Structural,Critical,9,1446.33,2025-06-11,2025-06-28,2025-06-28,False,False,0.0,True,Poor Workmanship,True,10072.3,1.0,PRJ-5458,Q2-2025,13016.97
-PO-2024-00281,2024-11-22,Crestfall Components,Structural,High,74,973.03,2025-01-28,2025-02-11,2025-02-13,False,False,2.0,False,,,,,PRJ-3255,Q4-2024,72004.22
-PO-2026-00282,2026-02-02,Greystone Fabrications,Structural,Standard,26,1089.18,2026-04-14,2026-04-30,2026-05-02,False,False,2.0,True,Wrong Part Delivered,True,2627.5,4.0,PRJ-6635,Q1-2026,28318.68
-PO-2025-00283,2025-06-09,Apex Precision Components,Hydraulic,High,14,3799.36,2025-07-15,2025-07-12,2025-07-13,False,False,1.0,False,,,,,PRJ-8845,Q2-2025,53191.04
-PO-2025-00284,2025-12-04,Hollowpoint Alloys Inc,Hydraulic,High,79,5856.07,2026-01-21,2026-02-19,2026-02-26,True,False,7.0,True,Supplier BOM Error,True,3403.76,21.0,PRJ-6687,Q4-2025,462629.52999999997
-PO-2026-00285,2026-02-18,Dusk Manufacturing Co,Thermal Management,Standard,3,2801.98,2026-05-15,2026-06-08,2026-06-10,False,False,2.0,True,Surface Finish Defect,True,11219.43,7.0,PRJ-8845,Q1-2026,8405.94
-PO-2025-00286,2025-03-10,Granite Valley Mfg,Structural,Critical,17,1533.23,2025-04-22,2025-05-03,2025-05-03,False,False,0.0,True,Dimension Non-Conformance,True,5683.83,11.0,PRJ-5166,Q1-2025,26064.91
-PO-2025-00287,2025-06-01,Dusk Manufacturing Co,Structural,High,10,1888.1,2025-07-10,2025-08-04,2025-08-19,True,False,15.0,False,,,,,PRJ-6687,Q2-2025,18881.0
-PO-2025-00288,2025-11-12,Bayside Precision LLC,Thermal Management,Standard,25,2848.71,2025-11-27,2025-12-06,2025-12-06,False,False,0.0,False,,,,,PRJ-4837,Q4-2025,71217.75
-PO-2025-00289,2025-11-14,Crestline Tooling Co,Electrical,Standard,12,11195.78,2026-01-30,2026-01-27,2026-01-25,False,False,0.0,False,,,,,PRJ-3255,Q4-2025,134349.36000000002
-PO-2024-00290,2024-10-25,Horizon Mech Solutions,Structural,Standard,32,1074.68,2024-11-27,2024-12-05,2024-12-05,False,False,0.0,False,,,,,PRJ-5166,Q4-2024,34389.76
-PO-2024-00291,2024-05-31,Dusk Manufacturing Co,Thermal Management,Standard,27,807.97,2024-06-26,2024-07-09,2024-07-09,False,False,0.0,False,,,,,PRJ-7027,Q2-2024,21815.190000000002
-PO-2026-00292,2026-01-21,Dusk Manufacturing Co,Electrical,Standard,12,14226.21,2026-04-13,2026-04-18,2026-04-22,False,False,4.0,False,,,,,PRJ-6687,Q1-2026,170714.52
-PO-2025-00293,2025-06-06,Lakewood Electro Systems,Structural,Critical,11,1756.22,2025-07-03,2025-07-06,2025-07-13,True,False,7.0,False,,,,,PRJ-7715,Q2-2025,19318.420000000002
-PO-2026-00294,2026-02-20,Lakeview Thermal Systems,Mechanical,Standard,21,2394.0,2026-05-11,2026-05-20,2026-05-21,False,False,1.0,False,,,,,PRJ-7715,Q1-2026,50274.0
-PO-2025-00295,2025-12-12,Mesa Components Corp,Structural,High,30,926.49,2026-01-11,2026-01-23,2026-01-23,False,False,0.0,False,,,,,PRJ-7715,Q4-2025,27794.7
-PO-2025-00296,2025-08-26,Dusk Manufacturing Co,Optical,Standard,2,10423.2,2025-09-19,2025-10-07,2025-10-09,False,False,2.0,False,,,,,PRJ-5458,Q3-2025,20846.4
-PO-2026-00297,2026-01-18,Crestline Tooling Co,Hydraulic,High,14,2871.74,2026-02-10,2026-02-15,2026-02-17,False,False,2.0,False,,,,,PRJ-4837,Q1-2026,40204.36
-PO-2025-00298,2025-09-29,Riverton Manufacturing,Optical,Standard,32,46713.89,2025-10-13,2025-10-26,2025-10-29,False,False,3.0,False,,,,,PRJ-2978,Q3-2025,1494844.48
-PO-2025-00299,2025-01-01,Summit Hydraulics LLC,Thermal Management,High,58,5295.0,2025-03-20,2025-03-24,2025-03-25,False,False,1.0,False,,,,,PRJ-7027,Q1-2025,307110.0
-PO-2025-00300,2025-07-22,Summit Hydraulics LLC,Mechanical,Standard,54,1089.42,2025-08-09,2025-08-13,2025-08-15,False,False,2.0,False,,,,,PRJ-5166,Q3-2025,58828.68000000001
-PO-2024-00301,2024-11-04,Summit Hydraulics LLC,Hydraulic,High,6,414.14,2024-12-01,2024-12-04,2024-12-02,False,False,0.0,False,,,,,PRJ-5166,Q4-2024,2484.84
-PO-2024-00302,2024-06-12,NorthStar Electro-Mech,Optical,Critical,26,37449.9,2024-08-07,2024-08-08,2024-08-06,False,False,0.0,False,,,,,PRJ-5166,Q2-2024,973697.4
-PO-2025-00303,2025-01-20,Meridian Fastener Corp,Structural,Critical,20,581.7,2025-03-06,2025-03-06,2025-03-05,False,False,0.0,False,,,,,PRJ-7715,Q1-2025,11634.0
-PO-2024-00304,2024-02-04,BlueSky Structural Inc,Thermal Management,Standard,14,3275.22,2024-03-13,2024-03-22,2024-03-30,True,False,8.0,False,,,,,PRJ-5721,Q1-2024,45853.079999999994
-PO-2024-00305,2024-08-18,Granite Valley Mfg,Mechanical,Standard,23,624.87,2024-09-12,2024-09-19,2024-09-18,False,False,0.0,False,,,,,PRJ-4837,Q3-2024,14372.01
-PO-2024-00306,2024-04-13,Apex Precision Components,Hydraulic,Standard,2,2330.98,2024-05-16,2024-05-21,2024-05-19,False,False,0.0,False,,,,,PRJ-5458,Q2-2024,4661.96
-PO-2024-00307,2024-10-19,Lakewood Electro Systems,Structural,Critical,9,1168.94,2024-12-10,2024-12-12,2024-12-11,False,False,0.0,False,,,,,PRJ-5721,Q4-2024,10520.460000000001
-PO-2024-00308,2024-08-05,Bayside Precision LLC,Optical,High,9,16107.52,2024-08-31,2024-09-09,2024-09-09,False,False,0.0,True,Supplier BOM Error,False,,23.0,PRJ-3255,Q3-2024,144967.68
-PO-2025-00309,2025-08-21,Hollowpoint Alloys Inc,Mechanical,Standard,123,657.95,2025-10-15,2025-11-11,,False,True,,False,,,,,PRJ-8845,Q3-2025,80927.85
-PO-2024-00310,2024-02-26,Badlands Components LLC,Structural,Standard,13,1917.07,2024-04-09,2024-05-03,2024-06-15,True,False,43.0,True,Wrong Part Delivered,True,1010.71,23.0,PRJ-8845,Q1-2024,24921.91
-PO-2024-00311,2024-08-15,Ironwood Tooling Group,Electrical,High,12,3242.39,2024-11-06,2024-11-21,2024-11-20,False,False,0.0,True,Supplier BOM Error,False,,24.0,PRJ-3255,Q3-2024,38908.68
-PO-2024-00312,2024-10-24,BlueSky Structural Inc,Electrical,High,9,2695.91,2024-12-28,2025-01-09,2025-01-09,False,False,0.0,False,,,,,PRJ-7027,Q4-2024,24263.19
-PO-2026-00313,2026-02-20,Canyon Fabricators LLC,Optical,Critical,21,13765.54,2026-04-27,2026-05-09,2026-05-08,False,False,0.0,False,,,,,PRJ-3255,Q1-2026,289076.34
-PO-2025-00314,2025-04-07,NorthStar Electro-Mech,Structural,Critical,20,1394.52,2025-06-25,2025-06-29,2025-07-01,False,False,2.0,False,,,,,PRJ-8845,Q2-2025,27890.4
-PO-2026-00315,2026-01-01,Trident Industrial Parts,Electrical,High,36,13928.68,2026-02-15,2026-02-27,2026-03-03,False,False,4.0,False,,,,,PRJ-6635,Q1-2026,501432.48
-PO-2024-00316,2024-01-20,Dusk Manufacturing Co,Mechanical,High,51,4680.37,2024-03-06,2024-03-21,2024-03-20,False,False,0.0,False,,,,,PRJ-5721,Q1-2024,238698.87
-PO-2025-00317,2025-01-04,Hollowpoint Alloys Inc,Optical,Standard,16,34194.93,2025-02-28,2025-04-09,2025-05-06,True,False,27.0,True,Damaged in Transit,True,9270.9,15.0,PRJ-3255,Q1-2025,547118.88
-PO-2025-00318,2025-08-17,Delta Machining Group,Mechanical,High,15,4696.7,2025-10-02,2025-10-15,2025-10-15,False,False,0.0,False,,,,,PRJ-2978,Q3-2025,70450.5
-PO-2025-00319,2025-03-23,Dusk Manufacturing Co,Thermal Management,Standard,10,199.85,2025-06-07,2025-06-20,2025-06-21,False,False,1.0,False,,,,,PRJ-7715,Q1-2025,1998.5
-PO-2025-00320,2025-07-22,Lakewood Electro Systems,Thermal Management,Standard,7,3301.26,2025-08-18,2025-08-23,2025-08-24,False,False,1.0,False,,,,,PRJ-4837,Q3-2025,23108.82
-PO-2024-00321,2024-06-18,Dusk Manufacturing Co,Optical,High,16,24226.82,2024-09-13,2024-10-13,2024-10-26,True,False,13.0,False,,,,,PRJ-6635,Q2-2024,387629.12
-PO-2026-00322,2026-01-19,Mesa Components Corp,Thermal Management,Standard,3,5223.1,2026-03-14,2026-03-19,2026-03-20,False,False,1.0,False,,,,,PRJ-4837,Q1-2026,15669.300000000001
-PO-2024-00323,2024-09-01,Riverton Manufacturing,Hydraulic,High,7,7057.31,2024-10-13,2024-11-12,2024-11-19,True,False,7.0,True,Poor Workmanship,False,,19.0,PRJ-5458,Q3-2024,49401.170000000006
-PO-2025-00324,2025-05-22,BlueSky Structural Inc,Mechanical,Standard,7,4677.65,2025-06-24,2025-07-09,2025-07-09,False,False,0.0,False,,,,,PRJ-3255,Q2-2025,32743.549999999996
-PO-2024-00325,2024-04-18,BlueSky Structural Inc,Mechanical,High,13,3514.58,2024-06-24,2024-07-04,2024-07-05,False,False,1.0,False,,,,,PRJ-5166,Q2-2024,45689.54
-PO-2024-00326,2024-09-15,Granite Valley Mfg,Mechanical,High,3,4291.01,2024-11-23,2024-12-06,2024-12-07,False,False,1.0,False,,,,,PRJ-7027,Q3-2024,12873.03
-PO-2025-00327,2025-01-03,Riverton Manufacturing,Optical,Standard,12,46329.54,2025-03-23,2025-04-27,2025-05-13,True,False,16.0,True,Surface Finish Defect,False,,5.0,PRJ-2978,Q1-2025,555954.48
-PO-2026-00328,2026-03-11,Bayside Precision LLC,Hydraulic,Critical,12,737.0,2026-04-16,2026-05-03,2026-05-04,False,False,1.0,False,,,,,PRJ-5166,Q1-2026,8844.0
-PO-2024-00329,2024-06-26,Bayside Precision LLC,Structural,Standard,25,602.22,2024-07-31,2024-08-19,2024-08-28,True,False,9.0,False,,,,,PRJ-6687,Q2-2024,15055.5
-PO-2024-00330,2024-06-27,NorthStar Electro-Mech,Mechanical,Critical,67,4438.61,2024-09-06,2024-09-04,2024-09-05,False,False,1.0,False,,,,,PRJ-8845,Q2-2024,297386.87
-PO-2024-00331,2024-03-17,NorthStar Electro-Mech,Optical,Standard,10,37483.98,2024-05-11,2024-05-16,2024-05-17,False,False,1.0,False,,,,,PRJ-4837,Q1-2024,374839.80000000005
-PO-2024-00332,2024-12-24,Riverton Manufacturing,Thermal Management,Standard,5,1170.67,2025-02-15,2025-03-21,2025-04-07,True,False,17.0,False,,,,,PRJ-2978,Q4-2024,5853.35
-PO-2026-00333,2026-03-05,Crestfall Components,Thermal Management,Standard,37,1938.34,2026-04-23,2026-05-10,2026-05-11,False,False,1.0,False,,,,,PRJ-6635,Q1-2026,71718.58
-PO-2024-00334,2024-12-02,Dusk Manufacturing Co,Hydraulic,Critical,50,948.98,2025-01-01,2025-01-26,2025-01-28,False,False,2.0,False,,,,,PRJ-3255,Q4-2024,47449.0
-PO-2025-00335,2025-05-24,Keystone Bearing Systems,Thermal Management,Standard,18,3484.56,2025-07-08,2025-07-12,2025-07-11,False,False,0.0,False,,,,,PRJ-8845,Q2-2025,62722.08
-PO-2025-00336,2025-07-03,NorthStar Electro-Mech,Structural,Standard,18,1121.0,2025-08-30,2025-09-01,2025-09-02,False,False,1.0,False,,,,,PRJ-5721,Q3-2025,20178.0
-PO-2026-00337,2026-03-27,BlueSky Structural Inc,Electrical,High,25,2409.05,2026-06-11,2026-06-16,2026-06-17,False,False,1.0,False,,,,,PRJ-3691,Q1-2026,60226.25000000001
-PO-2024-00338,2024-01-20,NorthStar Electro-Mech,Structural,High,12,565.81,2024-04-18,2024-04-19,2024-04-18,False,False,0.0,False,,,,,PRJ-7027,Q1-2024,6789.719999999999
-PO-2024-00339,2024-03-15,NorthStar Electro-Mech,Electrical,Standard,18,6640.62,2024-04-09,2024-04-13,2024-04-13,False,False,0.0,False,,,,,PRJ-7027,Q1-2024,119531.16
-PO-2024-00340,2024-03-29,Crestline Tooling Co,Structural,Critical,24,1285.54,2024-05-21,2024-05-18,2024-05-16,False,False,0.0,False,,,,,PRJ-5166,Q1-2024,30852.96
-PO-2025-00341,2025-08-24,Meridian Fastener Corp,Mechanical,Standard,18,4281.53,2025-10-07,2025-10-12,2025-10-13,False,False,1.0,False,,,,,PRJ-7027,Q3-2025,77067.54
-PO-2024-00342,2024-08-20,Greystone Fabrications,Thermal Management,Standard,2,2412.88,2024-09-21,2024-10-08,2024-10-08,False,False,0.0,True,Surface Finish Defect,True,10951.76,22.0,PRJ-3255,Q3-2024,4825.76
-PO-2024-00343,2024-11-25,Pacific Alloy Works,Optical,Standard,93,19075.65,2025-01-29,2025-01-27,2025-01-25,False,False,0.0,False,,,,,PRJ-3691,Q4-2024,1774035.4500000002
-PO-2024-00344,2024-12-04,NorthStar Electro-Mech,Electrical,High,46,9770.62,2025-02-27,2025-03-02,2025-03-02,False,False,0.0,False,,,,,PRJ-5166,Q4-2024,449448.52
-PO-2024-00345,2024-07-31,Harbor Castings LLC,Mechanical,Standard,25,754.64,2024-10-02,2024-10-05,2024-10-05,False,False,0.0,False,,,,,PRJ-2978,Q3-2024,18866.0
-PO-2025-00346,2025-11-20,Vega Electronics Ltd,Hydraulic,Standard,96,1380.79,2025-12-12,2025-12-17,2025-12-17,False,False,0.0,False,,,,,PRJ-7715,Q4-2025,132555.84
-PO-2025-00347,2025-04-11,BlueSky Structural Inc,Hydraulic,Standard,14,1078.33,2025-05-11,2025-05-12,2025-05-12,False,False,0.0,False,,,,,PRJ-4837,Q2-2025,15096.619999999999
-PO-2024-00348,2024-07-15,Dusk Manufacturing Co,Thermal Management,Standard,34,5836.87,2024-08-19,2024-09-18,2024-09-20,False,False,2.0,False,,,,,PRJ-5458,Q3-2024,198453.58
-PO-2025-00349,2025-09-28,Apex Precision Components,Mechanical,High,12,3885.08,2025-11-21,2025-11-21,2025-11-21,False,False,0.0,False,,,,,PRJ-7027,Q3-2025,46620.96
-PO-2024-00350,2024-01-16,Granite Valley Mfg,Thermal Management,Standard,20,4815.86,2024-03-18,2024-04-01,2024-04-01,False,False,0.0,False,,,,,PRJ-7027,Q1-2024,96317.2
-PO-2025-00351,2025-06-29,Stratos Machined Parts,Hydraulic,Standard,8,6700.72,2025-08-07,2025-08-06,2025-08-07,False,False,1.0,False,,,,,PRJ-5458,Q2-2025,53605.76
-PO-2026-00352,2026-02-28,Greystone Fabrications,Mechanical,High,27,4621.72,2026-04-21,2026-05-03,2026-05-04,False,False,1.0,True,Damaged in Transit,True,6275.92,13.0,PRJ-5721,Q1-2026,124786.44
-PO-2025-00353,2025-08-20,NorthStar Electro-Mech,Mechanical,High,20,2218.68,2025-10-04,2025-10-05,2025-10-03,False,False,0.0,False,,,,,PRJ-3255,Q3-2025,44373.6
-PO-2025-00354,2025-05-20,Apex Precision Components,Structural,High,17,1930.98,2025-06-12,2025-06-12,2025-06-14,False,False,2.0,False,,,,,PRJ-3255,Q2-2025,32826.66
-PO-2024-00355,2024-11-12,Dusk Manufacturing Co,Mechanical,Standard,98,2472.82,2025-01-08,2025-02-07,2025-02-27,True,False,20.0,True,Damaged in Transit,True,3345.38,17.0,PRJ-3691,Q4-2024,242336.36000000002
-PO-2025-00356,2025-03-22,Delta Machining Group,Thermal Management,Standard,6,309.9,2025-04-13,2025-04-21,2025-04-20,False,False,0.0,False,,,,,PRJ-5721,Q1-2025,1859.3999999999999
-PO-2024-00357,2024-09-18,Badlands Components LLC,Electrical,High,6,3261.73,2024-11-01,2024-11-30,2025-01-07,True,False,38.0,False,,,,,PRJ-7027,Q3-2024,19570.38
-PO-2024-00358,2024-12-02,Western Alloy Fab,Electrical,Critical,34,14255.56,2025-03-01,2025-03-10,2025-03-11,False,False,1.0,False,,,,,PRJ-4837,Q4-2024,484689.04
-PO-2025-00359,2025-08-02,Bayside Precision LLC,Electrical,Standard,15,953.09,2025-08-24,2025-09-02,2025-09-21,True,False,19.0,False,,,,,PRJ-7715,Q3-2025,14296.35
-PO-2025-00360,2025-05-13,BlueSky Structural Inc,Structural,Critical,3,1444.31,2025-06-25,2025-07-03,2025-07-02,False,False,0.0,False,,,,,PRJ-4837,Q2-2025,4332.93
-PO-2024-00361,2024-10-23,Meridian Fastener Corp,Electrical,High,20,11757.54,2024-11-13,2024-11-18,2024-11-16,False,False,0.0,False,,,,,PRJ-3691,Q4-2024,235150.80000000002
-PO-2024-00362,2024-06-12,Hollowpoint Alloys Inc,Optical,Standard,2,36422.62,2024-08-22,2024-09-28,2024-10-26,True,False,28.0,False,,,,,PRJ-4837,Q2-2024,72845.24
-PO-2024-00363,2024-04-13,Lowland Metal Works,Structural,Standard,11,1862.74,2024-05-10,2024-05-19,2024-05-19,False,False,0.0,False,,,,,PRJ-8845,Q2-2024,20490.14
-PO-2025-00364,2025-10-30,BlueSky Structural Inc,Structural,Standard,18,1089.65,2025-11-14,2025-11-14,2025-11-13,False,False,0.0,False,,,,,PRJ-3691,Q4-2025,19613.7
-PO-2024-00365,2024-09-16,Greystone Fabrications,Optical,Standard,17,35938.1,2024-10-08,2024-10-20,2024-10-19,False,False,0.0,False,,,,,PRJ-8845,Q3-2024,610947.7
-PO-2024-00366,2024-08-08,Pacific Alloy Works,Mechanical,Standard,23,1425.86,2024-08-30,2024-09-04,2024-09-06,False,False,2.0,False,,,,,PRJ-2978,Q3-2024,32794.78
-PO-2025-00367,2025-12-31,Crestfall Components,Hydraulic,Standard,14,1342.29,2026-03-03,2026-03-18,2026-03-17,False,False,0.0,False,,,,,PRJ-5458,Q4-2025,18792.059999999998
-PO-2024-00368,2024-11-30,Western Alloy Fab,Mechanical,Standard,17,4891.23,2025-01-31,2025-02-08,2025-02-07,False,False,0.0,False,,,,,PRJ-2978,Q4-2024,83150.90999999999
-PO-2024-00369,2024-08-09,Helix Precision Mfg,Thermal Management,Standard,7,3518.49,2024-09-10,2024-09-12,2024-09-13,False,False,1.0,False,,,,,PRJ-5721,Q3-2024,24629.43
-PO-2024-00370,2024-12-18,Tri-State Fabricators Inc,Hydraulic,Standard,1,5141.73,2025-03-07,2025-03-14,2025-03-13,False,False,0.0,True,Surface Finish Defect,True,8880.57,21.0,PRJ-3255,Q4-2024,5141.73
-PO-2025-00371,2025-10-27,Cascade Tooling Solutions,Electrical,Critical,2,11850.27,2026-01-10,2026-01-10,2026-01-10,False,False,0.0,False,,,,,PRJ-3255,Q4-2025,23700.54
-PO-2025-00372,2025-05-15,Apex Precision Components,Optical,Standard,18,27292.73,2025-08-06,2025-08-10,2025-08-11,False,False,1.0,False,,,,,PRJ-7715,Q2-2025,491269.14
-PO-2025-00373,2025-09-09,BlueSky Structural Inc,Hydraulic,Standard,5,2206.24,2025-10-19,2025-10-26,2025-10-27,False,False,1.0,False,,,,,PRJ-5458,Q3-2025,11031.199999999999
-PO-2024-00374,2024-09-15,Crestline Tooling Co,Electrical,Critical,1,7736.21,2024-11-29,2024-11-28,2024-11-28,False,False,0.0,False,,,,,PRJ-7715,Q3-2024,7736.21
-PO-2024-00375,2024-04-07,Riverton Manufacturing,Mechanical,Standard,6,286.26,2024-06-29,2024-08-01,2024-09-11,True,False,41.0,True,Wrong Part Delivered,False,,13.0,PRJ-2978,Q2-2024,1717.56
-PO-2025-00376,2025-02-20,NorthStar Electro-Mech,Structural,Standard,6,1610.63,2025-04-11,2025-04-06,2025-04-07,False,False,1.0,False,,,,,PRJ-4837,Q1-2025,9663.78
-PO-2025-00377,2025-03-05,Dusk Manufacturing Co,Mechanical,High,9,1564.69,2025-03-24,2025-04-01,2025-04-01,False,False,0.0,False,,,,,PRJ-5166,Q1-2025,14082.210000000001
-PO-2024-00378,2024-04-27,BlueSky Structural Inc,Optical,High,33,1373.18,2024-05-30,2024-05-31,2024-05-31,False,False,0.0,False,,,,,PRJ-3691,Q2-2024,45314.94
-PO-2024-00379,2024-10-17,Apex Precision Components,Optical,Standard,5,19839.01,2024-11-02,2024-11-05,2024-11-06,False,False,1.0,False,,,,,PRJ-6687,Q4-2024,99195.04999999999
-PO-2025-00380,2025-12-10,Summit Hydraulics LLC,Optical,Standard,4,47425.69,2026-03-10,2026-03-05,2026-03-07,False,False,2.0,False,,,,,PRJ-4837,Q4-2025,189702.76
-PO-2025-00381,2025-12-22,Cascade Tooling Solutions,Mechanical,Standard,22,468.43,2026-02-02,2026-02-05,2026-02-06,False,False,1.0,False,,,,,PRJ-6635,Q4-2025,10305.460000000001
-PO-2024-00382,2024-07-20,Apex Precision Components,Optical,Standard,10,49566.27,2024-10-04,2024-10-08,2024-10-09,False,False,1.0,False,,,,,PRJ-8845,Q3-2024,495662.69999999995
-PO-2024-00383,2024-06-02,NorthStar Electro-Mech,Structural,Standard,22,682.0,2024-08-01,2024-08-05,2024-08-03,False,False,0.0,False,,,,,PRJ-2978,Q2-2024,15004.0
-PO-2025-00384,2025-03-22,Dusk Manufacturing Co,Optical,High,6,27850.07,2025-05-11,2025-05-20,2025-05-21,False,False,1.0,False,,,,,PRJ-4837,Q1-2025,167100.41999999998
-PO-2024-00385,2024-11-29,Bayside Precision LLC,Mechanical,High,23,1441.81,2024-12-28,2025-01-24,2025-02-06,True,False,13.0,True,Surface Finish Defect,True,2629.78,9.0,PRJ-5721,Q4-2024,33161.63
-PO-2025-00386,2025-02-13,Bayside Precision LLC,Optical,Standard,41,32315.25,2025-05-03,2025-05-27,2025-06-11,True,False,15.0,False,,,,,PRJ-3255,Q1-2025,1324925.25
-PO-2025-00387,2025-04-16,Dusk Manufacturing Co,Electrical,High,8,13111.21,2025-06-24,2025-07-03,2025-07-23,True,False,20.0,True,Supplier BOM Error,True,7336.93,24.0,PRJ-3255,Q2-2025,104889.68
-PO-2025-00388,2025-01-25,Crestfall Components,Hydraulic,High,43,6240.58,2025-04-16,2025-05-08,2025-05-10,False,False,2.0,False,,,,,PRJ-3255,Q1-2025,268344.94
-PO-2025-00389,2025-10-13,NorthStar Electro-Mech,Electrical,Critical,2,5939.96,2025-11-09,2025-11-06,2025-11-06,False,False,0.0,False,,,,,PRJ-5458,Q4-2025,11879.92
-PO-2024-00390,2024-05-20,Dusk Manufacturing Co,Structural,High,97,142.97,2024-07-05,2024-07-26,2024-08-01,True,False,6.0,False,,,,,PRJ-7715,Q2-2024,13868.09
-PO-2025-00391,2025-03-25,Delta Machining Group,Thermal Management,High,11,298.53,2025-06-14,2025-06-21,2025-06-21,False,False,0.0,False,,,,,PRJ-6687,Q1-2025,3283.83
-PO-2025-00392,2025-03-19,Silverado Machining,Mechanical,High,7,850.66,2025-05-22,2025-05-26,2025-05-26,False,False,0.0,False,,,,,PRJ-5166,Q1-2025,5954.62
-PO-2025-00393,2025-06-18,Apex Precision Components,Optical,Standard,49,41795.02,2025-07-17,2025-07-20,2025-07-19,False,False,0.0,False,,,,,PRJ-5721,Q2-2025,2047955.9799999997
-PO-2025-00394,2025-03-03,Horizon Mech Solutions,Mechanical,High,17,4475.63,2025-05-29,2025-06-03,2025-06-04,False,False,1.0,True,Dimension Non-Conformance,False,,12.0,PRJ-7027,Q1-2025,76085.71
-PO-2025-00395,2025-09-15,Dusk Manufacturing Co,Structural,Standard,25,960.66,2025-10-20,2025-11-07,2025-11-06,False,False,0.0,False,,,,,PRJ-7715,Q3-2025,24016.5
-PO-2025-00396,2025-07-11,Helix Precision Mfg,Mechanical,High,5,574.01,2025-09-25,2025-09-22,2025-09-20,False,False,0.0,False,,,,,PRJ-4837,Q3-2025,2870.05
-PO-2025-00397,2025-01-15,Dusk Manufacturing Co,Optical,Standard,20,1403.48,2025-04-03,2025-04-09,2025-04-18,True,False,9.0,True,Wrong Part Delivered,False,,11.0,PRJ-4837,Q1-2025,28069.6
-PO-2024-00398,2024-05-19,Delta Machining Group,Structural,High,21,1941.85,2024-08-10,2024-08-13,2024-08-14,False,False,1.0,False,,,,,PRJ-8845,Q2-2024,40778.85
-PO-2025-00399,2025-01-13,Bayside Precision LLC,Thermal Management,High,5,3826.71,2025-04-03,2025-05-01,2025-05-14,True,False,13.0,False,,,,,PRJ-8845,Q1-2025,19133.55
-PO-2024-00400,2024-02-25,Ironclad Assemblies,Optical,Standard,1,48610.87,2024-04-24,2024-04-20,2024-04-22,False,False,2.0,False,,,,,PRJ-5458,Q1-2024,48610.87
-PO-2024-00401,2024-06-19,Dusk Manufacturing Co,Optical,High,10,9364.27,2024-09-01,2024-09-13,2024-09-14,False,False,1.0,False,,,,,PRJ-5166,Q2-2024,93642.70000000001
-PO-2025-00402,2025-02-07,Greystone Fabrications,Mechanical,Standard,25,2455.07,2025-03-20,2025-04-13,2025-04-19,True,False,6.0,True,Poor Workmanship,True,4013.12,17.0,PRJ-5166,Q1-2025,61376.75000000001
-PO-2024-00403,2024-04-23,Bayside Precision LLC,Electrical,Critical,50,125.88,2024-07-16,2024-08-03,2024-08-05,False,False,2.0,False,,,,,PRJ-5458,Q2-2024,6294.0
-PO-2026-00404,2026-01-20,Bayside Precision LLC,Optical,High,14,49407.49,2026-04-12,2026-05-02,2026-05-03,False,False,1.0,False,,,,,PRJ-5458,Q1-2026,691704.86
-PO-2024-00405,2024-11-23,NorthStar Electro-Mech,Hydraulic,Critical,7,2250.76,2025-02-10,2025-02-13,2025-02-15,False,False,2.0,False,,,,,PRJ-2978,Q4-2024,15755.320000000002
-PO-2024-00406,2024-11-18,Dusk Manufacturing Co,Electrical,Standard,38,14747.99,2025-02-06,2025-03-06,2025-03-05,False,False,0.0,False,,,,,PRJ-5166,Q4-2024,560423.62
-PO-2024-00407,2024-10-28,Lakewood Electro Systems,Electrical,Standard,8,4458.03,2025-01-16,2025-01-29,2025-01-30,False,False,1.0,False,,,,,PRJ-5721,Q4-2024,35664.24
-PO-2024-00408,2024-11-23,Hollowpoint Alloys Inc,Optical,Critical,97,41553.45,2024-12-20,2025-01-09,,False,True,,False,,,,,PRJ-5166,Q4-2024,4030684.65
-PO-2025-00409,2025-12-10,Apex Precision Components,Mechanical,High,12,62.79,2026-01-10,2026-01-10,2026-01-12,False,False,2.0,False,,,,,PRJ-5458,Q4-2025,753.48
-PO-2024-00410,2024-12-21,Apex Precision Components,Structural,High,87,1908.86,2025-01-14,2025-01-13,2025-01-15,False,False,2.0,False,,,,,PRJ-5166,Q4-2024,166070.81999999998
-PO-2025-00411,2025-01-19,Eagle Ridge Components,Thermal Management,Critical,72,383.3,2025-02-11,2025-02-24,2025-02-23,False,False,0.0,False,,,,,PRJ-3255,Q1-2025,27597.600000000002
-PO-2025-00412,2025-11-23,Dusk Manufacturing Co,Optical,High,50,23431.21,2025-12-31,2026-01-07,2026-01-09,False,False,2.0,False,,,,,PRJ-4837,Q4-2025,1171560.5
-PO-2025-00413,2025-08-31,Dusk Manufacturing Co,Structural,Standard,8,1716.71,2025-09-24,2025-09-29,2025-10-01,False,False,2.0,False,,,,,PRJ-7027,Q3-2025,13733.68
-PO-2026-00414,2026-02-10,Crestfall Components,Thermal Management,Standard,8,4271.44,2026-03-21,2026-04-15,2026-04-16,False,False,1.0,False,,,,,PRJ-3255,Q1-2026,34171.52
-PO-2025-00415,2025-02-27,Badlands Components LLC,Hydraulic,High,65,6897.45,2025-04-28,2025-05-14,,False,True,,True,Surface Finish Defect,True,408.43,10.0,PRJ-6635,Q1-2025,448334.25
-PO-2024-00416,2024-07-22,Bayside Precision LLC,Mechanical,Standard,12,58.74,2024-08-15,2024-08-25,2024-08-24,False,False,0.0,True,Damaged in Transit,False,,12.0,PRJ-6687,Q3-2024,704.88
-PO-2026-00417,2026-02-12,Coastal Precision Parts,Hydraulic,Standard,6,934.03,2026-02-26,2026-03-01,2026-03-07,True,False,6.0,False,,,,,PRJ-5721,Q1-2026,5604.18
-PO-2025-00418,2025-07-27,Alpine Fabrications Inc,Hydraulic,Standard,20,4391.35,2025-09-12,2025-09-16,2025-09-15,False,False,0.0,False,,,,,PRJ-3255,Q3-2025,87827.0
-PO-2025-00419,2025-04-17,Foxridge Assemblies,Hydraulic,High,3,5940.95,2025-06-09,2025-06-19,2025-06-20,False,False,1.0,False,,,,,PRJ-3255,Q2-2025,17822.85
-PO-2024-00420,2024-03-03,BlueSky Structural Inc,Thermal Management,High,38,1117.23,2024-05-13,2024-05-28,2024-06-02,True,False,5.0,False,,,,,PRJ-5458,Q1-2024,42454.74
-PO-2025-00421,2025-12-17,Crestfall Components,Hydraulic,High,5,3396.33,2026-03-04,2026-03-23,2026-03-29,True,False,6.0,True,Damaged in Transit,True,10549.19,6.0,PRJ-3691,Q4-2025,16981.65
-PO-2025-00422,2025-12-29,Bayside Precision LLC,Electrical,Standard,4,3047.63,2026-02-07,2026-02-18,2026-02-26,True,False,8.0,False,,,,,PRJ-5458,Q4-2025,12190.52
-PO-2026-00423,2026-01-23,Prairie Industrial Supply,Structural,High,32,1453.04,2026-03-05,2026-03-20,2026-03-28,True,False,8.0,True,Supplier BOM Error,True,11031.1,9.0,PRJ-3255,Q1-2026,46497.28
-PO-2024-00424,2024-04-06,Hollowpoint Alloys Inc,Hydraulic,Standard,22,3363.75,2024-06-13,2024-06-28,2024-07-05,True,False,7.0,True,Damaged in Transit,True,5552.1,22.0,PRJ-4837,Q2-2024,74002.5
-PO-2025-00425,2025-10-21,NorthStar Electro-Mech,Electrical,Critical,31,10361.93,2025-11-12,2025-11-15,2025-11-15,False,False,0.0,False,,,,,PRJ-6687,Q4-2025,321219.83
-PO-2025-00426,2025-01-23,Dusk Manufacturing Co,Structural,Standard,4,355.15,2025-03-23,2025-04-01,2025-03-31,False,False,0.0,True,Dimension Non-Conformance,True,10333.16,11.0,PRJ-4837,Q1-2025,1420.6
-PO-2024-00427,2024-06-29,Greystone Fabrications,Thermal Management,Critical,99,4571.63,2024-08-10,2024-08-20,2024-09-03,True,False,14.0,False,,,,,PRJ-6635,Q2-2024,452591.37
-PO-2024-00428,2024-09-17,Lowland Metal Works,Hydraulic,High,8,3318.55,2024-10-27,2024-11-05,2024-11-06,False,False,1.0,False,,,,,PRJ-7715,Q3-2024,26548.4
-PO-2024-00429,2024-09-19,NorthStar Electro-Mech,Optical,Critical,10,22280.97,2024-11-30,2024-11-27,2024-11-29,False,False,2.0,False,,,,,PRJ-6635,Q3-2024,222809.7
-PO-2025-00430,2025-06-19,Greystone Fabrications,Structural,Standard,15,1353.65,2025-07-12,2025-07-26,2025-07-28,False,False,2.0,True,Supplier BOM Error,False,,14.0,PRJ-5166,Q2-2025,20304.75
-PO-2025-00431,2025-11-11,Delta Machining Group,Thermal Management,High,29,3453.47,2026-01-05,2026-01-07,2026-01-08,False,False,1.0,False,,,,,PRJ-6687,Q4-2025,100150.62999999999
-PO-2025-00432,2025-11-14,BlueSky Structural Inc,Thermal Management,High,12,1081.48,2025-12-10,2025-12-18,2025-12-18,False,False,0.0,False,,,,,PRJ-7027,Q4-2025,12977.76
-PO-2024-00433,2024-09-08,BlueSky Structural Inc,Optical,Standard,25,25840.58,2024-10-25,2024-10-31,2024-11-01,False,False,1.0,False,,,,,PRJ-5166,Q3-2024,646014.5
-PO-2025-00434,2025-10-12,Ironwood Tooling Group,Structural,Standard,8,161.16,2025-11-17,2025-11-22,2025-11-21,False,False,0.0,False,,,,,PRJ-5166,Q4-2025,1289.28
-PO-2025-00435,2025-02-24,Summit Hydraulics LLC,Electrical,Standard,27,11682.72,2025-05-07,2025-05-08,2025-05-07,False,False,0.0,False,,,,,PRJ-6687,Q1-2025,315433.44
-PO-2025-00436,2025-06-03,Bayside Precision LLC,Optical,Standard,35,38332.4,2025-08-11,2025-08-31,2025-08-30,False,False,0.0,False,,,,,PRJ-7027,Q2-2025,1341634.0
-PO-2025-00437,2025-03-09,Granite Valley Mfg,Hydraulic,Standard,20,4561.49,2025-04-18,2025-04-19,2025-04-20,False,False,1.0,True,Poor Workmanship,True,3468.94,10.0,PRJ-6687,Q1-2025,91229.79999999999
-PO-2025-00438,2025-04-05,Polaris Metals Group,Thermal Management,High,12,4537.2,2025-06-08,2025-06-06,2025-06-06,False,False,0.0,False,,,,,PRJ-7027,Q2-2025,54446.399999999994
-PO-2024-00439,2024-01-30,Ridgeline Hydraulics,Mechanical,High,54,4718.14,2024-03-20,2024-04-01,2024-04-02,False,False,1.0,False,,,,,PRJ-5721,Q1-2024,254779.56000000003
-PO-2024-00440,2024-10-18,Alpine Fabrications Inc,Mechanical,High,40,1589.44,2024-12-28,2024-12-27,2024-12-29,False,False,2.0,False,,,,,PRJ-5721,Q4-2024,63577.600000000006
-PO-2024-00441,2024-07-14,Lakewood Electro Systems,Hydraulic,High,11,4026.02,2024-08-21,2024-08-28,2024-08-27,False,False,0.0,True,Wrong Part Delivered,True,9313.51,20.0,PRJ-7715,Q3-2024,44286.22
-PO-2024-00442,2024-05-27,Silverado Machining,Electrical,High,15,10111.28,2024-07-07,2024-07-15,2024-07-17,False,False,2.0,False,,,,,PRJ-8845,Q2-2024,151669.2
-PO-2024-00443,2024-09-18,Apex Precision Components,Hydraulic,High,29,218.43,2024-12-03,2024-12-04,2024-12-06,False,False,2.0,False,,,,,PRJ-3691,Q3-2024,6334.47
-PO-2025-00444,2025-11-26,NorthStar Electro-Mech,Mechanical,Standard,14,4421.04,2026-01-22,2026-01-17,2026-01-19,False,False,2.0,True,Poor Workmanship,True,4857.92,24.0,PRJ-5721,Q4-2025,61894.56
-PO-2025-00445,2025-07-20,Dusk Manufacturing Co,Optical,Critical,43,37314.29,2025-09-18,2025-09-30,,False,True,,True,Wrong Part Delivered,True,1237.52,13.0,PRJ-4837,Q3-2025,1604514.47
-PO-2025-00446,2025-06-04,NorthStar Electro-Mech,Hydraulic,High,18,349.81,2025-06-19,2025-06-23,2025-06-22,False,False,0.0,False,,,,,PRJ-5721,Q2-2025,6296.58
-PO-2024-00447,2024-12-20,NorthStar Electro-Mech,Thermal Management,Critical,21,4591.95,2025-01-24,2025-01-28,2025-01-26,False,False,0.0,False,,,,,PRJ-6635,Q4-2024,96430.95
-PO-2024-00448,2024-12-13,Greystone Fabrications,Optical,Standard,1,43856.68,2025-02-14,2025-03-15,2025-03-27,True,False,12.0,True,Dimension Non-Conformance,True,8041.9,14.0,PRJ-6635,Q4-2024,43856.68
-PO-2026-00449,2026-03-09,Ridgeline Hydraulics,Hydraulic,High,6,6524.47,2026-03-25,2026-04-03,2026-04-04,False,False,1.0,False,,,,,PRJ-6687,Q1-2026,39146.82
-PO-2024-00450,2024-10-30,Apex Precision Components,Structural,Standard,6,411.17,2024-12-12,2024-12-07,2024-12-07,False,False,0.0,False,,,,,PRJ-5721,Q4-2024,2467.02
-PO-2024-00451,2024-10-03,Western Alloy Fab,Hydraulic,High,49,2944.46,2024-12-08,2024-12-09,2024-12-09,False,False,0.0,False,,,,,PRJ-3691,Q4-2024,144278.54
-PO-2026-00452,2026-02-11,Granite Valley Mfg,Structural,Standard,38,1389.68,2026-04-20,2026-04-28,2026-05-02,False,False,4.0,False,,,,,PRJ-5721,Q1-2026,52807.840000000004
-PO-2025-00453,2025-01-22,Bayside Precision LLC,Structural,Standard,18,893.44,2025-04-21,2025-05-21,2025-05-20,False,False,0.0,True,Dimension Non-Conformance,True,4272.35,6.0,PRJ-2978,Q1-2025,16081.920000000002
-PO-2024-00454,2024-05-28,BlueSky Structural Inc,Thermal Management,Standard,33,177.15,2024-08-02,2024-08-12,2024-08-11,False,False,0.0,False,,,,,PRJ-6635,Q2-2024,5845.95
-PO-2025-00455,2025-01-12,Bayside Precision LLC,Optical,Standard,39,4482.81,2025-04-09,2025-04-19,2025-04-20,False,False,1.0,False,,,,,PRJ-3255,Q1-2025,174829.59000000003
-PO-2024-00456,2024-02-18,Dusk Manufacturing Co,Thermal Management,High,35,1159.66,2024-04-03,2024-04-14,,False,True,,False,,,,,PRJ-5458,Q1-2024,40588.100000000006
-PO-2025-00457,2025-07-25,Hollowpoint Alloys Inc,Electrical,Critical,1,8385.88,2025-09-26,2025-10-08,2025-11-02,True,False,25.0,True,Supplier BOM Error,True,3433.57,10.0,PRJ-3255,Q3-2025,8385.88
-PO-2025-00458,2025-08-25,Greystone Fabrications,Optical,Critical,11,26864.23,2025-10-02,2025-10-14,2025-10-19,True,False,5.0,False,,,,,PRJ-3691,Q3-2025,295506.52999999997
-PO-2025-00459,2025-02-03,Prairie Industrial Supply,Thermal Management,High,45,5394.75,2025-04-19,2025-04-26,2025-04-25,False,False,0.0,False,,,,,PRJ-3691,Q1-2025,242763.75
-PO-2025-00460,2025-03-20,Keystone Bearing Systems,Optical,Standard,23,47583.84,2025-04-28,2025-04-26,2025-04-27,False,False,1.0,False,,,,,PRJ-3255,Q1-2025,1094428.3199999998
-PO-2026-00461,2026-03-05,Lowland Metal Works,Structural,High,5,1420.14,2026-05-02,2026-05-30,2026-05-31,False,False,1.0,True,Damaged in Transit,False,,11.0,PRJ-7027,Q1-2026,7100.700000000001
-PO-2025-00462,2025-01-05,NorthStar Electro-Mech,Structural,Critical,65,1185.71,2025-03-13,2025-03-09,2025-03-09,False,False,0.0,False,,,,,PRJ-2978,Q1-2025,77071.15000000001
-PO-2024-00463,2024-02-04,BlueSky Structural Inc,Mechanical,Standard,20,2751.53,2024-04-09,2024-04-14,2024-04-14,False,False,0.0,False,,,,,PRJ-4837,Q1-2024,55030.600000000006
-PO-2026-00464,2026-02-27,Mesa Components Corp,Structural,Critical,14,1073.81,2026-04-22,2026-04-29,2026-04-29,False,False,0.0,False,,,,,PRJ-5458,Q1-2026,15033.34
-PO-2025-00465,2025-10-30,Dusk Manufacturing Co,Optical,High,110,33342.83,2025-12-26,2026-01-18,2026-01-27,True,False,9.0,False,,,,,PRJ-2978,Q4-2025,3667711.3000000003
-PO-2024-00466,2024-07-01,Hollowpoint Alloys Inc,Electrical,Standard,5,1957.48,2024-08-21,2024-09-14,2024-10-16,True,False,32.0,False,,,,,PRJ-5458,Q3-2024,9787.4
-PO-2026-00467,2026-01-28,Polaris Metals Group,Thermal Management,Standard,13,1752.46,2026-04-05,2026-04-06,2026-04-07,False,False,1.0,False,,,,,PRJ-3691,Q1-2026,22781.98
-PO-2025-00468,2025-01-23,NorthStar Electro-Mech,Hydraulic,Standard,4,4722.8,2025-03-24,2025-03-20,2025-03-18,False,False,0.0,False,,,,,PRJ-7027,Q1-2025,18891.2
-PO-2024-00469,2024-09-02,Hollowpoint Alloys Inc,Thermal Management,High,23,2498.09,2024-09-20,2024-10-19,2024-11-27,True,False,39.0,False,,,,,PRJ-5458,Q3-2024,57456.07000000001
-PO-2025-00470,2025-05-23,Apex Precision Components,Hydraulic,Standard,23,5023.23,2025-08-04,2025-08-06,2025-08-05,False,False,0.0,False,,,,,PRJ-4837,Q2-2025,115534.29
-PO-2024-00471,2024-05-26,Dusk Manufacturing Co,Electrical,Standard,39,13800.76,2024-06-12,2024-07-05,2024-07-09,False,False,4.0,True,Damaged in Transit,False,,8.0,PRJ-4837,Q2-2024,538229.64
-PO-2025-00472,2025-06-22,Greystone Fabrications,Structural,Standard,6,1388.74,2025-09-09,2025-10-09,2025-10-09,False,False,0.0,False,,,,,PRJ-8845,Q2-2025,8332.44
-PO-2025-00473,2025-08-08,Greystone Fabrications,Electrical,Standard,26,2619.49,2025-09-09,2025-09-17,2025-10-04,True,False,17.0,False,,,,,PRJ-7715,Q3-2025,68106.73999999999
-PO-2024-00474,2024-07-20,Greystone Fabrications,Electrical,Standard,7,10162.38,2024-10-15,2024-11-03,2024-11-06,False,False,3.0,True,Supplier BOM Error,False,,6.0,PRJ-4837,Q3-2024,71136.65999999999
-PO-2025-00475,2025-12-28,Apex Precision Components,Hydraulic,Standard,5,2541.93,2026-03-15,2026-03-12,2026-03-12,False,False,0.0,False,,,,,PRJ-4837,Q4-2025,12709.65
-PO-2025-00476,2025-10-02,Bayside Precision LLC,Hydraulic,High,4,881.93,2025-11-01,2025-12-01,2025-12-18,True,False,17.0,False,,,,,PRJ-4837,Q4-2025,3527.72
-PO-2025-00477,2025-03-09,Bayside Precision LLC,Structural,Critical,23,128.0,2025-06-03,2025-06-30,2025-06-29,False,False,0.0,False,,,,,PRJ-5458,Q1-2025,2944.0
-PO-2026-00478,2026-01-20,Vega Electronics Ltd,Thermal Management,Critical,70,2056.19,2026-02-17,2026-02-16,2026-02-16,False,False,0.0,False,,,,,PRJ-2978,Q1-2026,143933.30000000002
-PO-2025-00479,2025-08-07,Polaris Metals Group,Structural,Standard,89,1631.28,2025-09-16,2025-09-14,2025-09-14,False,False,0.0,False,,,,,PRJ-6635,Q3-2025,145183.91999999998
-PO-2024-00480,2024-05-16,BlueSky Structural Inc,Optical,High,12,8562.61,2024-07-24,2024-08-01,2024-08-07,True,False,6.0,True,Wrong Part Delivered,True,6902.15,17.0,PRJ-3691,Q2-2024,102751.32
-PO-2025-00481,2025-04-18,Granite Valley Mfg,Structural,Standard,9,934.68,2025-05-03,2025-05-18,2025-05-19,False,False,1.0,False,,,,,PRJ-5458,Q2-2025,8412.119999999999
-PO-2025-00482,2025-10-09,Riverton Manufacturing,Thermal Management,Standard,1,4818.78,2025-11-16,2025-12-09,2025-12-25,True,False,16.0,True,Poor Workmanship,False,,20.0,PRJ-3691,Q4-2025,4818.78
-PO-2024-00483,2024-12-03,Greystone Fabrications,Thermal Management,High,12,3595.36,2025-02-27,2025-03-15,2025-03-30,True,False,15.0,False,,,,,PRJ-7027,Q4-2024,43144.32
-PO-2024-00484,2024-10-07,Harbor Castings LLC,Electrical,Standard,1,12219.16,2024-12-07,2024-12-17,2024-12-24,True,False,7.0,False,,,,,PRJ-5721,Q4-2024,12219.16
-PO-2024-00485,2024-12-17,Bayside Precision LLC,Electrical,Standard,12,12574.15,2025-03-01,2025-03-30,2025-03-31,False,False,1.0,True,Dimension Non-Conformance,True,10648.37,21.0,PRJ-2978,Q4-2024,150889.8
-PO-2024-00486,2024-06-15,Timberline Fasteners,Thermal Management,Standard,7,3622.03,2024-08-09,2024-08-22,2024-08-23,False,False,1.0,False,,,,,PRJ-6635,Q2-2024,25354.210000000003
-PO-2025-00487,2025-03-23,Western Alloy Fab,Optical,Standard,19,15740.31,2025-05-18,2025-05-28,2025-05-27,False,False,0.0,False,,,,,PRJ-5458,Q1-2025,299065.89
-PO-2025-00488,2025-12-23,Prairie Industrial Supply,Mechanical,Standard,46,722.56,2026-01-20,2026-02-01,2026-02-09,True,False,8.0,False,,,,,PRJ-3255,Q4-2025,33237.759999999995
-PO-2024-00489,2024-12-15,NorthStar Electro-Mech,Hydraulic,Standard,59,6808.04,2025-02-04,2025-02-05,2025-02-06,False,False,1.0,False,,,,,PRJ-5721,Q4-2024,401674.36
-PO-2025-00490,2025-03-22,Eagle Ridge Components,Optical,Critical,97,19394.63,2025-04-14,2025-04-27,2025-04-28,False,False,1.0,False,,,,,PRJ-6635,Q1-2025,1881279.11
-PO-2025-00491,2025-01-23,Lowland Metal Works,Electrical,High,14,9442.9,2025-03-20,2025-04-19,2025-04-21,False,False,2.0,False,,,,,PRJ-8845,Q1-2025,132200.6
-PO-2025-00492,2025-03-04,Ironclad Assemblies,Mechanical,Standard,1,4394.2,2025-05-06,2025-05-04,2025-05-05,False,False,1.0,False,,,,,PRJ-5721,Q1-2025,4394.2
-PO-2025-00493,2025-08-17,Apex Precision Components,Mechanical,High,1,3636.01,2025-11-01,2025-11-06,2025-11-07,False,False,1.0,False,,,,,PRJ-2978,Q3-2025,3636.01
-PO-2024-00494,2024-08-16,Silverado Machining,Thermal Management,Standard,31,5168.85,2024-10-24,2024-11-08,2024-11-07,False,False,0.0,False,,,,,PRJ-5166,Q3-2024,160234.35
-PO-2024-00495,2024-12-08,Stratos Machined Parts,Structural,Standard,13,686.4,2025-02-16,2025-02-19,2025-02-17,False,False,0.0,False,,,,,PRJ-7715,Q4-2024,8923.199999999999
-PO-2024-00496,2024-09-18,Apex Precision Components,Thermal Management,High,39,433.67,2024-10-31,2024-11-02,2024-11-01,False,False,0.0,False,,,,,PRJ-2978,Q3-2024,16913.13
-PO-2024-00497,2024-07-23,Riverton Manufacturing,Electrical,High,3,5014.86,2024-10-09,2024-11-05,2024-11-20,True,False,15.0,False,,,,,PRJ-5166,Q3-2024,15044.579999999998
-PO-2024-00498,2024-03-24,Timberline Fasteners,Hydraulic,Standard,10,3694.38,2024-05-28,2024-06-09,2024-06-08,False,False,0.0,False,,,,,PRJ-5458,Q1-2024,36943.8
-PO-2025-00499,2025-12-29,Badlands Components LLC,Optical,High,7,48322.12,2026-02-14,2026-03-28,2026-03-30,False,False,2.0,True,Dimension Non-Conformance,True,5517.57,12.0,PRJ-2978,Q4-2025,338254.84
-PO-2026-00500,2026-03-05,Riverton Manufacturing,Hydraulic,Standard,5,7941.23,2026-04-02,2026-04-30,2026-05-25,True,False,25.0,True,Supplier BOM Error,True,9732.09,1.0,PRJ-5458,Q1-2026,39706.149999999994
-PO-2024-00501,2024-05-02,Helix Precision Mfg,Optical,High,3,12693.56,2024-06-28,2024-06-28,2024-06-29,False,False,1.0,False,,,,,PRJ-3255,Q2-2024,38080.68
+order_id,order_date,supplier_name,component_category,component_criticality,qty_ordered,unit_cost_usd,request_date,commit_date,received_date,is_late_arrived,is_open_late,days_late,has_md_event,md_fault_type,is_supplier_fault,cost_of_rework_usd,days_lost_to_md,project_number,quarter,line_spend_usd,md_fault_owner
+PO-2024-00382,2024-01-01,Granite Valley Mfg,Electrical,High,4,8155.91,2024-03-20,2024-03-26,2024-03-25,False,False,0.0,False,,,,,PRJ-3489,Q1-2024,32623.64,
+PO-2024-00270,2024-01-02,Pacific Alloy Works,Optical,Standard,7,32337.73,2024-01-30,2024-01-27,2024-01-26,False,False,0.0,False,,,,,PRJ-2292,Q1-2024,226364.11,
+PO-2024-ALPN-018,2024-01-05,Alpine Fabrications Inc,Mechanical,Standard,38,2100.94,2024-01-19,2024-01-24,2024-01-23,False,False,0.0,False,,,,,PRJ-6373,Q1-2024,133683.16,
+PO-2024-00184,2024-01-06,Dusk Manufacturing Co,Optical,Standard,25,8475.67,2024-02-19,2024-03-01,2024-03-12,True,False,11.0,False,,,,,PRJ-7778,Q1-2024,211891.75,
+PO-2024-00372,2024-01-07,Horizon Mech Solutions,Mechanical,Standard,24,3739.19,2024-03-10,2024-03-10,2024-03-12,False,False,2.0,True,Supplier BOM Error,True,2221.71,9.0,PRJ-8503,Q1-2024,89740.56,
+PO-2024-00285,2024-01-08,Zenith Alloy Solutions,Structural,Critical,8,1274.22,2024-02-19,2024-02-17,2024-02-18,False,False,1.0,False,,,,,PRJ-9685,Q1-2024,10193.76,
+PO-2024-00224,2024-01-10,Cascade Tooling Solutions,Mechanical,High,15,2388.82,2024-03-29,2024-03-26,2024-03-28,False,False,2.0,False,,,,,PRJ-5522,Q1-2024,35832.3,
+PO-2024-00239,2024-01-11,Ironclad Assemblies,Structural,Standard,28,1882.6,2024-01-29,2024-02-01,2024-02-03,False,False,2.0,False,,,,,PRJ-3594,Q1-2024,52712.799999999996,
+PO-2024-00252,2024-01-11,Badlands Components LLC,Electrical,High,49,6748.77,2024-02-27,2024-03-28,2024-04-05,True,False,8.0,True,Poor Workmanship,True,8516.98,1.0,PRJ-6531,Q1-2024,330689.73000000004,
+PO-2024-00500,2024-01-11,Dusk Manufacturing Co,Hydraulic,Critical,12,2317.01,2024-04-07,2024-05-06,2024-05-07,False,False,1.0,False,,,,,PRJ-8503,Q1-2024,27804.120000000003,
+PO-2024-00024,2024-01-12,Coastal Precision Parts,Hydraulic,High,3,6087.57,2024-02-19,2024-02-25,2024-02-27,False,False,2.0,False,,,,,PRJ-3489,Q1-2024,18262.71,
+PO-2024-00495,2024-01-13,Zenith Alloy Solutions,Mechanical,Standard,9,4054.26,2024-03-10,2024-03-08,2024-03-08,False,False,0.0,False,,,,,PRJ-7778,Q1-2024,36488.340000000004,
+PO-2024-00409,2024-01-17,Badlands Components LLC,Electrical,High,8,14901.82,2024-01-31,2024-03-11,2024-04-24,True,False,44.0,True,Supplier BOM Error,False,,4.0,PRJ-3489,Q1-2024,119214.56,
+PO-2024-00365,2024-01-18,Riverton Manufacturing,Mechanical,High,6,1445.74,2024-04-01,2024-05-04,,False,True,,False,,,,,PRJ-7631,Q1-2024,8674.44,
+PO-2024-00441,2024-01-18,Apex Precision Components,Thermal Management,Standard,11,1398.5,2024-02-21,2024-02-25,2024-02-26,False,False,1.0,False,,,,,PRJ-8503,Q1-2024,15383.5,
+PO-2024-00142,2024-01-19,Ironclad Assemblies,Mechanical,High,40,210.34,2024-04-02,2024-04-04,2024-04-02,False,False,0.0,False,,,,,PRJ-6531,Q1-2024,8413.6,
+PO-2024-00283,2024-01-19,Silverado Machining,Thermal Management,Standard,5,3799.33,2024-02-16,2024-02-16,2024-02-15,False,False,0.0,False,,,,,PRJ-5522,Q1-2024,18996.65,
+PO-2024-00430,2024-01-22,Vega Electronics Ltd,Optical,High,74,9951.33,2024-02-19,2024-02-20,2024-02-22,False,False,2.0,False,,,,,PRJ-9685,Q1-2024,736398.42,
+PO-2024-00175,2024-01-23,Trident Industrial Parts,Optical,High,3,48763.33,2024-02-25,2024-03-08,2024-03-10,False,False,2.0,True,Wrong Part Delivered,False,,18.0,PRJ-9685,Q1-2024,146289.99,
+PO-2024-00037,2024-01-24,Granite Valley Mfg,Thermal Management,Critical,23,589.62,2024-03-11,2024-03-18,2024-03-19,False,False,1.0,False,,,,,PRJ-9600,Q1-2024,13561.26,
+PO-2024-00379,2024-01-31,Ironclad Assemblies,Optical,Standard,50,7765.44,2024-03-29,2024-03-28,2024-03-26,False,False,0.0,False,,,,,PRJ-6531,Q1-2024,388272.0,
+PO-2024-00327,2024-02-05,Trident Industrial Parts,Mechanical,Standard,48,1587.34,2024-02-25,2024-03-16,2024-03-17,False,False,1.0,True,Supplier BOM Error,True,3469.45,18.0,PRJ-2292,Q1-2024,76192.31999999999,
+PO-2024-00294,2024-02-05,Trident Industrial Parts,Structural,Critical,41,1249.71,2024-04-29,2024-05-06,2024-05-19,True,False,13.0,False,,,,,PRJ-3489,Q1-2024,51238.11,
+PO-2024-00279,2024-02-06,Dusk Manufacturing Co,Thermal Management,High,13,3844.8,2024-03-13,2024-03-27,,False,True,,False,,,,,PRJ-7631,Q1-2024,49982.4,
+PO-2024-00155,2024-02-06,Polaris Metals Group,Electrical,High,3,3708.12,2024-04-03,2024-04-04,2024-04-05,False,False,1.0,False,,,,,PRJ-2427,Q1-2024,11124.36,
+PO-2024-00445,2024-02-06,Pacific Alloy Works,Structural,High,12,1337.3,2024-04-19,2024-04-23,2024-04-25,False,False,2.0,False,,,,,PRJ-7778,Q1-2024,16047.599999999999,
+PO-2024-00164,2024-02-07,Granite Valley Mfg,Thermal Management,Standard,1,1182.2,2024-04-04,2024-04-09,2024-04-10,False,False,1.0,False,,,,,PRJ-7778,Q1-2024,1182.2,
+PO-2024-00345,2024-02-09,Lakewood Electro Systems,Optical,Critical,12,49739.1,2024-04-18,2024-05-02,2024-05-02,False,False,0.0,False,,,,,PRJ-8503,Q1-2024,596869.2,
+PO-2024-00067,2024-02-11,Mesa Components Corp,Hydraulic,High,12,5460.15,2024-03-14,2024-03-17,2024-03-22,True,False,5.0,False,,,,,PRJ-6531,Q1-2024,65521.799999999996,
+PO-2024-00468,2024-02-11,Eagle Ridge Components,Electrical,Critical,12,3695.61,2024-05-08,2024-05-15,2024-05-15,False,False,0.0,False,,,,,PRJ-3594,Q1-2024,44347.32,
+PO-2024-00362,2024-02-12,Riverton Manufacturing,Electrical,Standard,42,11543.55,2024-04-22,2024-06-01,2024-06-04,False,False,3.0,False,,,,,PRJ-6531,Q1-2024,484829.1,
+PO-2024-00260,2024-02-13,Stratos Machined Parts,Optical,Standard,26,29857.95,2024-03-08,2024-03-03,2024-03-03,False,False,0.0,False,,,,,PRJ-2188,Q1-2024,776306.7000000001,
+PO-2024-00236,2024-02-14,Hollowpoint Alloys Inc,Structural,Critical,16,1580.95,2024-03-30,2024-05-07,2024-06-07,True,False,31.0,True,Poor Workmanship,True,726.68,3.0,PRJ-9600,Q1-2024,25295.2,
+PO-2024-00063,2024-02-14,Foxridge Assemblies,Thermal Management,High,1,849.06,2024-05-12,2024-06-02,2024-06-15,True,False,13.0,False,,,,,PRJ-7631,Q1-2024,849.06,
+PO-2024-00171,2024-02-15,Ironclad Assemblies,Optical,Critical,1,49051.22,2024-03-11,2024-03-14,2024-03-14,False,False,0.0,False,,,,,PRJ-3594,Q1-2024,49051.22,
+PO-2024-00360,2024-02-18,Granite Valley Mfg,Thermal Management,High,6,4526.14,2024-04-24,2024-04-24,2024-04-23,False,False,0.0,True,Surface Finish Defect,False,,19.0,PRJ-3489,Q1-2024,27156.840000000004,
+PO-2024-00482,2024-02-18,Granite Valley Mfg,Mechanical,High,28,3280.76,2024-03-18,2024-03-23,2024-03-23,False,False,0.0,False,,,,,PRJ-7778,Q1-2024,91861.28,
+PO-2024-00331,2024-02-18,Ironclad Assemblies,Hydraulic,Standard,29,6900.56,2024-04-18,2024-04-14,2024-04-12,False,False,0.0,True,Surface Finish Defect,False,,11.0,PRJ-3594,Q1-2024,200116.24000000002,
+PO-2024-00305,2024-02-18,Badlands Components LLC,Electrical,High,39,12170.58,2024-03-05,2024-03-22,2024-04-19,True,False,28.0,True,Dimension Non-Conformance,True,1004.23,11.0,PRJ-8503,Q1-2024,474652.62,
+PO-2024-00002,2024-02-19,Coastal Precision Parts,Mechanical,Critical,8,4176.95,2024-04-19,2024-04-19,2024-04-20,False,False,1.0,False,,,,,PRJ-2427,Q1-2024,33415.6,
+PO-2024-00434,2024-02-20,Tri-State Fabricators Inc,Electrical,Standard,18,1784.91,2024-04-13,2024-04-14,2024-04-14,False,False,0.0,False,,,,,PRJ-9600,Q1-2024,32128.38,
+PO-2024-00333,2024-02-21,Badlands Components LLC,Structural,High,16,1090.15,2024-04-29,2024-05-19,2024-05-26,True,False,7.0,True,Dimension Non-Conformance,True,7496.93,21.0,PRJ-3594,Q1-2024,17442.4,
+PO-2024-00429,2024-02-21,Keystone Bearing Systems,Hydraulic,Critical,73,2681.83,2024-04-25,2024-04-26,2024-04-24,False,False,0.0,False,,,,,PRJ-3594,Q1-2024,195773.59,
+PO-2024-00008,2024-02-23,Granite Valley Mfg,Hydraulic,Standard,2,1672.93,2024-03-29,2024-04-11,2024-04-11,False,False,0.0,False,,,,,PRJ-5522,Q1-2024,3345.86,
+PO-2024-00187,2024-02-24,Zenith Alloy Solutions,Thermal Management,Critical,8,4984.65,2024-03-09,2024-03-12,2024-03-14,False,False,2.0,False,,,,,PRJ-2188,Q1-2024,39877.2,
+PO-2024-00265,2024-02-28,Crestfall Components,Thermal Management,Standard,4,3787.36,2024-03-24,2024-04-09,2024-04-11,False,False,2.0,False,,,,,PRJ-3594,Q1-2024,15149.44,
+PO-2024-00242,2024-02-28,Trident Industrial Parts,Mechanical,Standard,11,2762.56,2024-04-11,2024-04-30,2024-04-30,False,False,0.0,False,,,,,PRJ-6531,Q1-2024,30388.16,
+PO-2024-00373,2024-03-03,Western Alloy Fab,Hydraulic,Standard,66,1037.81,2024-03-20,2024-03-29,2024-03-30,False,False,1.0,False,,,,,PRJ-6531,Q1-2024,68495.45999999999,
+PO-2024-00397,2024-03-03,Coastal Precision Parts,Mechanical,High,11,4888.89,2024-05-20,2024-05-24,2024-05-24,False,False,0.0,False,,,,,PRJ-6531,Q1-2024,53777.79,
+PO-2024-00426,2024-03-06,Cornerstone Electro-Mech,Hydraulic,High,6,724.93,2024-05-01,2024-05-15,2024-05-15,False,False,0.0,False,,,,,PRJ-7631,Q1-2024,4349.58,
+PO-2024-00087,2024-03-07,Badlands Components LLC,Optical,Standard,22,19207.27,2024-04-29,2024-05-13,2024-05-22,True,False,9.0,True,Damaged in Transit,True,5789.42,25.0,PRJ-2427,Q1-2024,422559.94,
+PO-2024-00425,2024-03-10,Lowland Metal Works,Optical,Critical,3,34716.92,2024-06-08,2024-07-01,2024-07-01,False,False,0.0,True,Supplier BOM Error,True,10145.25,24.0,PRJ-9600,Q1-2024,104150.76,
+PO-2024-00417,2024-03-11,Dusk Manufacturing Co,Optical,Critical,13,1766.3,2024-04-28,2024-05-17,2024-05-19,False,False,2.0,False,,,,,PRJ-3594,Q1-2024,22961.899999999998,
+PO-2024-00470,2024-03-14,Cascade Tooling Solutions,Electrical,Standard,36,9713.6,2024-06-07,2024-06-09,2024-06-07,False,False,0.0,False,,,,,PRJ-9685,Q1-2024,349689.60000000003,
+PO-2024-00088,2024-03-17,Redwood Stampings Inc,Hydraulic,High,7,215.77,2024-06-11,2024-06-15,2024-06-15,False,False,0.0,False,,,,,PRJ-3594,Q1-2024,1510.39,
+PO-2024-00203,2024-03-18,BlueSky Structural Inc,Mechanical,Standard,12,3529.23,2024-05-11,2024-05-16,2024-05-17,False,False,1.0,False,,,,,PRJ-2427,Q1-2024,42350.76,
+PO-2024-00158,2024-03-18,Horizon Mech Solutions,Thermal Management,Critical,27,4279.67,2024-05-09,2024-05-19,2024-05-18,False,False,0.0,False,,,,,PRJ-3594,Q1-2024,115551.09,
+PO-2024-00030,2024-03-19,Cascade Tooling Solutions,Thermal Management,Standard,12,2518.64,2024-04-15,2024-04-11,2024-04-13,False,False,2.0,False,,,,,PRJ-6531,Q1-2024,30223.68,
+PO-2024-00314,2024-03-23,Coastal Precision Parts,Mechanical,High,3,2701.0,2024-05-29,2024-06-06,2024-06-06,False,False,0.0,False,,,,,PRJ-2188,Q1-2024,8103.0,
+PO-2024-00293,2024-03-26,Ironclad Assemblies,Mechanical,Critical,12,925.83,2024-05-21,2024-05-16,2024-05-17,False,False,1.0,True,Poor Workmanship,False,,22.0,PRJ-9685,Q1-2024,11109.960000000001,
+PO-2024-00383,2024-03-27,Dusk Manufacturing Co,Optical,Standard,14,2863.59,2024-04-25,2024-05-04,2024-05-08,False,False,4.0,False,,,,,PRJ-7778,Q1-2024,40090.26,
+PO-2024-ALPN-013,2024-03-27,Alpine Fabrications Inc,Structural,Critical,7,3045.89,2024-04-11,2024-04-15,2024-04-17,False,False,2.0,False,,,,,PRJ-1951,Q1-2024,71875.02,
+PO-2024-00132,2024-03-30,Pacific Alloy Works,Electrical,High,20,5403.24,2024-06-08,2024-06-11,2024-06-13,False,False,2.0,False,,,,,PRJ-5522,Q1-2024,108064.79999999999,
+PO-2024-00251,2024-03-31,Helix Precision Mfg,Hydraulic,Standard,4,6273.84,2024-04-28,2024-04-24,2024-04-22,False,False,0.0,False,,,,,PRJ-2292,Q1-2024,25095.36,
+PO-2024-00128,2024-04-04,Redwood Stampings Inc,Optical,High,2,45653.74,2024-07-02,2024-07-03,2024-07-04,False,False,1.0,False,,,,,PRJ-6531,Q2-2024,91307.48,
+PO-2024-00223,2024-04-05,Granite Valley Mfg,Mechanical,High,19,3367.66,2024-04-30,2024-05-05,2024-05-04,False,False,0.0,False,,,,,PRJ-8503,Q2-2024,63985.53999999999,
+PO-2024-00310,2024-04-06,Keystone Bearing Systems,Structural,Standard,6,1329.16,2024-04-25,2024-04-25,2024-04-27,False,False,2.0,False,,,,,PRJ-2292,Q2-2024,7974.960000000001,
+PO-2024-00021,2024-04-06,Dusk Manufacturing Co,Hydraulic,Critical,10,3110.38,2024-04-27,2024-05-18,2024-05-31,True,False,13.0,False,,,,,PRJ-2292,Q2-2024,31103.800000000003,
+PO-2024-00031,2024-04-07,Foxridge Assemblies,Structural,Standard,85,762.22,2024-05-17,2024-05-31,2024-06-19,True,False,19.0,False,,,,,PRJ-5522,Q2-2024,64788.700000000004,
+PO-2024-ALPN-014,2024-04-07,Alpine Fabrications Inc,Electrical,Standard,30,2269.0,2024-06-02,2024-06-08,2024-06-08,False,False,0.0,False,,,,,PRJ-5167,Q2-2024,181151.61,
+PO-2024-00484,2024-04-09,Granite Valley Mfg,Thermal Management,Standard,10,2451.18,2024-07-04,2024-07-10,2024-07-10,False,False,0.0,False,,,,,PRJ-7778,Q2-2024,24511.8,
+PO-2024-00124,2024-04-10,Zenith Alloy Solutions,Mechanical,Critical,18,4821.4,2024-04-27,2024-04-22,2024-04-20,False,False,0.0,False,,,,,PRJ-9685,Q2-2024,86785.2,
+PO-2024-00317,2024-04-14,Granite Valley Mfg,Hydraulic,High,8,6658.6,2024-05-21,2024-05-27,2024-05-26,False,False,0.0,False,,,,,PRJ-9600,Q2-2024,53268.8,
+PO-2024-00257,2024-04-15,Crestfall Components,Optical,Standard,21,30444.76,2024-06-16,2024-07-08,2024-07-12,False,False,4.0,True,Poor Workmanship,True,2358.02,13.0,PRJ-2292,Q2-2024,639339.96,
+PO-2024-00444,2024-04-20,Zenith Alloy Solutions,Electrical,Standard,58,9462.65,2024-06-03,2024-06-01,2024-05-31,False,False,0.0,False,,,,,PRJ-2188,Q2-2024,548833.7,
+PO-2024-00100,2024-04-20,Dusk Manufacturing Co,Hydraulic,Standard,9,451.11,2024-06-02,2024-06-25,2024-06-24,False,False,0.0,False,,,,,PRJ-3489,Q2-2024,4059.9900000000002,
+PO-2024-00022,2024-04-25,Riverton Manufacturing,Optical,Critical,14,40003.36,2024-05-23,2024-06-22,2024-07-24,True,False,32.0,False,,,,,PRJ-2188,Q2-2024,560047.04,
+PO-2024-00112,2024-04-29,Zenith Alloy Solutions,Thermal Management,Standard,26,2155.73,2024-07-23,2024-07-20,2024-07-20,False,False,0.0,False,,,,,PRJ-2427,Q2-2024,56048.98,
+PO-2024-00393,2024-05-01,Crestfall Components,Thermal Management,Critical,5,2141.41,2024-06-05,2024-06-17,2024-07-07,True,False,20.0,False,,,,,PRJ-5522,Q2-2024,10707.05,
+PO-2024-00191,2024-05-01,Pacific Alloy Works,Thermal Management,Standard,66,5225.75,2024-06-24,2024-06-27,2024-06-26,False,False,0.0,False,,,,,PRJ-8503,Q2-2024,344899.5,
+PO-2024-00038,2024-05-01,Granite Valley Mfg,Optical,Standard,17,40150.14,2024-07-13,2024-07-25,2024-07-25,False,False,0.0,False,,,,,PRJ-9600,Q2-2024,682552.38,
+PO-2024-00371,2024-05-01,Coastal Precision Parts,Mechanical,Standard,3,1679.29,2024-05-25,2024-06-07,2024-06-06,False,False,0.0,False,,,,,PRJ-9685,Q2-2024,5037.87,
+PO-2024-00205,2024-05-05,Badlands Components LLC,Thermal Management,Standard,71,3113.62,2024-05-24,2024-07-12,2024-07-13,False,False,1.0,True,Wrong Part Delivered,True,1646.6,13.0,PRJ-2427,Q2-2024,221067.02,
+PO-2024-00130,2024-05-07,Zenith Alloy Solutions,Structural,Standard,64,1440.86,2024-08-04,2024-08-05,2024-08-05,False,False,0.0,False,,,,,PRJ-2427,Q2-2024,92215.04,
+PO-2024-00308,2024-05-16,Dusk Manufacturing Co,Electrical,Standard,20,10723.71,2024-07-13,2024-08-09,2024-08-10,False,False,1.0,False,,,,,PRJ-8503,Q2-2024,214474.19999999998,
+PO-2024-00395,2024-05-18,Dusk Manufacturing Co,Mechanical,High,63,156.65,2024-06-05,2024-06-14,2024-06-13,False,False,0.0,False,,,,,PRJ-2427,Q2-2024,9868.95,
+PO-2024-00490,2024-05-20,Badlands Components LLC,Hydraulic,Standard,53,7500.2,2024-06-05,2024-07-22,2024-08-28,True,False,37.0,True,Supplier BOM Error,True,1435.24,5.0,PRJ-2427,Q2-2024,397510.6,
+PO-2024-00219,2024-05-20,Badlands Components LLC,Mechanical,Standard,1,3409.96,2024-06-29,2024-08-02,2024-08-17,True,False,15.0,False,,,,,PRJ-2188,Q2-2024,3409.96,
+PO-2024-00176,2024-05-21,Badlands Components LLC,Thermal Management,Critical,16,2224.74,2024-07-29,2024-08-18,2024-09-08,True,False,21.0,True,Wrong Part Delivered,False,,21.0,PRJ-2427,Q2-2024,35595.84,
+PO-2024-00355,2024-05-23,Granite Valley Mfg,Optical,Standard,41,11332.42,2024-06-19,2024-06-29,2024-06-29,False,False,0.0,False,,,,,PRJ-9685,Q2-2024,464629.22000000003,
+PO-2024-00259,2024-05-23,Ironclad Assemblies,Electrical,Standard,13,2635.35,2024-08-12,2024-08-07,2024-08-07,False,False,0.0,False,,,,,PRJ-2188,Q2-2024,34259.549999999996,
+PO-2024-00056,2024-05-25,Badlands Components LLC,Thermal Management,Critical,21,2413.12,2024-07-09,2024-08-04,2024-09-18,True,False,45.0,True,Damaged in Transit,True,9084.98,21.0,PRJ-9600,Q2-2024,50675.52,
+PO-2024-00012,2024-05-26,Badlands Components LLC,Hydraulic,Critical,13,2941.99,2024-08-18,2024-09-25,2024-10-15,True,False,20.0,False,,,,,PRJ-2427,Q2-2024,38245.869999999995,
+PO-2024-00043,2024-05-27,Canyon Fabricators LLC,Thermal Management,Standard,3,4377.2,2024-08-02,2024-08-06,2024-08-13,True,False,7.0,False,,,,,PRJ-7631,Q2-2024,13131.599999999999,
+PO-2024-00330,2024-05-30,Ironclad Assemblies,Hydraulic,Standard,12,6459.69,2024-07-08,2024-07-06,2024-07-06,False,False,0.0,False,,,,,PRJ-7778,Q2-2024,77516.28,
+PO-2024-00075,2024-05-30,Eagle Ridge Components,Mechanical,Critical,11,1019.89,2024-08-28,2024-08-31,2024-09-01,False,False,1.0,False,,,,,PRJ-8503,Q2-2024,11218.789999999999,
+PO-2024-00394,2024-06-04,Lakeview Thermal Systems,Mechanical,Standard,3,2731.67,2024-06-28,2024-06-28,2024-06-30,False,False,2.0,False,,,,,PRJ-2188,Q2-2024,8195.01,
+PO-2024-00202,2024-06-10,Dusk Manufacturing Co,Mechanical,Critical,31,1745.83,2024-07-26,2024-08-07,2024-08-11,False,False,4.0,True,Wrong Part Delivered,True,8412.74,23.0,PRJ-3489,Q2-2024,54120.729999999996,
+PO-2024-00438,2024-06-11,Pacific Alloy Works,Structural,Critical,7,197.04,2024-08-12,2024-08-16,2024-08-16,False,False,0.0,False,,,,,PRJ-8503,Q2-2024,1379.28,
+PO-2024-00111,2024-06-11,Dusk Manufacturing Co,Structural,Critical,12,927.4,2024-09-08,2024-10-02,2024-10-02,False,False,0.0,True,Damaged in Transit,False,,23.0,PRJ-7631,Q2-2024,11128.8,
+PO-2024-00189,2024-06-12,Ironclad Assemblies,Mechanical,Standard,10,4366.28,2024-09-09,2024-09-13,2024-09-12,False,False,0.0,False,,,,,PRJ-7631,Q2-2024,43662.799999999996,
+PO-2024-00366,2024-06-13,Lakewood Electro Systems,Hydraulic,High,4,6215.84,2024-07-31,2024-08-12,2024-08-12,False,False,0.0,False,,,,,PRJ-6531,Q2-2024,24863.36,
+PO-2024-00475,2024-06-17,Pacific Alloy Works,Structural,Standard,4,447.12,2024-07-18,2024-07-15,2024-07-15,False,False,0.0,False,,,,,PRJ-7778,Q2-2024,1788.48,
+PO-2024-00204,2024-06-17,Bayside Precision LLC,Hydraulic,High,20,1494.98,2024-08-07,2024-08-20,2024-08-22,False,False,2.0,False,,,,,PRJ-9685,Q2-2024,29899.6,
+PO-2024-ALPN-017,2024-06-19,Alpine Fabrications Inc,Structural,Standard,9,1342.14,2024-07-05,2024-07-06,2024-07-05,False,False,0.0,False,,,,,PRJ-4037,Q2-2024,5920.55,
+PO-2024-00463,2024-06-20,Dusk Manufacturing Co,Structural,High,15,1012.68,2024-08-11,2024-08-27,2024-08-27,False,False,0.0,False,,,,,PRJ-9600,Q2-2024,15190.199999999999,
+PO-2024-00278,2024-06-27,Zenith Alloy Solutions,Structural,Standard,23,1294.92,2024-07-15,2024-07-10,2024-07-09,False,False,0.0,False,,,,,PRJ-7631,Q2-2024,29783.160000000003,
+PO-2024-00129,2024-06-29,Mesa Components Corp,Structural,Standard,1,911.06,2024-07-17,2024-07-24,2024-07-24,False,False,0.0,False,,,,,PRJ-2427,Q2-2024,911.06,
+PO-2024-00048,2024-06-29,Stratos Machined Parts,Structural,Critical,3,1661.03,2024-09-20,2024-09-25,2024-09-26,False,False,1.0,False,,,,,PRJ-9600,Q2-2024,4983.09,
+PO-2024-00135,2024-06-30,Riverton Manufacturing,Structural,High,5,244.56,2024-07-17,2024-08-12,2024-09-07,True,False,26.0,False,,,,,PRJ-2427,Q2-2024,1222.8,
+PO-2024-00418,2024-07-03,Riverton Manufacturing,Thermal Management,Standard,42,511.96,2024-09-21,2024-10-31,,False,True,,True,Damaged in Transit,True,11479.63,2.0,PRJ-9600,Q3-2024,21502.32,
+PO-2024-00408,2024-07-03,Stratos Machined Parts,Electrical,Standard,24,1193.75,2024-09-22,2024-09-24,2024-09-23,False,False,0.0,False,,,,,PRJ-2292,Q3-2024,28650.0,
+PO-2024-00299,2024-07-07,Helix Precision Mfg,Mechanical,Critical,68,1735.65,2024-08-10,2024-08-12,2024-08-14,False,False,2.0,False,,,,,PRJ-7778,Q3-2024,118024.20000000001,
+PO-2024-ALPN-023,2024-07-08,Alpine Fabrications Inc,Hydraulic,High,23,1604.38,2024-08-19,2024-08-26,2024-08-27,False,False,1.0,False,,,,,PRJ-8857,Q3-2024,35846.84,
+PO-2024-00451,2024-07-09,Badlands Components LLC,Electrical,High,3,3216.57,2024-09-17,2024-10-09,2024-10-15,True,False,6.0,True,Wrong Part Delivered,True,2083.15,24.0,PRJ-3489,Q3-2024,9649.710000000001,
+PO-2024-00226,2024-07-09,Zenith Alloy Solutions,Electrical,High,26,12376.88,2024-08-20,2024-08-18,2024-08-19,False,False,1.0,False,,,,,PRJ-7778,Q3-2024,321798.88,
+PO-2024-00216,2024-07-09,Cascade Tooling Solutions,Mechanical,High,31,2665.29,2024-08-29,2024-08-31,2024-08-30,False,False,0.0,False,,,,,PRJ-9600,Q3-2024,82623.99,
+PO-2024-00102,2024-07-12,Helix Precision Mfg,Structural,Standard,52,1372.56,2024-08-27,2024-08-26,2024-08-28,False,False,2.0,False,,,,,PRJ-3489,Q3-2024,71373.12,
+PO-2024-ALPN-008,2024-07-13,Alpine Fabrications Inc,Structural,Standard,5,5505.76,2024-08-31,2024-08-31,2024-09-01,False,False,1.0,False,,,,,PRJ-2554,Q3-2024,29159.84,
+PO-2024-00465,2024-07-13,Hollowpoint Alloys Inc,Electrical,Standard,34,11394.95,2024-09-25,2024-10-12,2024-10-16,False,False,4.0,False,,,,,PRJ-7631,Q3-2024,387428.30000000005,
+PO-2024-00421,2024-07-13,Coastal Precision Parts,Optical,Standard,12,46957.09,2024-09-17,2024-10-02,2024-10-02,False,False,0.0,False,,,,,PRJ-5522,Q3-2024,563485.08,
+PO-2024-00215,2024-07-14,Ridgeline Hydraulics,Optical,Standard,16,26987.44,2024-08-27,2024-08-27,2024-08-26,False,False,0.0,False,,,,,PRJ-7631,Q3-2024,431799.04,
+PO-2024-00133,2024-07-16,Zenith Alloy Solutions,Optical,Standard,12,42083.66,2024-10-14,2024-10-15,2024-10-16,False,False,1.0,False,,,,,PRJ-2188,Q3-2024,505003.92000000004,
+PO-2024-00281,2024-07-16,Crestline Tooling Co,Thermal Management,High,2,799.12,2024-09-30,2024-09-27,2024-09-28,False,False,1.0,False,,,,,PRJ-7778,Q3-2024,1598.24,
+PO-2024-00459,2024-07-19,Trident Industrial Parts,Electrical,High,3,2156.47,2024-09-24,2024-10-08,2024-10-10,False,False,2.0,False,,,,,PRJ-3594,Q3-2024,6469.41,
+PO-2024-00474,2024-07-19,Lowland Metal Works,Mechanical,Standard,36,1319.79,2024-08-14,2024-08-28,2024-08-29,False,False,1.0,False,,,,,PRJ-6531,Q3-2024,47512.44,
+PO-2024-00097,2024-07-19,Horizon Mech Solutions,Structural,Standard,7,1378.58,2024-09-03,2024-09-16,2024-09-21,True,False,5.0,False,,,,,PRJ-2292,Q3-2024,9650.06,
+PO-2024-00335,2024-07-20,Badlands Components LLC,Thermal Management,Standard,7,4876.52,2024-08-26,2024-09-06,2024-09-30,True,False,24.0,True,Dimension Non-Conformance,True,11854.53,17.0,PRJ-3594,Q3-2024,34135.64,
+PO-2024-00344,2024-07-20,Zenith Alloy Solutions,Thermal Management,Critical,1,4175.02,2024-08-21,2024-08-23,2024-08-21,False,False,0.0,False,,,,,PRJ-3489,Q3-2024,4175.02,
+PO-2024-00387,2024-07-21,Trident Industrial Parts,Hydraulic,Standard,8,5325.11,2024-10-11,2024-10-26,2024-10-27,False,False,1.0,True,Damaged in Transit,True,5778.33,19.0,PRJ-9600,Q3-2024,42600.88,
+PO-2024-00040,2024-07-26,Zenith Alloy Solutions,Thermal Management,High,2,5349.68,2024-10-20,2024-10-15,2024-10-16,False,False,1.0,False,,,,,PRJ-6531,Q3-2024,10699.36,
+PO-2024-00036,2024-07-26,Dusk Manufacturing Co,Mechanical,Standard,29,1745.13,2024-08-15,2024-09-12,2024-09-18,True,False,6.0,False,,,,,PRJ-3594,Q3-2024,50608.770000000004,
+PO-2024-00078,2024-07-26,Dusk Manufacturing Co,Optical,Standard,20,34170.95,2024-10-03,2024-10-19,2024-10-22,False,False,3.0,False,,,,,PRJ-2188,Q3-2024,683419.0,
+PO-2024-00369,2024-07-27,Badlands Components LLC,Structural,High,67,1553.82,2024-08-13,2024-09-13,2024-09-17,False,False,4.0,True,Poor Workmanship,False,,6.0,PRJ-2188,Q3-2024,104105.94,
+PO-2024-00218,2024-07-28,Granite Valley Mfg,Optical,High,10,23559.45,2024-08-30,2024-08-30,2024-09-03,False,False,4.0,False,,,,,PRJ-8503,Q3-2024,235594.5,
+PO-2024-00375,2024-07-28,Dusk Manufacturing Co,Hydraulic,High,28,6706.59,2024-10-23,2024-10-29,2024-11-09,True,False,11.0,False,,,,,PRJ-6531,Q3-2024,187784.52000000002,
+PO-2024-00410,2024-07-30,Redwood Stampings Inc,Electrical,High,11,14630.63,2024-10-17,2024-10-23,2024-10-24,False,False,1.0,False,,,,,PRJ-3489,Q3-2024,160936.93,
+PO-2024-00154,2024-07-30,Ironclad Assemblies,Mechanical,Critical,43,1644.15,2024-08-30,2024-09-02,2024-09-04,False,False,2.0,False,,,,,PRJ-7631,Q3-2024,70698.45,
+PO-2024-00245,2024-07-31,Redwood Stampings Inc,Structural,High,12,1115.5,2024-08-16,2024-08-27,2024-08-26,False,False,0.0,False,,,,,PRJ-8503,Q3-2024,13386.0,
+PO-2024-00093,2024-08-02,Greystone Fabrications,Mechanical,Standard,28,1434.37,2024-10-19,2024-10-31,2024-11-02,False,False,2.0,False,,,,,PRJ-2427,Q3-2024,40162.36,
+PO-2024-00315,2024-08-04,Redwood Stampings Inc,Optical,Standard,15,39703.78,2024-08-21,2024-09-01,2024-09-02,False,False,1.0,False,,,,,PRJ-2188,Q3-2024,595556.7,
+PO-2024-00181,2024-08-04,Pacific Alloy Works,Hydraulic,Standard,15,7443.65,2024-10-16,2024-10-18,2024-10-17,False,False,0.0,False,,,,,PRJ-2427,Q3-2024,111654.75,
+PO-2024-00182,2024-08-05,Dusk Manufacturing Co,Electrical,Standard,35,10730.26,2024-09-03,2024-09-22,2024-09-22,False,False,0.0,False,,,,,PRJ-6531,Q3-2024,375559.10000000003,
+PO-2024-00353,2024-08-06,Zenith Alloy Solutions,Electrical,Standard,28,14745.23,2024-08-23,2024-08-26,2024-08-27,False,False,1.0,False,,,,,PRJ-7778,Q3-2024,412866.44,
+PO-2024-00241,2024-08-07,Stratos Machined Parts,Thermal Management,Standard,27,5948.34,2024-09-25,2024-09-28,2024-09-27,False,False,0.0,False,,,,,PRJ-2427,Q3-2024,160605.18,
+PO-2024-00003,2024-08-07,Ironwood Tooling Group,Structural,Critical,31,1764.04,2024-10-26,2024-11-02,2024-11-02,False,False,0.0,False,,,,,PRJ-7778,Q3-2024,54685.24,
+PO-2024-00289,2024-08-08,Foxridge Assemblies,Optical,High,37,26061.43,2024-08-31,2024-09-26,2024-09-28,False,False,2.0,True,Surface Finish Defect,False,,24.0,PRJ-2427,Q3-2024,964272.91,
+PO-2024-00232,2024-08-09,Timberline Fasteners,Structural,Standard,7,738.0,2024-09-30,2024-09-30,2024-09-30,False,False,0.0,False,,,,,PRJ-9600,Q3-2024,5166.0,
+PO-2024-00220,2024-08-13,Coastal Precision Parts,Thermal Management,Standard,7,3785.47,2024-11-10,2024-11-25,2024-11-25,False,False,0.0,False,,,,,PRJ-2188,Q3-2024,26498.289999999997,
+PO-2024-00351,2024-08-15,Zenith Alloy Solutions,Hydraulic,Standard,22,3831.19,2024-09-27,2024-09-24,2024-09-25,False,False,1.0,False,,,,,PRJ-8503,Q3-2024,84286.18000000001,
+PO-2024-00497,2024-08-17,Granite Valley Mfg,Mechanical,Standard,15,3748.8,2024-10-05,2024-10-16,2024-10-15,False,False,0.0,False,,,,,PRJ-2188,Q3-2024,56232.0,
+PO-2024-00028,2024-08-18,Cornerstone Electro-Mech,Hydraulic,Standard,1,5730.38,2024-10-11,2024-10-17,2024-10-24,True,False,7.0,False,,,,,PRJ-9685,Q3-2024,5730.38,
+PO-2024-00446,2024-08-19,Granite Valley Mfg,Structural,High,66,1552.59,2024-11-08,2024-11-19,2024-11-24,True,False,5.0,False,,,,,PRJ-9600,Q3-2024,102470.93999999999,
+PO-2024-00453,2024-08-20,Dusk Manufacturing Co,Hydraulic,Standard,10,5677.03,2024-10-28,2024-11-10,2024-11-11,False,False,1.0,False,,,,,PRJ-6531,Q3-2024,56770.299999999996,
+PO-2024-00064,2024-08-24,Horizon Mech Solutions,Hydraulic,Standard,25,2349.02,2024-09-18,2024-09-22,2024-09-21,False,False,0.0,False,,,,,PRJ-3594,Q3-2024,58725.5,
+PO-2024-00207,2024-08-26,Zenith Alloy Solutions,Hydraulic,Standard,7,7446.49,2024-10-24,2024-10-28,2024-10-27,False,False,0.0,False,,,,,PRJ-3594,Q3-2024,52125.43,
+PO-2024-00115,2024-08-28,Granite Valley Mfg,Electrical,Standard,1,4597.83,2024-11-18,2024-12-03,2024-12-03,False,False,0.0,False,,,,,PRJ-7631,Q3-2024,4597.83,
+PO-2024-00280,2024-08-29,Hollowpoint Alloys Inc,Thermal Management,Standard,10,1896.09,2024-10-17,2024-10-30,2024-11-11,True,False,12.0,True,Dimension Non-Conformance,True,4219.35,9.0,PRJ-2188,Q3-2024,18960.899999999998,
+PO-2024-00370,2024-08-29,Stratos Machined Parts,Hydraulic,Standard,26,3969.13,2024-11-17,2024-11-22,2024-11-21,False,False,0.0,False,,,,,PRJ-3594,Q3-2024,103197.38,
+PO-2024-00248,2024-09-01,Tri-State Fabricators Inc,Hydraulic,Standard,8,6754.25,2024-11-13,2024-11-28,2024-11-28,False,False,0.0,False,,,,,PRJ-9685,Q3-2024,54034.0,
+PO-2024-00214,2024-09-02,BlueSky Structural Inc,Electrical,Standard,16,11113.28,2024-11-26,2024-12-09,2024-12-17,True,False,8.0,False,,,,,PRJ-9685,Q3-2024,177812.48,
+PO-2024-00302,2024-09-03,Zenith Alloy Solutions,Optical,High,55,27051.27,2024-11-08,2024-11-11,2024-11-09,False,False,0.0,False,,,,,PRJ-2188,Q3-2024,1487819.85,
+PO-2024-00193,2024-09-04,Western Alloy Fab,Thermal Management,Critical,3,4506.9,2024-10-01,2024-10-09,2024-10-10,False,False,1.0,False,,,,,PRJ-7631,Q3-2024,13520.699999999999,
+PO-2024-00439,2024-09-05,Granite Valley Mfg,Electrical,Standard,21,8692.52,2024-11-13,2024-11-15,2024-11-19,False,False,4.0,False,,,,,PRJ-7631,Q3-2024,182542.92,
+PO-2024-00010,2024-09-06,Granite Valley Mfg,Electrical,Critical,2,9897.63,2024-11-08,2024-11-16,2024-11-16,False,False,0.0,False,,,,,PRJ-8503,Q3-2024,19795.26,
+PO-2024-00026,2024-09-07,Dusk Manufacturing Co,Electrical,High,4,7779.96,2024-11-23,2024-12-12,2024-12-11,False,False,0.0,False,,,,,PRJ-3594,Q3-2024,31119.84,
+PO-2024-00153,2024-09-10,Cornerstone Electro-Mech,Thermal Management,Standard,15,4389.25,2024-11-13,2024-11-20,2024-11-19,False,False,0.0,False,,,,,PRJ-5522,Q3-2024,65838.75,
+PO-2024-00416,2024-09-10,Stratos Machined Parts,Mechanical,Critical,27,2240.59,2024-10-18,2024-10-18,2024-10-17,False,False,0.0,False,,,,,PRJ-6531,Q3-2024,60495.93000000001,
+PO-2024-00049,2024-09-10,Zenith Alloy Solutions,Structural,Standard,63,1494.48,2024-12-07,2024-12-04,2024-12-04,False,False,0.0,False,,,,,PRJ-7631,Q3-2024,94152.24,
+PO-2024-00391,2024-09-10,NorthStar Electro-Mech,Hydraulic,High,22,3753.76,2024-10-27,2024-10-30,2024-10-28,False,False,0.0,False,,,,,PRJ-7631,Q3-2024,82582.72,
+PO-2024-00288,2024-09-13,Ironclad Assemblies,Mechanical,Standard,44,1656.72,2024-11-24,2024-11-21,2024-11-23,False,False,2.0,False,,,,,PRJ-2292,Q3-2024,72895.68000000001,
+PO-2024-00206,2024-09-14,Polaris Metals Group,Thermal Management,Standard,4,3165.8,2024-10-26,2024-10-25,2024-10-23,False,False,0.0,False,,,,,PRJ-2427,Q3-2024,12663.2,
+PO-2024-00458,2024-09-15,Greystone Fabrications,Electrical,High,13,9165.14,2024-09-30,2024-10-21,2024-10-20,False,False,0.0,False,,,,,PRJ-7778,Q3-2024,119146.81999999999,
+PO-2024-00264,2024-09-15,Ironclad Assemblies,Structural,High,30,1035.92,2024-11-19,2024-11-24,2024-11-24,False,False,0.0,False,,,,,PRJ-5522,Q3-2024,31077.600000000002,
+PO-2024-00121,2024-09-16,Coastal Precision Parts,Thermal Management,Standard,23,563.03,2024-12-08,2024-12-16,2024-12-16,False,False,0.0,False,,,,,PRJ-8503,Q3-2024,12949.689999999999,
+PO-2024-00498,2024-09-17,Ironclad Assemblies,Electrical,High,101,8458.68,2024-10-01,2024-10-05,2024-10-04,False,False,0.0,False,,,,,PRJ-9685,Q3-2024,854326.68,
+PO-2024-00489,2024-09-17,Redwood Stampings Inc,Optical,High,4,26595.75,2024-12-04,2024-12-07,2024-12-09,False,False,2.0,False,,,,,PRJ-5522,Q3-2024,106383.0,
+PO-2024-00198,2024-09-21,Bayside Precision LLC,Optical,Standard,7,45843.74,2024-10-25,2024-11-10,2024-11-20,True,False,10.0,True,Wrong Part Delivered,True,5599.63,21.0,PRJ-2427,Q3-2024,320906.18,
+PO-2024-00347,2024-09-21,Badlands Components LLC,Electrical,Standard,15,9421.89,2024-10-16,2024-10-28,2024-11-29,True,False,32.0,False,,,,,PRJ-8503,Q3-2024,141328.34999999998,
+PO-2024-00467,2024-09-23,Eagle Ridge Components,Thermal Management,High,9,4474.56,2024-11-23,2024-11-23,2024-11-22,False,False,0.0,True,Poor Workmanship,True,10534.99,21.0,PRJ-9685,Q3-2024,40271.04,
+PO-2024-00186,2024-09-24,Prairie Industrial Supply,Electrical,Standard,21,6025.2,2024-10-25,2024-10-28,2024-10-29,False,False,1.0,False,,,,,PRJ-3594,Q3-2024,126529.2,
+PO-2024-00442,2024-09-25,Crestfall Components,Structural,Standard,3,1659.37,2024-11-07,2024-12-03,2024-12-05,False,False,2.0,True,Supplier BOM Error,True,4346.9,6.0,PRJ-3489,Q3-2024,4978.11,
+PO-2024-00057,2024-09-28,BlueSky Structural Inc,Optical,Standard,32,13602.75,2024-12-04,2024-12-05,2024-12-05,False,False,0.0,False,,,,,PRJ-2188,Q3-2024,435288.0,
+PO-2024-00428,2024-09-30,Crestfall Components,Optical,Standard,6,6935.53,2024-10-31,2024-11-26,2024-12-16,True,False,20.0,False,,,,,PRJ-7631,Q3-2024,41613.18,
+PO-2024-00058,2024-09-30,Zenith Alloy Solutions,Mechanical,Standard,5,4101.59,2024-11-25,2024-11-20,2024-11-20,False,False,0.0,False,,,,,PRJ-7778,Q3-2024,20507.95,
+PO-2024-00286,2024-10-01,Zenith Alloy Solutions,Thermal Management,High,21,5813.4,2024-11-06,2024-11-11,2024-11-11,False,False,0.0,False,,,,,PRJ-3594,Q4-2024,122081.4,
+PO-2024-00082,2024-10-01,Lowland Metal Works,Electrical,Standard,12,6000.32,2024-12-12,2025-01-11,2025-01-10,False,False,0.0,True,Supplier BOM Error,True,10530.59,22.0,PRJ-2427,Q4-2024,72003.84,
+PO-2024-00211,2024-10-03,Ironclad Assemblies,Hydraulic,High,34,2907.75,2024-11-23,2024-11-21,2024-11-19,False,False,0.0,False,,,,,PRJ-9685,Q4-2024,98863.5,
+PO-2024-00352,2024-10-07,Summit Hydraulics LLC,Optical,Critical,33,10126.23,2024-11-07,2024-11-10,2024-11-12,False,False,2.0,False,,,,,PRJ-7778,Q4-2024,334165.58999999997,
+PO-2024-00066,2024-10-08,Greystone Fabrications,Structural,High,5,1828.79,2024-11-13,2024-11-19,2024-11-18,False,False,0.0,False,,,,,PRJ-9600,Q4-2024,9143.95,
+PO-2024-00190,2024-10-09,Western Alloy Fab,Thermal Management,Critical,41,5030.21,2024-10-29,2024-11-11,2024-11-11,False,False,0.0,False,,,,,PRJ-7778,Q4-2024,206238.61000000002,
+PO-2024-00107,2024-10-10,Dusk Manufacturing Co,Electrical,Standard,45,143.11,2025-01-07,2025-01-22,2025-02-01,True,False,10.0,False,,,,,PRJ-5522,Q4-2024,6439.950000000001,
+PO-2024-00290,2024-10-12,Redwood Stampings Inc,Mechanical,Standard,68,1994.27,2024-10-28,2024-11-09,2024-11-09,False,False,0.0,False,,,,,PRJ-2292,Q4-2024,135610.36,
+PO-2024-00172,2024-10-13,Hollowpoint Alloys Inc,Structural,Standard,9,1946.91,2024-11-23,2024-12-09,2025-01-05,True,False,27.0,True,Poor Workmanship,True,1847.33,13.0,PRJ-5522,Q4-2024,17522.190000000002,
+PO-2024-00041,2024-10-13,Polaris Metals Group,Structural,Standard,23,499.75,2024-11-22,2024-11-22,2024-11-22,False,False,0.0,False,,,,,PRJ-8503,Q4-2024,11494.25,
+PO-2024-00485,2024-10-13,Zenith Alloy Solutions,Hydraulic,Standard,10,2103.46,2025-01-03,2024-12-31,2025-01-02,False,False,2.0,False,,,,,PRJ-5522,Q4-2024,21034.6,
+PO-2024-00148,2024-10-14,Ironclad Assemblies,Electrical,Standard,3,10494.43,2024-10-30,2024-11-02,2024-11-03,False,False,1.0,False,,,,,PRJ-2188,Q4-2024,31483.29,
+PO-2024-00225,2024-10-15,Granite Valley Mfg,Hydraulic,High,21,2369.07,2024-11-14,2024-11-24,2024-11-25,False,False,1.0,False,,,,,PRJ-7631,Q4-2024,49750.47,
+PO-2024-00139,2024-10-16,Horizon Mech Solutions,Hydraulic,Standard,22,5235.18,2024-10-31,2024-11-14,2024-11-14,False,False,0.0,False,,,,,PRJ-9685,Q4-2024,115173.96,
+PO-2024-00403,2024-10-19,Eagle Ridge Components,Thermal Management,High,3,3188.54,2025-01-02,2025-01-02,2025-01-09,True,False,7.0,False,,,,,PRJ-2188,Q4-2024,9565.619999999999,
+PO-2024-00341,2024-10-19,Ironclad Assemblies,Thermal Management,Critical,8,3996.12,2024-12-17,2024-12-13,2024-12-14,False,False,1.0,False,,,,,PRJ-3594,Q4-2024,31968.96,
+PO-2024-00053,2024-10-25,Badlands Components LLC,Hydraulic,Standard,11,7101.97,2024-11-09,2024-11-28,2024-12-06,True,False,8.0,False,,,,,PRJ-2427,Q4-2024,78121.67,
+PO-2024-00443,2024-10-26,Stratos Machined Parts,Mechanical,Standard,20,2362.02,2025-01-20,2025-01-20,2025-01-20,False,False,0.0,False,,,,,PRJ-9600,Q4-2024,47240.4,
+PO-2024-00447,2024-10-27,Hollowpoint Alloys Inc,Hydraulic,Standard,36,2000.64,2024-12-22,2025-01-17,2025-01-23,True,False,6.0,False,,,,,PRJ-3489,Q4-2024,72023.04000000001,
+PO-2024-00492,2024-10-29,Badlands Components LLC,Thermal Management,High,32,1821.36,2024-11-21,2024-12-31,2025-01-21,True,False,21.0,True,Surface Finish Defect,True,627.36,15.0,PRJ-2292,Q4-2024,58283.52,
+PO-2024-00125,2024-10-29,Stratos Machined Parts,Hydraulic,Critical,24,7628.3,2025-01-22,2025-01-24,2025-01-22,False,False,0.0,False,,,,,PRJ-7778,Q4-2024,183079.2,
+PO-2024-00180,2024-10-30,Ironclad Assemblies,Electrical,Standard,14,5981.06,2024-12-04,2024-12-07,2024-12-05,False,False,0.0,False,,,,,PRJ-3489,Q4-2024,83734.84000000001,
+PO-2024-00103,2024-10-30,Dusk Manufacturing Co,Mechanical,Standard,1,1512.76,2025-01-09,2025-01-26,2025-01-25,False,False,0.0,False,,,,,PRJ-6531,Q4-2024,1512.76,
+PO-2024-00055,2024-11-01,Badlands Components LLC,Thermal Management,Standard,26,1380.3,2024-12-24,2025-01-19,2025-03-01,True,False,41.0,True,Wrong Part Delivered,True,10041.19,11.0,PRJ-7631,Q4-2024,35887.799999999996,
+PO-2024-00413,2024-11-06,Eagle Ridge Components,Optical,High,2,39503.76,2024-11-22,2024-11-28,2024-12-05,True,False,7.0,False,,,,,PRJ-9600,Q4-2024,79007.52,
+PO-2024-00462,2024-11-08,NorthStar Electro-Mech,Thermal Management,Standard,49,2957.42,2025-01-22,2025-01-18,2025-01-17,False,False,0.0,False,,,,,PRJ-7778,Q4-2024,144913.58000000002,
+PO-2024-00023,2024-11-08,Foxridge Assemblies,Structural,High,7,561.27,2025-01-06,2025-01-31,2025-02-02,False,False,2.0,False,,,,,PRJ-8503,Q4-2024,3928.89,
+PO-2024-00487,2024-11-08,Foxridge Assemblies,Structural,Standard,28,756.88,2024-12-12,2025-01-06,2025-01-26,True,False,20.0,False,,,,,PRJ-3489,Q4-2024,21192.64,
+PO-2024-ALPN-009,2024-11-11,Alpine Fabrications Inc,Structural,High,35,7853.66,2024-12-12,2024-12-15,2024-12-15,False,False,0.0,False,,,,,PRJ-3426,Q4-2024,102432.09,
+PO-2024-00005,2024-11-11,Stratos Machined Parts,Structural,High,32,390.8,2024-12-03,2024-12-03,2024-12-01,False,False,0.0,False,,,,,PRJ-3489,Q4-2024,12505.6,
+PO-2024-00452,2024-11-14,Hollowpoint Alloys Inc,Thermal Management,Standard,9,3119.23,2025-01-24,2025-03-14,2025-04-02,True,False,19.0,False,,,,,PRJ-7631,Q4-2024,28073.07,
+PO-2024-00479,2024-11-17,Coastal Precision Parts,Thermal Management,Standard,13,2471.77,2024-12-19,2024-12-27,2025-01-01,True,False,5.0,False,,,,,PRJ-2292,Q4-2024,32133.01,
+PO-2024-00269,2024-11-18,Greystone Fabrications,Optical,Critical,5,32835.39,2025-02-16,2025-03-06,2025-03-24,True,False,18.0,False,,,,,PRJ-9685,Q4-2024,164176.95,
+PO-2024-00170,2024-11-19,Helix Precision Mfg,Structural,High,3,689.06,2025-02-17,2025-02-14,2025-02-14,False,False,0.0,True,Supplier BOM Error,False,,4.0,PRJ-5522,Q4-2024,2067.18,
+PO-2024-00050,2024-11-23,Summit Hydraulics LLC,Structural,Standard,2,1515.39,2024-12-18,2024-12-18,2024-12-19,False,False,1.0,False,,,,,PRJ-8503,Q4-2024,3030.78,
+PO-2024-00374,2024-11-26,Ironclad Assemblies,Thermal Management,Critical,36,2577.61,2025-01-25,2025-01-21,2025-01-19,False,False,0.0,False,,,,,PRJ-7631,Q4-2024,92793.96,
+PO-2024-00185,2024-11-27,Ironclad Assemblies,Thermal Management,High,35,3500.3,2025-02-12,2025-02-09,2025-02-07,False,False,0.0,False,,,,,PRJ-7631,Q4-2024,122510.5,
+PO-2024-00077,2024-11-30,Hollowpoint Alloys Inc,Mechanical,High,10,2007.33,2025-02-02,2025-02-24,2025-03-25,True,False,29.0,False,,,,,PRJ-6531,Q4-2024,20073.3,
+PO-2024-00343,2024-12-01,Ironwood Tooling Group,Mechanical,High,50,4430.79,2024-12-24,2024-12-24,2024-12-23,False,False,0.0,False,,,,,PRJ-3594,Q4-2024,221539.5,
+PO-2024-00316,2024-12-03,Crestline Tooling Co,Thermal Management,Standard,17,5336.18,2025-01-04,2025-01-01,2024-12-31,False,False,0.0,False,,,,,PRJ-9600,Q4-2024,90715.06,
+PO-2024-00039,2024-12-03,Apex Precision Components,Mechanical,Standard,6,4920.86,2025-01-15,2025-01-11,2025-01-12,False,False,1.0,False,,,,,PRJ-5522,Q4-2024,29525.159999999996,
+PO-2024-00324,2024-12-04,Crestfall Components,Mechanical,Standard,12,886.22,2025-01-22,2025-02-10,2025-02-14,False,False,4.0,True,Dimension Non-Conformance,True,6831.78,5.0,PRJ-2427,Q4-2024,10634.64,
+PO-2024-ALPN-016,2024-12-05,Alpine Fabrications Inc,Electrical,Standard,2,673.66,2024-12-28,2024-12-28,2024-12-27,False,False,0.0,False,,,,,PRJ-2825,Q4-2024,29641.65,
+PO-2024-00213,2024-12-09,Lowland Metal Works,Structural,Standard,5,111.92,2025-01-09,2025-02-05,2025-02-21,True,False,16.0,False,,,,,PRJ-3594,Q4-2024,559.6,
+PO-2024-00235,2024-12-14,Lakeview Thermal Systems,Optical,Critical,62,4237.15,2025-02-01,2025-02-07,2025-02-10,False,False,3.0,False,,,,,PRJ-9685,Q4-2024,262703.3,
+PO-2024-00051,2024-12-14,Granite Valley Mfg,Thermal Management,Standard,34,1489.72,2025-01-14,2025-01-18,2025-01-18,False,False,0.0,False,,,,,PRJ-8503,Q4-2024,50650.48,
+PO-2024-00109,2024-12-14,Ironclad Assemblies,Structural,Standard,15,1070.57,2025-03-10,2025-03-09,2025-03-08,False,False,0.0,False,,,,,PRJ-2427,Q4-2024,16058.55,
+PO-2024-00388,2024-12-16,Lakeview Thermal Systems,Optical,High,31,40487.44,2025-01-18,2025-01-20,2025-01-19,False,False,0.0,False,,,,,PRJ-9600,Q4-2024,1255110.6400000001,
+PO-2024-00029,2024-12-18,Greystone Fabrications,Electrical,Critical,47,14923.58,2025-01-11,2025-02-02,2025-02-01,False,False,0.0,False,,,,,PRJ-3594,Q4-2024,701408.26,
+PO-2024-00440,2024-12-19,Granite Valley Mfg,Optical,High,17,7754.54,2025-01-03,2025-01-09,2025-01-10,False,False,1.0,False,,,,,PRJ-7778,Q4-2024,131827.18,
+PO-2024-00476,2024-12-20,Zenith Alloy Solutions,Structural,Standard,10,1339.46,2025-01-15,2025-01-12,2025-01-12,False,False,0.0,False,,,,,PRJ-9600,Q4-2024,13394.6,
+PO-2024-00356,2024-12-21,Dusk Manufacturing Co,Structural,Standard,20,243.45,2025-02-25,2025-03-11,2025-03-28,True,False,17.0,True,Dimension Non-Conformance,True,2217.86,11.0,PRJ-7631,Q4-2024,4869.0,
+PO-2024-00156,2024-12-21,Dusk Manufacturing Co,Structural,High,2,1878.11,2025-01-30,2025-02-08,2025-02-16,True,False,8.0,False,,,,,PRJ-9600,Q4-2024,3756.22,
+PO-2024-00287,2024-12-21,Zenith Alloy Solutions,Electrical,High,11,14882.62,2025-03-05,2025-03-01,2025-02-28,False,False,0.0,False,,,,,PRJ-3594,Q4-2024,163708.82,
+PO-2024-00297,2024-12-21,Hollowpoint Alloys Inc,Electrical,Critical,13,840.88,2025-01-21,2025-02-22,2025-02-26,False,False,4.0,True,Supplier BOM Error,True,8318.24,11.0,PRJ-8503,Q4-2024,10931.44,
+PO-2024-00085,2024-12-22,Dusk Manufacturing Co,Hydraulic,High,47,2107.51,2025-03-16,2025-04-02,2025-04-04,False,False,2.0,False,,,,,PRJ-9600,Q4-2024,99052.97000000002,
+PO-2024-00450,2024-12-24,Dusk Manufacturing Co,Thermal Management,High,9,5521.07,2025-02-12,2025-02-20,2025-02-21,False,False,1.0,True,Wrong Part Delivered,True,7962.0,3.0,PRJ-2188,Q4-2024,49689.63,
+PO-2024-00018,2024-12-26,Western Alloy Fab,Hydraulic,Standard,7,3216.53,2025-01-24,2025-02-01,2025-01-31,False,False,0.0,False,,,,,PRJ-8503,Q4-2024,22515.710000000003,
+PO-2024-00268,2024-12-27,Trident Industrial Parts,Hydraulic,Standard,19,1987.15,2025-02-05,2025-03-07,2025-03-07,False,False,0.0,True,Dimension Non-Conformance,True,7372.09,23.0,PRJ-6531,Q4-2024,37755.85,
+PO-2024-00068,2024-12-28,Foxridge Assemblies,Electrical,Standard,14,4290.94,2025-01-12,2025-01-29,2025-01-28,False,False,0.0,False,,,,,PRJ-5522,Q4-2024,60073.159999999996,
+PO-2024-ALPN-012,2024-12-28,Alpine Fabrications Inc,Optical,Critical,5,6184.54,2025-01-16,2025-01-18,2025-01-18,False,False,0.0,False,,,,,PRJ-8072,Q4-2024,21713.04,
+PO-2024-00300,2024-12-29,Zenith Alloy Solutions,Structural,High,47,446.15,2025-02-07,2025-02-07,2025-02-09,False,False,2.0,False,,,,,PRJ-5522,Q4-2024,20969.05,
+PO-2024-00052,2024-12-31,Greystone Fabrications,Mechanical,Standard,12,719.28,2025-03-27,2025-04-25,2025-04-26,False,False,1.0,False,,,,,PRJ-9685,Q4-2024,8631.36,
+PO-2025-00398,2025-01-01,Dusk Manufacturing Co,Electrical,Critical,11,3020.84,2025-01-26,2025-02-22,2025-03-07,True,False,13.0,True,Surface Finish Defect,True,7012.83,16.0,PRJ-5522,Q1-2025,33229.240000000005,
+PO-2025-00478,2025-01-06,Crestline Tooling Co,Thermal Management,High,1,4902.68,2025-03-02,2025-02-27,2025-03-01,False,False,2.0,False,,,,,PRJ-7631,Q1-2025,4902.68,
+PO-2025-00313,2025-01-06,Bayside Precision LLC,Thermal Management,High,7,941.23,2025-03-25,2025-04-04,2025-04-04,False,False,0.0,True,Surface Finish Defect,True,5880.56,3.0,PRJ-8503,Q1-2025,6588.610000000001,
+PO-2025-00179,2025-01-07,Granite Valley Mfg,Electrical,Standard,71,6456.45,2025-02-15,2025-02-19,2025-02-27,True,False,8.0,False,,,,,PRJ-9685,Q1-2025,458407.95,
+PO-2025-00045,2025-01-09,Silverado Machining,Optical,Standard,47,19316.93,2025-03-23,2025-03-30,2025-03-30,False,False,0.0,False,,,,,PRJ-2427,Q1-2025,907895.71,
+PO-2025-00076,2025-01-09,Dusk Manufacturing Co,Hydraulic,High,1,6431.97,2025-03-01,2025-03-28,2025-04-17,True,False,20.0,False,,,,,PRJ-8503,Q1-2025,6431.97,
+PO-2025-00424,2025-01-10,Granite Valley Mfg,Structural,Standard,12,1019.26,2025-04-09,2025-04-14,2025-04-14,False,False,0.0,False,,,,,PRJ-2188,Q1-2025,12231.119999999999,
+PO-2025-00099,2025-01-19,Coastal Precision Parts,Optical,Standard,4,5626.82,2025-04-01,2025-04-02,2025-04-03,False,False,1.0,False,,,,,PRJ-2427,Q1-2025,22507.28,
+PO-2025-00227,2025-01-19,Prairie Industrial Supply,Optical,Standard,2,37416.35,2025-03-15,2025-03-28,2025-03-29,False,False,1.0,False,,,,,PRJ-7778,Q1-2025,74832.7,
+PO-2025-00295,2025-01-22,Crestfall Components,Thermal Management,High,10,2039.23,2025-02-09,2025-03-03,2025-03-21,True,False,18.0,False,,,,,PRJ-7631,Q1-2025,20392.3,
+PO-2025-00349,2025-01-23,Timberline Fasteners,Electrical,Standard,19,8637.49,2025-04-09,2025-04-13,2025-04-13,False,False,0.0,False,,,,,PRJ-5522,Q1-2025,164112.31,
+PO-2025-00237,2025-01-23,NorthStar Electro-Mech,Mechanical,High,20,3883.65,2025-04-20,2025-04-22,2025-04-24,False,False,2.0,False,,,,,PRJ-3594,Q1-2025,77673.0,
+PO-2025-00145,2025-01-25,Dusk Manufacturing Co,Electrical,Standard,30,13374.33,2025-02-16,2025-02-26,2025-02-25,False,False,0.0,False,,,,,PRJ-6531,Q1-2025,401229.9,
+PO-2025-ALPN-001,2025-01-25,Alpine Fabrications Inc,Electrical,Standard,24,151.6,2025-03-14,2025-03-21,2025-03-22,False,False,1.0,False,,,,,PRJ-9419,Q1-2025,32931.66,
+PO-2025-00117,2025-01-25,Badlands Components LLC,Hydraulic,Standard,30,1771.29,2025-02-09,2025-03-19,2025-03-21,False,False,2.0,False,,,,,PRJ-2427,Q1-2025,53138.7,
+PO-2025-00032,2025-01-26,Granite Valley Mfg,Electrical,Standard,5,4475.99,2025-03-28,2025-03-31,2025-04-03,False,False,3.0,True,Dimension Non-Conformance,False,,11.0,PRJ-7631,Q1-2025,22379.949999999997,
+PO-2025-00329,2025-01-26,Timberline Fasteners,Thermal Management,Critical,27,5115.57,2025-04-12,2025-04-20,2025-04-20,False,False,0.0,False,,,,,PRJ-7631,Q1-2025,138120.38999999998,
+PO-2025-00034,2025-01-30,Granite Valley Mfg,Structural,Critical,33,1769.76,2025-04-09,2025-04-22,2025-04-27,True,False,5.0,False,,,,,PRJ-7778,Q1-2025,58402.08,
+PO-2025-00001,2025-02-01,BlueSky Structural Inc,Thermal Management,Standard,23,4368.01,2025-04-12,2025-04-15,2025-04-16,False,False,1.0,False,,,,,PRJ-9685,Q1-2025,100464.23000000001,
+PO-2025-00396,2025-02-03,Trident Industrial Parts,Structural,Standard,20,922.07,2025-04-23,2025-05-18,2025-05-23,True,False,5.0,False,,,,,PRJ-2292,Q1-2025,18441.4,
+PO-2025-00122,2025-02-03,Granite Valley Mfg,Structural,Critical,22,905.66,2025-02-21,2025-03-04,2025-03-03,False,False,0.0,False,,,,,PRJ-2188,Q1-2025,19924.52,
+PO-2025-00273,2025-02-05,Horizon Mech Solutions,Electrical,Standard,11,3662.57,2025-05-01,2025-05-13,2025-05-19,True,False,6.0,True,Dimension Non-Conformance,False,,5.0,PRJ-2292,Q1-2025,40288.270000000004,
+PO-2025-ALPN-020,2025-02-09,Alpine Fabrications Inc,Hydraulic,Critical,11,7360.78,2025-03-12,2025-03-15,2025-03-16,False,False,1.0,False,,,,,PRJ-2701,Q1-2025,28775.82,
+PO-2025-00301,2025-02-09,Tri-State Fabricators Inc,Optical,Standard,15,16793.25,2025-04-14,2025-04-20,2025-04-25,True,False,5.0,False,,,,,PRJ-6531,Q1-2025,251898.75,
+PO-2025-00086,2025-02-10,Greystone Fabrications,Structural,High,28,133.2,2025-04-26,2025-05-22,2025-05-22,False,False,0.0,False,,,,,PRJ-3594,Q1-2025,3729.5999999999995,
+PO-2025-00340,2025-02-11,Ironclad Assemblies,Structural,Critical,13,1710.71,2025-04-29,2025-05-02,2025-04-30,False,False,0.0,False,,,,,PRJ-3594,Q1-2025,22239.23,
+PO-2025-00070,2025-02-12,Crestfall Components,Structural,Standard,7,397.14,2025-05-03,2025-05-27,2025-06-01,True,False,5.0,False,,,,,PRJ-3489,Q1-2025,2779.98,
+PO-2025-00017,2025-02-12,Stratos Machined Parts,Hydraulic,Standard,24,7679.08,2025-04-08,2025-04-09,2025-04-08,False,False,0.0,False,,,,,PRJ-7778,Q1-2025,184297.91999999998,
+PO-2025-00321,2025-02-12,Lakewood Electro Systems,Thermal Management,Standard,19,3499.34,2025-03-28,2025-04-03,2025-04-02,False,False,0.0,False,,,,,PRJ-7778,Q1-2025,66487.46,
+PO-2025-00348,2025-02-15,Lowland Metal Works,Mechanical,Standard,25,3600.28,2025-05-01,2025-05-31,2025-05-31,False,False,0.0,True,Poor Workmanship,False,,8.0,PRJ-2427,Q1-2025,90007.0,
+PO-2025-00282,2025-02-16,Granite Valley Mfg,Optical,High,1,47565.44,2025-03-06,2025-03-14,2025-03-16,False,False,2.0,False,,,,,PRJ-3489,Q1-2025,47565.44,
+PO-2025-00262,2025-02-21,Zenith Alloy Solutions,Electrical,Critical,15,11518.44,2025-04-26,2025-04-28,2025-04-28,False,False,0.0,False,,,,,PRJ-2292,Q1-2025,172776.6,
+PO-2025-00486,2025-02-23,Prairie Industrial Supply,Hydraulic,Critical,40,5817.5,2025-03-11,2025-03-16,2025-03-17,False,False,1.0,True,Surface Finish Defect,False,,13.0,PRJ-2427,Q1-2025,232700.0,
+PO-2025-00338,2025-02-23,Pacific Alloy Works,Thermal Management,High,13,5085.68,2025-03-21,2025-03-18,2025-03-18,False,False,0.0,False,,,,,PRJ-3594,Q1-2025,66113.84,
+PO-2025-00354,2025-02-24,Trident Industrial Parts,Mechanical,Standard,10,4745.4,2025-05-02,2025-05-24,2025-05-23,False,False,0.0,False,,,,,PRJ-6531,Q1-2025,47454.0,
+PO-2025-00104,2025-02-25,Dusk Manufacturing Co,Thermal Management,High,12,1809.34,2025-04-30,2025-05-07,2025-05-08,False,False,1.0,False,,,,,PRJ-9600,Q1-2025,21712.079999999998,
+PO-2025-00376,2025-02-27,Bayside Precision LLC,Mechanical,Standard,24,1227.69,2025-03-23,2025-04-11,2025-04-12,False,False,1.0,False,,,,,PRJ-2292,Q1-2025,29464.56,
+PO-2025-00261,2025-02-28,Meridian Fastener Corp,Mechanical,High,6,996.53,2025-04-11,2025-04-08,2025-04-07,False,False,0.0,False,,,,,PRJ-2292,Q1-2025,5979.18,
+PO-2025-00054,2025-03-01,NorthStar Electro-Mech,Structural,Critical,7,1807.22,2025-05-10,2025-05-09,2025-05-07,False,False,0.0,False,,,,,PRJ-7778,Q1-2025,12650.54,
+PO-2025-00192,2025-03-01,Zenith Alloy Solutions,Electrical,Standard,5,12791.9,2025-05-04,2025-05-05,2025-05-06,False,False,1.0,False,,,,,PRJ-7631,Q1-2025,63959.5,
+PO-2025-00234,2025-03-01,Ironclad Assemblies,Optical,High,8,12722.47,2025-03-21,2025-03-23,2025-03-23,False,False,0.0,False,,,,,PRJ-8503,Q1-2025,101779.76,
+PO-2025-00323,2025-03-04,Horizon Mech Solutions,Electrical,High,19,5486.15,2025-06-01,2025-06-16,2025-06-15,False,False,0.0,False,,,,,PRJ-6531,Q1-2025,104236.84999999999,
+PO-2025-00427,2025-03-05,Harbor Castings LLC,Electrical,Standard,6,9140.18,2025-03-30,2025-04-13,2025-04-14,False,False,1.0,False,,,,,PRJ-6531,Q1-2025,54841.08,
+PO-2025-00157,2025-03-06,Granite Valley Mfg,Hydraulic,High,17,1987.46,2025-04-29,2025-04-30,2025-05-01,False,False,1.0,False,,,,,PRJ-2427,Q1-2025,33786.82,
+PO-2025-00123,2025-03-07,Crestfall Components,Hydraulic,High,11,1309.6,2025-05-08,2025-05-15,2025-05-17,False,False,2.0,False,,,,,PRJ-9600,Q1-2025,14405.599999999999,
+PO-2025-00149,2025-03-07,Foxridge Assemblies,Mechanical,High,56,2294.94,2025-04-24,2025-05-22,2025-06-10,True,False,19.0,True,Surface Finish Defect,True,9359.62,7.0,PRJ-3594,Q1-2025,128516.64,
+PO-2025-00090,2025-03-08,Foxridge Assemblies,Mechanical,Standard,9,3888.75,2025-04-01,2025-04-08,2025-04-07,False,False,0.0,False,,,,,PRJ-6531,Q1-2025,34998.75,
+PO-2025-00406,2025-03-09,Trident Industrial Parts,Mechanical,High,12,3767.65,2025-05-04,2025-05-11,2025-05-31,True,False,20.0,False,,,,,PRJ-7778,Q1-2025,45211.8,
+PO-2025-00020,2025-03-09,Summit Hydraulics LLC,Optical,Standard,12,20481.86,2025-04-14,2025-04-18,2025-04-16,False,False,0.0,False,,,,,PRJ-9685,Q1-2025,245782.32,
+PO-2025-00336,2025-03-11,Tri-State Fabricators Inc,Hydraulic,Standard,27,3479.23,2025-04-20,2025-04-20,2025-04-19,False,False,0.0,False,,,,,PRJ-2188,Q1-2025,93939.21,
+PO-2025-00119,2025-03-19,Zenith Alloy Solutions,Optical,Standard,1,4117.75,2025-04-12,2025-04-09,2025-04-07,False,False,0.0,False,,,,,PRJ-6531,Q1-2025,4117.75,
+PO-2025-00140,2025-03-22,Badlands Components LLC,Optical,Standard,23,35058.81,2025-06-14,2025-07-11,2025-07-28,True,False,17.0,False,,,,,PRJ-8503,Q1-2025,806352.6299999999,
+PO-2025-00113,2025-03-23,Coastal Precision Parts,Mechanical,High,1,661.94,2025-05-02,2025-05-15,2025-05-14,False,False,0.0,False,,,,,PRJ-3489,Q1-2025,661.94,
+PO-2025-00401,2025-03-26,Stratos Machined Parts,Electrical,Standard,12,11248.28,2025-06-05,2025-05-31,2025-05-31,False,False,0.0,False,,,,,PRJ-9685,Q1-2025,134979.36000000002,
+PO-2025-00386,2025-03-29,Riverton Manufacturing,Hydraulic,High,23,7588.42,2025-06-07,2025-07-07,2025-07-12,True,False,5.0,True,Damaged in Transit,True,11727.72,18.0,PRJ-3594,Q1-2025,174533.66,
+PO-2025-00304,2025-03-30,Coastal Precision Parts,Optical,Standard,22,1198.01,2025-06-12,2025-06-27,2025-06-27,False,False,0.0,False,,,,,PRJ-9685,Q1-2025,26356.22,
+PO-2025-00309,2025-03-30,Crestline Tooling Co,Optical,Critical,7,12857.54,2025-05-07,2025-05-06,2025-05-08,False,False,2.0,False,,,,,PRJ-5522,Q1-2025,90002.78,
+PO-2025-00061,2025-03-31,Pacific Alloy Works,Structural,Standard,3,1084.39,2025-05-30,2025-05-29,2025-05-27,False,False,0.0,False,,,,,PRJ-9600,Q1-2025,3253.17,
+PO-2025-00233,2025-04-02,Coastal Precision Parts,Optical,Critical,16,753.72,2025-06-15,2025-06-24,2025-06-24,False,False,0.0,False,,,,,PRJ-3594,Q2-2025,12059.52,
+PO-2025-00177,2025-04-03,Horizon Mech Solutions,Hydraulic,Critical,11,2635.7,2025-06-04,2025-06-07,2025-06-08,False,False,1.0,False,,,,,PRJ-2188,Q2-2025,28992.699999999997,
+PO-2025-00471,2025-04-04,Dusk Manufacturing Co,Electrical,High,2,2697.2,2025-04-25,2025-05-11,2025-05-13,False,False,2.0,False,,,,,PRJ-5522,Q2-2025,5394.4,
+PO-2025-00249,2025-04-06,Dusk Manufacturing Co,Hydraulic,Standard,31,2688.52,2025-06-13,2025-07-09,2025-07-19,True,False,10.0,False,,,,,PRJ-6531,Q2-2025,83344.12,
+PO-2025-00361,2025-04-07,Crestfall Components,Mechanical,Critical,13,4781.97,2025-06-18,2025-06-27,2025-06-27,False,False,0.0,False,,,,,PRJ-3594,Q2-2025,62165.61,
+PO-2025-ALPN-022,2025-04-09,Alpine Fabrications Inc,Mechanical,High,30,1645.03,2025-05-01,2025-05-02,2025-05-03,False,False,1.0,False,,,,,PRJ-2612,Q2-2025,97024.38,
+PO-2025-00411,2025-04-09,Coastal Precision Parts,Hydraulic,High,6,6457.79,2025-07-05,2025-07-20,2025-07-26,True,False,6.0,True,Wrong Part Delivered,False,,7.0,PRJ-8503,Q2-2025,38746.74,
+PO-2025-00385,2025-04-09,Cascade Tooling Solutions,Electrical,Standard,4,10833.76,2025-04-30,2025-04-27,2025-04-27,False,False,0.0,False,,,,,PRJ-3594,Q2-2025,43335.04,
+PO-2025-00014,2025-04-10,Granite Valley Mfg,Thermal Management,Standard,8,1576.89,2025-06-17,2025-06-23,2025-06-24,False,False,1.0,False,,,,,PRJ-2292,Q2-2025,12615.12,
+PO-2025-00433,2025-04-11,Keystone Bearing Systems,Thermal Management,Standard,27,1756.71,2025-06-09,2025-06-12,2025-06-10,False,False,0.0,False,,,,,PRJ-6531,Q2-2025,47431.17,
+PO-2025-00501,2025-04-11,Ironclad Assemblies,Thermal Management,Standard,47,766.69,2025-05-02,2025-05-07,2025-05-09,False,False,2.0,False,,,,,PRJ-9685,Q2-2025,36034.43,
+PO-2025-00069,2025-04-13,Granite Valley Mfg,Structural,High,26,1075.9,2025-06-28,2025-07-01,2025-06-30,False,False,0.0,False,,,,,PRJ-2188,Q2-2025,27973.4,
+PO-2025-00110,2025-04-17,Cornerstone Electro-Mech,Structural,Critical,23,553.69,2025-06-01,2025-06-02,2025-06-03,False,False,1.0,False,,,,,PRJ-2427,Q2-2025,12734.87,
+PO-2025-00284,2025-04-17,Ironclad Assemblies,Electrical,Critical,18,8951.91,2025-06-17,2025-06-17,2025-06-15,False,False,0.0,False,,,,,PRJ-2292,Q2-2025,161134.38,
+PO-2025-00247,2025-04-21,Riverton Manufacturing,Hydraulic,High,26,7648.62,2025-06-01,2025-06-29,2025-07-02,False,False,3.0,False,,,,,PRJ-9600,Q2-2025,198864.12,
+PO-2025-00275,2025-04-23,Zenith Alloy Solutions,Structural,High,13,1610.34,2025-05-15,2025-05-20,2025-05-18,False,False,0.0,False,,,,,PRJ-2292,Q2-2025,20934.42,
+PO-2025-00412,2025-04-26,Dusk Manufacturing Co,Mechanical,Standard,1,1540.77,2025-05-30,2025-06-11,2025-06-10,False,False,0.0,False,,,,,PRJ-7778,Q2-2025,1540.77,
+PO-2025-00062,2025-04-27,Harbor Castings LLC,Electrical,Standard,47,13301.7,2025-07-17,2025-07-23,2025-07-31,True,False,8.0,False,,,,,PRJ-8503,Q2-2025,625179.9,
+PO-2025-00483,2025-04-28,Ridgeline Hydraulics,Optical,Standard,8,39960.07,2025-06-06,2025-06-15,2025-06-15,False,False,0.0,False,,,,,PRJ-8503,Q2-2025,319680.56,
+PO-2025-00025,2025-04-28,Ironclad Assemblies,Optical,Standard,13,28053.28,2025-05-28,2025-05-26,2025-05-24,False,False,0.0,False,,,,,PRJ-6531,Q2-2025,364692.64,
+PO-2025-00047,2025-04-29,Hollowpoint Alloys Inc,Optical,High,1,24620.45,2025-05-14,2025-05-29,,False,True,,False,,,,,PRJ-9685,Q2-2025,24620.45,
+PO-2025-00195,2025-05-02,Horizon Mech Solutions,Hydraulic,Critical,19,4677.62,2025-07-11,2025-07-18,2025-07-25,True,False,7.0,False,,,,,PRJ-2188,Q2-2025,88874.78,
+PO-2025-00027,2025-05-04,NorthStar Electro-Mech,Thermal Management,Critical,34,1498.17,2025-05-23,2025-05-21,2025-05-20,False,False,0.0,False,,,,,PRJ-3594,Q2-2025,50937.78,
+PO-2025-00230,2025-05-05,Helix Precision Mfg,Electrical,High,37,11661.32,2025-06-10,2025-06-08,2025-06-10,False,False,2.0,False,,,,,PRJ-5522,Q2-2025,431468.83999999997,
+PO-2025-00322,2025-05-07,Granite Valley Mfg,Structural,Standard,54,658.15,2025-05-21,2025-05-31,2025-06-01,False,False,1.0,False,,,,,PRJ-2188,Q2-2025,35540.1,
+PO-2025-00059,2025-05-08,Granite Valley Mfg,Electrical,Standard,10,7636.42,2025-06-28,2025-07-01,2025-07-01,False,False,0.0,False,,,,,PRJ-7778,Q2-2025,76364.2,
+PO-2025-00494,2025-05-09,Zenith Alloy Solutions,Optical,Standard,13,31563.08,2025-06-13,2025-06-14,2025-06-15,False,False,1.0,False,,,,,PRJ-2188,Q2-2025,410320.04000000004,
+PO-2025-00183,2025-05-10,Pacific Alloy Works,Optical,High,28,2781.95,2025-06-09,2025-06-04,2025-06-03,False,False,0.0,False,,,,,PRJ-9685,Q2-2025,77894.59999999999,
+PO-2025-00404,2025-05-10,Badlands Components LLC,Thermal Management,High,12,2127.94,2025-06-11,2025-07-31,2025-08-28,True,False,28.0,False,,,,,PRJ-8503,Q2-2025,25535.28,
+PO-2025-00460,2025-05-13,Bayside Precision LLC,Optical,Standard,2,12780.02,2025-07-18,2025-08-05,2025-08-06,False,False,1.0,False,,,,,PRJ-2427,Q2-2025,25560.04,
+PO-2025-00389,2025-05-13,Lowland Metal Works,Thermal Management,High,3,1004.82,2025-08-07,2025-08-17,2025-08-16,False,False,0.0,True,Wrong Part Delivered,True,6840.75,6.0,PRJ-9600,Q2-2025,3014.46,
+PO-2025-00138,2025-05-14,Crestline Tooling Co,Structural,Standard,50,869.73,2025-07-25,2025-07-23,2025-07-22,False,False,0.0,False,,,,,PRJ-2292,Q2-2025,43486.5,
+PO-2025-ALPN-003,2025-05-15,Alpine Fabrications Inc,Mechanical,Critical,5,1235.1,2025-06-28,2025-06-28,2025-06-28,False,False,0.0,False,,,,,PRJ-1412,Q2-2025,47655.81,
+PO-2025-00173,2025-05-16,Redwood Stampings Inc,Mechanical,Critical,1,3863.03,2025-08-12,2025-08-19,2025-08-18,False,False,0.0,False,,,,,PRJ-6531,Q2-2025,3863.03,
+PO-2025-00419,2025-05-17,Redwood Stampings Inc,Optical,High,2,5610.58,2025-07-06,2025-07-09,2025-07-08,False,False,0.0,False,,,,,PRJ-3594,Q2-2025,11221.16,
+PO-2025-00271,2025-05-20,Cascade Tooling Solutions,Electrical,High,4,1823.63,2025-06-17,2025-06-13,2025-06-13,False,False,0.0,False,,,,,PRJ-2427,Q2-2025,7294.52,
+PO-2025-00437,2025-05-21,Zenith Alloy Solutions,Electrical,Standard,139,8139.44,2025-08-07,2025-08-11,2025-08-12,False,False,1.0,False,,,,,PRJ-2292,Q2-2025,1131382.16,
+PO-2025-00358,2025-05-24,Granite Valley Mfg,Structural,Standard,27,1792.95,2025-07-19,2025-07-29,2025-07-31,False,False,2.0,False,,,,,PRJ-5522,Q2-2025,48409.65,
+PO-2025-00466,2025-05-25,Eagle Ridge Components,Mechanical,High,24,3481.14,2025-07-02,2025-07-06,2025-07-07,False,False,1.0,False,,,,,PRJ-7778,Q2-2025,83547.36,
+PO-2025-00423,2025-05-26,Riverton Manufacturing,Thermal Management,Standard,2,5397.64,2025-07-16,2025-07-29,2025-08-08,True,False,10.0,False,,,,,PRJ-6531,Q2-2025,10795.28,
+PO-2025-00469,2025-05-26,Zenith Alloy Solutions,Mechanical,High,55,3298.74,2025-06-22,2025-06-20,2025-06-21,False,False,1.0,False,,,,,PRJ-8503,Q2-2025,181430.69999999998,
+PO-2025-00194,2025-05-26,Western Alloy Fab,Hydraulic,Critical,15,4312.03,2025-07-11,2025-07-17,2025-07-18,False,False,1.0,False,,,,,PRJ-9685,Q2-2025,64680.45,
+PO-2025-00143,2025-05-30,Polaris Metals Group,Structural,Standard,11,312.1,2025-07-04,2025-06-29,2025-06-27,False,False,0.0,False,,,,,PRJ-7778,Q2-2025,3433.1000000000004,
+PO-2025-00141,2025-06-02,Ironclad Assemblies,Mechanical,High,2,582.18,2025-07-20,2025-07-16,2025-07-17,False,False,1.0,False,,,,,PRJ-9685,Q2-2025,1164.36,
+PO-2025-00217,2025-06-03,Coastal Precision Parts,Thermal Management,High,16,5347.48,2025-08-11,2025-08-21,2025-08-21,False,False,0.0,False,,,,,PRJ-2188,Q2-2025,85559.68,
+PO-2025-00094,2025-06-03,Zenith Alloy Solutions,Thermal Management,Standard,3,1854.58,2025-07-09,2025-07-11,2025-07-11,False,False,0.0,False,,,,,PRJ-6531,Q2-2025,5563.74,
+PO-2025-00384,2025-06-07,Zenith Alloy Solutions,Structural,Standard,32,92.03,2025-07-07,2025-07-07,2025-07-07,False,False,0.0,False,,,,,PRJ-5522,Q2-2025,2944.96,
+PO-2025-00228,2025-06-08,Badlands Components LLC,Optical,Standard,1,8445.23,2025-07-23,2025-08-30,,False,True,,False,,,,,PRJ-7778,Q2-2025,8445.23,
+PO-2025-00364,2025-06-09,Meridian Fastener Corp,Electrical,Standard,10,8753.98,2025-09-06,2025-09-11,2025-09-09,False,False,0.0,False,,,,,PRJ-2427,Q2-2025,87539.79999999999,
+PO-2025-00007,2025-06-11,Ironclad Assemblies,Hydraulic,Standard,16,7473.98,2025-07-09,2025-07-09,2025-07-11,False,False,2.0,False,,,,,PRJ-2292,Q2-2025,119583.68,
+PO-2025-00342,2025-06-11,Dusk Manufacturing Co,Structural,Standard,15,457.79,2025-07-05,2025-08-01,2025-07-31,False,False,0.0,False,,,,,PRJ-2427,Q2-2025,6866.85,
+PO-2025-00210,2025-06-12,Ironclad Assemblies,Thermal Management,Standard,17,1816.64,2025-07-08,2025-07-09,2025-07-07,False,False,0.0,False,,,,,PRJ-9685,Q2-2025,30882.88,
+PO-2025-00400,2025-06-16,Granite Valley Mfg,Hydraulic,High,19,5659.01,2025-07-30,2025-08-01,2025-08-02,False,False,1.0,False,,,,,PRJ-2188,Q2-2025,107521.19,
+PO-2025-00092,2025-06-16,Stratos Machined Parts,Structural,High,18,1227.45,2025-08-06,2025-08-11,2025-08-13,False,False,2.0,False,,,,,PRJ-9600,Q2-2025,22094.100000000002,
+PO-2025-00296,2025-06-19,Dusk Manufacturing Co,Hydraulic,Critical,8,2830.14,2025-08-30,2025-09-20,2025-09-21,False,False,1.0,False,,,,,PRJ-9600,Q2-2025,22641.12,
+PO-2025-00060,2025-06-19,Ironclad Assemblies,Electrical,Standard,23,4350.49,2025-09-12,2025-09-14,2025-09-14,False,False,0.0,False,,,,,PRJ-3489,Q2-2025,100061.26999999999,
+PO-2025-00098,2025-06-20,Hollowpoint Alloys Inc,Mechanical,High,7,2967.95,2025-07-28,2025-09-03,2025-10-06,True,False,33.0,False,,,,,PRJ-2292,Q2-2025,20775.649999999998,
+PO-2025-00033,2025-06-20,Badlands Components LLC,Structural,Critical,72,136.94,2025-07-19,2025-08-31,2025-09-21,True,False,21.0,False,,,,,PRJ-2427,Q2-2025,9859.68,
+PO-2025-00231,2025-06-21,Zenith Alloy Solutions,Electrical,Standard,63,12140.37,2025-09-13,2025-09-11,2025-09-12,False,False,1.0,False,,,,,PRJ-7631,Q2-2025,764843.31,
+PO-2025-00209,2025-06-22,Riverton Manufacturing,Electrical,High,23,10786.94,2025-08-28,2025-10-16,2025-11-28,True,False,43.0,False,,,,,PRJ-2188,Q2-2025,248099.62000000002,
+PO-2025-00436,2025-06-29,Ironclad Assemblies,Mechanical,High,17,3158.23,2025-08-04,2025-08-05,2025-08-06,False,False,1.0,False,,,,,PRJ-9685,Q2-2025,53689.91,
+PO-2025-00311,2025-06-30,Eagle Ridge Components,Structural,Standard,1,757.75,2025-09-17,2025-10-01,2025-10-01,False,False,0.0,False,,,,,PRJ-5522,Q2-2025,757.75,
+PO-2025-00435,2025-06-30,Coastal Precision Parts,Hydraulic,High,49,7071.67,2025-07-20,2025-07-30,2025-07-29,False,False,0.0,False,,,,,PRJ-7778,Q2-2025,346511.83,
+PO-2025-00046,2025-07-06,Granite Valley Mfg,Thermal Management,Standard,17,2600.62,2025-08-25,2025-08-29,2025-08-28,False,False,0.0,False,,,,,PRJ-9685,Q3-2025,44210.54,
+PO-2025-00127,2025-07-09,Summit Hydraulics LLC,Hydraulic,High,5,4889.17,2025-08-17,2025-08-17,2025-08-19,False,False,2.0,False,,,,,PRJ-7631,Q3-2025,24445.85,
+PO-2025-00019,2025-07-11,Crestline Tooling Co,Structural,Standard,1,1812.48,2025-09-15,2025-09-14,2025-09-14,False,False,0.0,False,,,,,PRJ-9600,Q3-2025,1812.48,
+PO-2025-00328,2025-07-14,Eagle Ridge Components,Thermal Management,Critical,20,344.25,2025-09-25,2025-09-29,2025-09-30,False,False,1.0,False,,,,,PRJ-3594,Q3-2025,6885.0,
+PO-2025-00263,2025-07-17,Ironclad Assemblies,Electrical,Standard,20,3846.11,2025-09-19,2025-09-20,2025-09-20,False,False,0.0,False,,,,,PRJ-7631,Q3-2025,76922.2,
+PO-2025-00081,2025-07-18,Zenith Alloy Solutions,Structural,Standard,24,354.46,2025-09-19,2025-09-16,2025-09-14,False,False,0.0,False,,,,,PRJ-3489,Q3-2025,8507.039999999999,
+PO-2025-00477,2025-07-24,Trident Industrial Parts,Thermal Management,Standard,7,1118.5,2025-09-21,2025-10-01,2025-10-15,True,False,14.0,False,,,,,PRJ-9685,Q3-2025,7829.5,
+PO-2025-00196,2025-07-24,Dusk Manufacturing Co,Electrical,High,6,3219.75,2025-10-10,2025-10-19,2025-10-29,True,False,10.0,False,,,,,PRJ-5522,Q3-2025,19318.5,
+PO-2025-00303,2025-07-26,Meridian Fastener Corp,Hydraulic,High,25,3015.0,2025-08-09,2025-08-08,2025-08-08,False,False,0.0,False,,,,,PRJ-7631,Q3-2025,75375.0,
+PO-2025-00083,2025-07-27,Greystone Fabrications,Electrical,Standard,17,676.5,2025-08-25,2025-09-21,2025-09-23,False,False,2.0,False,,,,,PRJ-7631,Q3-2025,11500.5,
+PO-2025-ALPN-004,2025-07-28,Alpine Fabrications Inc,Optical,Standard,38,2477.32,2025-08-11,2025-08-16,2025-08-18,False,False,2.0,False,,,,,PRJ-9648,Q3-2025,227092.54,
+PO-2025-00405,2025-07-28,Bayside Precision LLC,Structural,Critical,26,112.56,2025-10-06,2025-11-03,2025-11-03,False,False,0.0,False,,,,,PRJ-5522,Q3-2025,2926.56,
+PO-2025-00337,2025-08-01,BlueSky Structural Inc,Hydraulic,High,14,3484.27,2025-10-26,2025-10-30,2025-10-30,False,False,0.0,False,,,,,PRJ-2427,Q3-2025,48779.78,
+PO-2025-ALPN-010,2025-08-01,Alpine Fabrications Inc,Hydraulic,Standard,29,3004.5,2025-09-09,2025-09-14,2025-09-15,False,False,1.0,False,,,,,PRJ-7735,Q3-2025,36311.99,
+PO-2025-00091,2025-08-02,Granite Valley Mfg,Hydraulic,Standard,29,3471.8,2025-09-01,2025-09-15,2025-09-16,False,False,1.0,False,,,,,PRJ-8503,Q3-2025,100682.20000000001,
+PO-2025-00229,2025-08-03,Ironclad Assemblies,Structural,High,34,1492.76,2025-09-03,2025-09-05,2025-09-06,False,False,1.0,False,,,,,PRJ-9600,Q3-2025,50753.84,
+PO-2025-00318,2025-08-04,Zenith Alloy Solutions,Electrical,Standard,32,9271.18,2025-09-05,2025-08-31,2025-09-01,False,False,1.0,False,,,,,PRJ-7778,Q3-2025,296677.76,
+PO-2025-00200,2025-08-05,Dusk Manufacturing Co,Mechanical,Standard,12,148.7,2025-08-28,2025-09-06,,False,True,,False,,,,,PRJ-2292,Q3-2025,1784.3999999999999,
+PO-2025-00114,2025-08-06,Coastal Precision Parts,Mechanical,High,9,1731.01,2025-08-20,2025-08-28,2025-08-27,False,False,0.0,False,,,,,PRJ-2427,Q3-2025,15579.09,
+PO-2025-00496,2025-08-11,Greystone Fabrications,Structural,Standard,9,1270.57,2025-09-26,2025-10-02,2025-10-10,True,False,8.0,False,,,,,PRJ-3489,Q3-2025,11435.13,
+PO-2025-00168,2025-08-12,Tri-State Fabricators Inc,Electrical,Standard,10,850.08,2025-10-26,2025-11-02,2025-11-04,False,False,2.0,False,,,,,PRJ-2188,Q3-2025,8500.800000000001,
+PO-2025-00244,2025-08-13,Badlands Components LLC,Hydraulic,High,3,4896.22,2025-11-04,2025-12-20,2026-01-17,True,False,28.0,False,,,,,PRJ-6531,Q3-2025,14688.66,
+PO-2025-00084,2025-08-13,Zenith Alloy Solutions,Optical,High,3,6733.85,2025-11-05,2025-10-31,2025-11-01,False,False,1.0,False,,,,,PRJ-3489,Q3-2025,20201.550000000003,
+PO-2025-00414,2025-08-13,Pacific Alloy Works,Mechanical,High,8,117.5,2025-09-17,2025-09-15,2025-09-15,False,False,0.0,False,,,,,PRJ-9685,Q3-2025,940.0,
+PO-2025-00456,2025-08-19,Pacific Alloy Works,Optical,High,2,4135.66,2025-11-12,2025-11-09,2025-11-07,False,False,0.0,False,,,,,PRJ-7631,Q3-2025,8271.32,
+PO-2025-ALPN-005,2025-08-26,Alpine Fabrications Inc,Hydraulic,Critical,14,690.8,2025-09-20,2025-09-25,2025-09-25,False,False,0.0,False,,,,,PRJ-1827,Q3-2025,23998.62,
+PO-2025-00160,2025-08-26,Ironclad Assemblies,Optical,High,7,38134.17,2025-09-20,2025-09-25,2025-09-27,False,False,2.0,False,,,,,PRJ-7778,Q3-2025,266939.19,
+PO-2025-00461,2025-08-30,Lowland Metal Works,Optical,Standard,4,4779.42,2025-11-04,2025-11-10,2025-11-09,False,False,0.0,True,Supplier BOM Error,True,2442.15,5.0,PRJ-7631,Q3-2025,19117.68,
+PO-2025-00266,2025-09-02,Granite Valley Mfg,Structural,Standard,19,1209.29,2025-10-30,2025-11-10,2025-11-13,False,False,3.0,False,,,,,PRJ-3594,Q3-2025,22976.51,
+PO-2025-00150,2025-09-03,Summit Hydraulics LLC,Thermal Management,Standard,22,301.86,2025-10-19,2025-10-14,2025-10-15,False,False,1.0,False,,,,,PRJ-7778,Q3-2025,6640.92,
+PO-2025-00253,2025-09-03,Stratos Machined Parts,Mechanical,Standard,19,4653.5,2025-11-27,2025-12-01,2025-11-30,False,False,0.0,False,,,,,PRJ-2292,Q3-2025,88416.5,
+PO-2025-00246,2025-09-06,Badlands Components LLC,Thermal Management,Standard,30,5329.48,2025-12-01,2026-01-12,2026-01-13,False,False,1.0,False,,,,,PRJ-5522,Q3-2025,159884.4,
+PO-2025-00013,2025-09-08,Eagle Ridge Components,Thermal Management,Critical,19,1769.25,2025-11-24,2025-11-27,2025-11-29,False,False,2.0,False,,,,,PRJ-3594,Q3-2025,33615.75,
+PO-2025-00073,2025-09-08,Badlands Components LLC,Mechanical,High,27,2765.81,2025-10-22,2025-11-23,2025-12-31,True,False,38.0,True,Surface Finish Defect,False,,15.0,PRJ-5522,Q3-2025,74676.87,
+PO-2025-00399,2025-09-08,Zenith Alloy Solutions,Structural,Standard,12,910.12,2025-10-10,2025-10-05,2025-10-04,False,False,0.0,False,,,,,PRJ-2188,Q3-2025,10921.44,
+PO-2025-00011,2025-09-12,Greystone Fabrications,Structural,High,85,1736.5,2025-12-08,2025-12-18,2025-12-20,False,False,2.0,False,,,,,PRJ-2292,Q3-2025,147602.5,
+PO-2025-00144,2025-09-12,Harbor Castings LLC,Structural,High,26,716.68,2025-10-31,2025-11-04,2025-11-04,False,False,0.0,False,,,,,PRJ-2292,Q3-2025,18633.68,
+PO-2025-00212,2025-09-13,Ironwood Tooling Group,Electrical,Standard,3,8370.81,2025-11-28,2025-12-04,2025-12-03,False,False,0.0,False,,,,,PRJ-8503,Q3-2025,25112.43,
+PO-2025-00359,2025-09-15,Greystone Fabrications,Optical,High,18,26332.89,2025-09-29,2025-10-24,2025-10-25,False,False,1.0,True,Poor Workmanship,True,10828.52,22.0,PRJ-8503,Q3-2025,473992.02,
+PO-2025-00312,2025-09-18,Riverton Manufacturing,Thermal Management,Critical,44,5708.27,2025-10-16,2025-11-28,2025-11-30,False,False,2.0,False,,,,,PRJ-9600,Q3-2025,251163.88,
+PO-2025-00392,2025-09-20,Cornerstone Electro-Mech,Mechanical,Standard,5,4315.91,2025-11-13,2025-11-22,2025-11-30,True,False,8.0,False,,,,,PRJ-9685,Q3-2025,21579.55,
+PO-2025-ALPN-007,2025-09-27,Alpine Fabrications Inc,Hydraulic,Standard,28,4161.29,2025-11-11,2025-11-16,2025-11-15,False,False,0.0,False,,,,,PRJ-3730,Q3-2025,46357.75,
+PO-2025-00272,2025-09-27,Dusk Manufacturing Co,Optical,Standard,7,28328.98,2025-10-22,2025-11-11,2025-11-12,False,False,1.0,True,Wrong Part Delivered,True,10035.07,2.0,PRJ-2427,Q3-2025,198302.86,
+PO-2025-00080,2025-09-28,Hollowpoint Alloys Inc,Thermal Management,High,13,5718.05,2025-11-29,2025-12-21,2025-12-25,False,False,4.0,False,,,,,PRJ-2292,Q3-2025,74334.65000000001,
+PO-2025-00131,2025-09-28,Ironclad Assemblies,Mechanical,Critical,27,4271.73,2025-11-26,2025-11-24,2025-11-25,False,False,1.0,False,,,,,PRJ-2292,Q3-2025,115336.70999999999,
+PO-2025-ALPN-011,2025-09-28,Alpine Fabrications Inc,Optical,Standard,8,4080.15,2025-11-17,2025-11-23,2025-11-23,False,False,0.0,False,,,,,PRJ-1678,Q3-2025,17777.83,
+PO-2025-00407,2025-09-28,Coastal Precision Parts,Hydraulic,Critical,7,2968.43,2025-11-04,2025-11-10,2025-11-13,False,False,3.0,True,Dimension Non-Conformance,True,6258.81,9.0,PRJ-6531,Q3-2025,20779.01,
+PO-2025-00449,2025-09-29,Horizon Mech Solutions,Structural,High,17,1136.76,2025-11-01,2025-11-14,2025-11-15,False,False,1.0,False,,,,,PRJ-7631,Q3-2025,19324.92,
+PO-2025-00146,2025-09-29,Ironwood Tooling Group,Hydraulic,Standard,38,3765.02,2025-12-13,2025-12-28,2025-12-29,False,False,1.0,False,,,,,PRJ-8503,Q3-2025,143070.76,
+PO-2025-00254,2025-09-30,Silverado Machining,Optical,Standard,39,13264.94,2025-11-20,2025-11-20,2025-11-20,False,False,0.0,False,,,,,PRJ-9685,Q3-2025,517332.66000000003,
+PO-2025-00044,2025-10-02,Granite Valley Mfg,Hydraulic,Standard,2,6855.87,2025-10-20,2025-10-21,2025-10-21,False,False,0.0,False,,,,,PRJ-3489,Q4-2025,13711.74,
+PO-2025-00165,2025-10-03,Polaris Metals Group,Mechanical,Standard,12,2878.17,2025-11-10,2025-11-09,2025-11-07,False,False,0.0,False,,,,,PRJ-9685,Q4-2025,34538.04,
+PO-2025-00089,2025-10-14,Granite Valley Mfg,Thermal Management,Standard,36,1306.96,2026-01-06,2026-01-10,2026-01-11,False,False,1.0,False,,,,,PRJ-5522,Q4-2025,47050.56,
+PO-2025-00065,2025-10-14,Mesa Components Corp,Electrical,Standard,24,14219.26,2025-11-04,2025-11-08,2025-11-07,False,False,0.0,False,,,,,PRJ-2188,Q4-2025,341262.24,
+PO-2025-00455,2025-10-15,Coastal Precision Parts,Optical,Standard,11,1227.1,2025-11-24,2025-12-07,2025-12-08,False,False,1.0,False,,,,,PRJ-7631,Q4-2025,13498.099999999999,
+PO-2025-ALPN-006,2025-10-19,Alpine Fabrications Inc,Structural,Standard,3,620.15,2025-11-13,2025-11-13,2025-11-14,False,False,1.0,False,,,,,PRJ-7718,Q4-2025,40815.28,
+PO-2025-00256,2025-10-23,Stratos Machined Parts,Hydraulic,High,1,7125.78,2025-12-26,2025-12-25,2025-12-26,False,False,1.0,False,,,,,PRJ-3594,Q4-2025,7125.78,
+PO-2025-00118,2025-10-23,Vega Electronics Ltd,Optical,Standard,5,5795.01,2025-12-09,2025-12-05,2025-12-05,False,False,0.0,False,,,,,PRJ-8503,Q4-2025,28975.050000000003,
+PO-2025-00258,2025-10-24,Mesa Components Corp,Structural,Critical,24,204.25,2025-12-29,2026-01-01,2026-01-02,False,False,1.0,False,,,,,PRJ-2188,Q4-2025,4902.0,
+PO-2025-00377,2025-10-26,Greystone Fabrications,Thermal Management,Critical,31,2012.54,2025-12-09,2025-12-18,2025-12-18,False,False,0.0,True,Wrong Part Delivered,True,6904.1,13.0,PRJ-3594,Q4-2025,62388.74,
+PO-2025-ALPN-002,2025-10-28,Alpine Fabrications Inc,Hydraulic,Standard,29,4155.37,2025-11-14,2025-11-21,2025-11-20,False,False,0.0,False,,,,,PRJ-8913,Q4-2025,45996.74,
+PO-2025-00134,2025-10-28,Harbor Castings LLC,Optical,Critical,20,27151.92,2025-12-19,2025-12-29,2025-12-30,False,False,1.0,False,,,,,PRJ-2188,Q4-2025,543038.3999999999,
+PO-2025-00499,2025-10-28,Eagle Ridge Components,Structural,Critical,12,1306.71,2025-12-26,2026-01-07,2026-01-07,False,False,0.0,False,,,,,PRJ-9685,Q4-2025,15680.52,
+PO-2025-00472,2025-10-29,Coastal Precision Parts,Thermal Management,High,19,2671.55,2025-12-31,2026-01-07,2026-01-07,False,False,0.0,True,Dimension Non-Conformance,True,5143.59,13.0,PRJ-2292,Q4-2025,50759.450000000004,
+PO-2025-00274,2025-10-29,Ironclad Assemblies,Hydraulic,High,15,5386.33,2025-12-18,2025-12-16,2025-12-14,False,False,0.0,False,,,,,PRJ-2292,Q4-2025,80794.95,
+PO-2025-00074,2025-10-30,Zenith Alloy Solutions,Hydraulic,Standard,4,6023.26,2025-12-20,2025-12-25,2025-12-24,False,False,0.0,False,,,,,PRJ-9600,Q4-2025,24093.04,
+PO-2025-00432,2025-11-03,Greystone Fabrications,Mechanical,Critical,12,3546.42,2025-12-31,2026-01-06,2026-01-06,False,False,0.0,True,Poor Workmanship,True,1250.62,15.0,PRJ-2427,Q4-2025,42557.04,
+PO-2025-00167,2025-11-06,Zenith Alloy Solutions,Electrical,Critical,11,7823.84,2025-12-14,2025-12-10,2025-12-08,False,False,0.0,False,,,,,PRJ-8503,Q4-2025,86062.24,
+PO-2025-00151,2025-11-07,Prairie Industrial Supply,Thermal Management,Standard,41,2755.33,2026-01-28,2026-02-08,2026-02-15,True,False,7.0,False,,,,,PRJ-3489,Q4-2025,112968.53,
+PO-2025-00464,2025-11-07,Lowland Metal Works,Electrical,Standard,34,5223.06,2026-01-24,2026-02-11,2026-02-22,True,False,11.0,False,,,,,PRJ-6531,Q4-2025,177584.04,
+PO-2025-00276,2025-11-07,Stratos Machined Parts,Structural,Standard,19,917.51,2026-01-20,2026-01-19,2026-01-18,False,False,0.0,False,,,,,PRJ-9685,Q4-2025,17432.69,
+PO-2025-00071,2025-11-12,Silverado Machining,Hydraulic,Standard,3,2081.21,2026-02-01,2026-02-07,2026-02-13,True,False,6.0,False,,,,,PRJ-7631,Q4-2025,6243.63,
+PO-2025-00208,2025-11-13,Western Alloy Fab,Structural,Standard,76,1278.59,2026-01-21,2026-01-31,2026-01-31,False,False,0.0,True,Surface Finish Defect,True,1276.31,13.0,PRJ-3489,Q4-2025,97172.84,
+PO-2025-00095,2025-11-13,Granite Valley Mfg,Optical,Standard,7,24861.56,2026-01-11,2026-01-24,2026-01-23,False,False,0.0,False,,,,,PRJ-2427,Q4-2025,174030.92,
+PO-2025-00363,2025-11-14,NorthStar Electro-Mech,Electrical,High,26,6554.82,2025-12-27,2025-12-23,2025-12-22,False,False,0.0,False,,,,,PRJ-7631,Q4-2025,170425.32,
+PO-2025-00319,2025-11-14,Ironclad Assemblies,Optical,High,11,5020.42,2026-01-15,2026-01-15,2026-01-13,False,False,0.0,False,,,,,PRJ-2292,Q4-2025,55224.62,
+PO-2025-00174,2025-11-15,Greystone Fabrications,Optical,Standard,12,20270.15,2026-02-03,2026-02-21,2026-03-08,True,False,15.0,False,,,,,PRJ-7631,Q4-2025,243241.80000000002,
+PO-2025-00307,2025-11-16,Riverton Manufacturing,Mechanical,High,55,1337.06,2025-12-10,2026-01-13,,False,True,,True,Surface Finish Defect,False,,6.0,PRJ-3489,Q4-2025,73538.3,
+PO-2025-00481,2025-11-16,Badlands Components LLC,Hydraulic,Critical,20,3696.63,2026-01-26,2026-03-05,,False,True,,True,Dimension Non-Conformance,False,,21.0,PRJ-6531,Q4-2025,73932.6,
+PO-2025-00292,2025-11-18,Western Alloy Fab,Electrical,Critical,43,12217.03,2025-12-14,2025-12-17,2025-12-17,False,False,0.0,False,,,,,PRJ-2188,Q4-2025,525332.29,
+PO-2025-ALPN-021,2025-11-23,Alpine Fabrications Inc,Hydraulic,High,32,2023.5,2025-12-14,2025-12-21,2025-12-20,False,False,0.0,False,,,,,PRJ-9994,Q4-2025,188581.64,
+PO-2025-00250,2025-11-24,Polaris Metals Group,Thermal Management,Standard,15,5213.61,2026-02-15,2026-02-13,2026-02-14,False,False,1.0,False,,,,,PRJ-3594,Q4-2025,78204.15,
+PO-2025-00473,2025-11-26,Stratos Machined Parts,Thermal Management,Standard,5,3712.73,2026-02-13,2026-02-10,2026-02-09,False,False,0.0,False,,,,,PRJ-2188,Q4-2025,18563.65,
+PO-2025-00015,2025-12-01,Granite Valley Mfg,Mechanical,Standard,9,1065.57,2026-01-14,2026-01-25,2026-01-26,False,False,1.0,False,,,,,PRJ-7631,Q4-2025,9590.13,
+PO-2025-00197,2025-12-02,Granite Valley Mfg,Electrical,Standard,26,5683.14,2026-01-21,2026-01-31,2026-01-31,False,False,0.0,False,,,,,PRJ-6531,Q4-2025,147761.64,
+PO-2025-00491,2025-12-03,NorthStar Electro-Mech,Mechanical,Standard,52,1704.78,2026-01-24,2026-01-20,2026-01-18,False,False,0.0,False,,,,,PRJ-8503,Q4-2025,88648.56,
+PO-2025-00136,2025-12-05,Ironclad Assemblies,Thermal Management,High,51,3338.74,2026-02-11,2026-02-08,2026-02-07,False,False,0.0,False,,,,,PRJ-3594,Q4-2025,170275.74,
+PO-2025-00368,2025-12-08,Greystone Fabrications,Electrical,Standard,8,4157.41,2026-01-27,2026-02-07,2026-02-11,False,False,4.0,False,,,,,PRJ-2292,Q4-2025,33259.28,
+PO-2025-00402,2025-12-09,Dusk Manufacturing Co,Structural,High,6,1079.59,2026-02-16,2026-02-27,2026-02-26,False,False,0.0,False,,,,,PRJ-3594,Q4-2025,6477.539999999999,
+PO-2025-00298,2025-12-10,Stratos Machined Parts,Hydraulic,Critical,6,486.73,2026-02-15,2026-02-17,2026-02-15,False,False,0.0,False,,,,,PRJ-9600,Q4-2025,2920.38,
+PO-2025-00199,2025-12-10,Lakewood Electro Systems,Structural,Critical,31,282.43,2026-03-05,2026-03-05,2026-03-07,False,False,2.0,False,,,,,PRJ-3489,Q4-2025,8755.33,
+PO-2025-00035,2025-12-14,Horizon Mech Solutions,Thermal Management,High,16,3968.75,2026-01-20,2026-02-01,2026-02-04,False,False,3.0,False,,,,,PRJ-7778,Q4-2025,63500.0,
+PO-2025-00096,2025-12-17,Lakewood Electro Systems,Electrical,Standard,23,195.6,2026-01-08,2026-01-15,2026-01-14,False,False,0.0,False,,,,,PRJ-5522,Q4-2025,4498.8,
+PO-2025-00320,2025-12-24,Coastal Precision Parts,Hydraulic,Standard,10,2304.37,2026-02-21,2026-02-27,2026-02-26,False,False,0.0,True,Dimension Non-Conformance,False,,3.0,PRJ-7631,Q4-2025,23043.699999999997,
+PO-2025-00381,2025-12-25,Dusk Manufacturing Co,Electrical,Standard,11,5653.15,2026-02-22,2026-02-27,2026-02-26,False,False,0.0,False,,,,,PRJ-2427,Q4-2025,62184.649999999994,
+PO-2025-00240,2025-12-29,Cascade Tooling Solutions,Structural,Critical,9,759.18,2026-02-04,2026-02-06,2026-02-04,False,False,0.0,False,,,,,PRJ-7631,Q4-2025,6832.62,
+PO-2025-00332,2025-12-30,Badlands Components LLC,Hydraulic,Standard,17,4255.17,2026-02-06,2026-03-27,2026-05-08,True,False,42.0,False,,,,,PRJ-2292,Q4-2025,72337.89,
+PO-2025-00221,2025-12-31,Zenith Alloy Solutions,Optical,Standard,2,11060.1,2026-02-16,2026-02-18,2026-02-16,False,False,0.0,False,,,,,PRJ-3594,Q4-2025,22120.2,
+PO-2026-00016,2026-01-01,Crestfall Components,Hydraulic,Standard,21,3947.22,2026-03-13,2026-04-08,2026-04-09,False,False,1.0,False,,,,,PRJ-7778,Q1-2026,82891.62,
+PO-2026-00079,2026-01-02,Crestline Tooling Co,Hydraulic,Standard,52,5732.26,2026-02-26,2026-02-22,2026-02-22,False,False,0.0,False,,,,,PRJ-7631,Q1-2026,298077.52,
+PO-2026-00480,2026-01-05,Cascade Tooling Solutions,Hydraulic,Critical,16,1393.18,2026-02-04,2026-02-09,2026-02-10,False,False,1.0,False,,,,,PRJ-6531,Q1-2026,22290.88,
+PO-2026-00101,2026-01-05,Zenith Alloy Solutions,Mechanical,Critical,16,3830.98,2026-03-09,2026-03-07,2026-03-09,False,False,2.0,False,,,,,PRJ-2188,Q1-2026,61295.68,
+PO-2026-00159,2026-01-07,Badlands Components LLC,Hydraulic,High,12,5538.77,2026-03-03,2026-03-19,2026-04-29,True,False,41.0,False,,,,,PRJ-9685,Q1-2026,66465.24,
+PO-2026-00378,2026-01-07,Crestfall Components,Thermal Management,Standard,4,1010.46,2026-02-25,2026-03-20,2026-03-21,False,False,1.0,False,,,,,PRJ-8503,Q1-2026,4041.84,
+PO-2026-00493,2026-01-09,Badlands Components LLC,Optical,High,45,30520.25,2026-03-15,2026-04-21,2026-04-28,True,False,7.0,False,,,,,PRJ-7778,Q1-2026,1373411.25,
+PO-2026-00420,2026-01-11,Lakeview Thermal Systems,Electrical,High,13,8798.53,2026-04-01,2026-04-14,2026-04-15,False,False,1.0,False,,,,,PRJ-2188,Q1-2026,114380.89000000001,
+PO-2026-00120,2026-01-13,Badlands Components LLC,Thermal Management,Standard,1,5102.65,2026-02-13,2026-02-28,,False,True,,True,Damaged in Transit,True,8655.36,6.0,PRJ-5522,Q1-2026,5102.65,
+PO-2026-00105,2026-01-14,Western Alloy Fab,Thermal Management,Critical,8,3807.05,2026-03-24,2026-03-27,2026-03-31,False,False,4.0,False,,,,,PRJ-9600,Q1-2026,30456.4,
+PO-2026-00306,2026-01-14,Zenith Alloy Solutions,Hydraulic,Standard,67,3555.46,2026-03-20,2026-03-16,2026-03-18,False,False,2.0,False,,,,,PRJ-9685,Q1-2026,238215.82,
+PO-2026-00367,2026-01-14,Ironclad Assemblies,Structural,High,12,139.25,2026-02-01,2026-01-31,2026-02-02,False,False,2.0,False,,,,,PRJ-3489,Q1-2026,1671.0,
+PO-2026-00291,2026-01-16,Greystone Fabrications,Optical,Standard,7,23213.85,2026-02-03,2026-02-23,2026-02-23,False,False,0.0,True,Dimension Non-Conformance,True,9757.86,5.0,PRJ-2188,Q1-2026,162496.94999999998,
+PO-2026-00162,2026-01-18,Trident Industrial Parts,Electrical,Standard,3,6949.79,2026-02-27,2026-03-17,2026-03-18,False,False,1.0,False,,,,,PRJ-6531,Q1-2026,20849.37,
+PO-2026-00222,2026-01-21,Summit Hydraulics LLC,Hydraulic,Standard,4,3546.29,2026-03-05,2026-03-05,2026-03-03,False,False,0.0,False,,,,,PRJ-7778,Q1-2026,14185.16,
+PO-2026-00243,2026-01-24,Hollowpoint Alloys Inc,Electrical,High,5,5629.16,2026-03-14,2026-04-03,2026-04-08,True,False,5.0,True,Surface Finish Defect,True,11376.38,9.0,PRJ-3489,Q1-2026,28145.8,
+PO-2026-00169,2026-01-26,Pacific Alloy Works,Optical,High,24,20230.42,2026-04-04,2026-03-31,2026-04-02,False,False,2.0,False,,,,,PRJ-8503,Q1-2026,485530.07999999996,
+PO-2026-00346,2026-01-29,Apex Precision Components,Mechanical,Critical,4,3776.26,2026-02-26,2026-02-24,2026-02-24,False,False,0.0,False,,,,,PRJ-3489,Q1-2026,15105.04,
+PO-2026-00267,2026-01-30,Greystone Fabrications,Hydraulic,Standard,20,1454.16,2026-04-02,2026-04-27,2026-04-26,False,False,0.0,True,Supplier BOM Error,False,,7.0,PRJ-5522,Q1-2026,29083.2,
+PO-2026-00448,2026-02-03,Ironclad Assemblies,Electrical,Critical,11,9431.28,2026-04-21,2026-04-20,2026-04-20,False,False,0.0,False,,,,,PRJ-2188,Q1-2026,103744.08,
+PO-2026-00201,2026-02-04,Granite Valley Mfg,Thermal Management,Standard,1,2948.0,2026-04-07,2026-04-19,2026-04-19,False,False,0.0,False,,,,,PRJ-3489,Q1-2026,2948.0,
+PO-2026-00106,2026-02-06,Coastal Precision Parts,Structural,High,57,610.39,2026-04-22,2026-05-05,2026-05-04,False,False,0.0,False,,,,,PRJ-9600,Q1-2026,34792.229999999996,
+PO-2026-00161,2026-02-11,NorthStar Electro-Mech,Optical,Standard,71,17207.42,2026-04-22,2026-04-25,2026-04-24,False,False,0.0,False,,,,,PRJ-8503,Q1-2026,1221726.8199999998,
+PO-2026-00006,2026-02-13,Zenith Alloy Solutions,Hydraulic,High,2,4092.82,2026-03-23,2026-03-27,2026-03-28,False,False,1.0,False,,,,,PRJ-3489,Q1-2026,8185.64,
+PO-2026-00238,2026-02-18,Foxridge Assemblies,Mechanical,Standard,7,2980.74,2026-03-11,2026-03-18,2026-03-31,True,False,13.0,False,,,,,PRJ-7778,Q1-2026,20865.18,
+PO-2026-00422,2026-02-21,Riverton Manufacturing,Electrical,Standard,5,12814.71,2026-04-07,2026-04-18,2026-05-05,True,False,17.0,False,,,,,PRJ-7631,Q1-2026,64073.549999999996,
+PO-2026-00163,2026-02-22,Vega Electronics Ltd,Optical,Critical,6,14871.86,2026-04-06,2026-04-08,2026-04-10,False,False,2.0,False,,,,,PRJ-3594,Q1-2026,89231.16,
+PO-2026-00072,2026-02-24,Coastal Precision Parts,Optical,Standard,9,39726.14,2026-05-17,2026-05-26,2026-05-25,False,False,0.0,False,,,,,PRJ-2188,Q1-2026,357535.26,
+PO-2026-00357,2026-02-24,Stratos Machined Parts,Hydraulic,High,10,7640.14,2026-05-14,2026-05-15,2026-05-14,False,False,0.0,False,,,,,PRJ-2427,Q1-2026,76401.40000000001,
+PO-2026-00126,2026-02-24,Apex Precision Components,Electrical,Standard,21,1669.33,2026-03-13,2026-03-10,2026-03-10,False,False,0.0,False,,,,,PRJ-3594,Q1-2026,35055.93,
+PO-2026-00178,2026-02-25,Zenith Alloy Solutions,Optical,High,3,2070.72,2026-04-23,2026-04-28,2026-04-28,False,False,0.0,False,,,,,PRJ-2427,Q1-2026,6212.16,
+PO-2026-00431,2026-02-26,Western Alloy Fab,Thermal Management,Standard,3,2573.43,2026-04-17,2026-04-26,2026-05-03,True,False,7.0,False,,,,,PRJ-2188,Q1-2026,7720.289999999999,
+PO-2026-ALPN-015,2026-02-26,Alpine Fabrications Inc,Hydraulic,Standard,37,2300.93,2026-03-21,2026-03-24,2026-03-26,False,False,2.0,False,,,,,PRJ-6567,Q1-2026,6371.28,
+PO-2026-00325,2026-02-26,Canyon Fabricators LLC,Hydraulic,Standard,38,2618.84,2026-04-03,2026-04-03,2026-04-04,False,False,1.0,False,,,,,PRJ-8503,Q1-2026,99515.92000000001,
+PO-2026-00326,2026-03-01,Tri-State Fabricators Inc,Structural,Standard,41,1485.09,2026-05-14,2026-05-15,2026-05-16,False,False,1.0,True,Surface Finish Defect,False,,17.0,PRJ-5522,Q1-2026,60888.689999999995,
+PO-2026-00166,2026-03-01,NorthStar Electro-Mech,Structural,Critical,3,984.26,2026-04-30,2026-04-27,2026-04-29,False,False,2.0,False,,,,,PRJ-2188,Q1-2026,2952.7799999999997,
+PO-2026-00390,2026-03-05,Crestfall Components,Structural,Standard,22,918.55,2026-04-08,2026-05-01,2026-05-02,False,False,1.0,True,Damaged in Transit,True,5895.7,4.0,PRJ-8503,Q1-2026,20208.1,
+PO-2026-ALPN-019,2026-03-06,Alpine Fabrications Inc,Mechanical,Standard,9,5118.32,2026-04-11,2026-04-13,2026-04-12,False,False,0.0,False,,,,,PRJ-9542,Q1-2026,47482.91,
+PO-2026-00108,2026-03-06,Helix Precision Mfg,Optical,Standard,3,24766.07,2026-05-14,2026-05-16,2026-05-14,False,False,0.0,False,,,,,PRJ-2292,Q1-2026,74298.20999999999,
+PO-2026-00457,2026-03-09,Riverton Manufacturing,Optical,Standard,25,21196.29,2026-05-07,2026-05-23,2026-06-24,True,False,32.0,False,,,,,PRJ-9685,Q1-2026,529907.25,
+PO-2026-00152,2026-03-12,Zenith Alloy Solutions,Hydraulic,High,58,983.7,2026-04-14,2026-04-14,2026-04-15,False,False,1.0,False,,,,,PRJ-7778,Q1-2026,57054.600000000006,
+PO-2026-00147,2026-03-13,Bayside Precision LLC,Hydraulic,High,1,3385.99,2026-06-08,2026-06-27,2026-07-07,True,False,10.0,False,,,,,PRJ-7778,Q1-2026,3385.99,
+PO-2026-00350,2026-03-13,Dusk Manufacturing Co,Thermal Management,High,6,4537.21,2026-04-20,2026-04-30,2026-04-30,False,False,0.0,False,,,,,PRJ-2188,Q1-2026,27223.260000000002,
+PO-2026-00116,2026-03-14,Granite Valley Mfg,Thermal Management,Standard,1,213.25,2026-04-27,2026-05-12,2026-05-19,True,False,7.0,True,Dimension Non-Conformance,False,,11.0,PRJ-3489,Q1-2026,213.25,
+PO-2026-00488,2026-03-15,Crestline Tooling Co,Structural,Standard,33,1317.66,2026-05-14,2026-05-19,2026-05-17,False,False,0.0,False,,,,,PRJ-2427,Q1-2026,43482.780000000006,
+PO-2026-00339,2026-03-18,Ironwood Tooling Group,Electrical,High,21,6922.91,2026-05-03,2026-05-13,2026-05-12,False,False,0.0,False,,,,,PRJ-8503,Q1-2026,145381.11,
+PO-2026-00277,2026-03-19,NorthStar Electro-Mech,Thermal Management,High,17,3419.38,2026-05-26,2026-05-30,2026-05-31,False,False,1.0,False,,,,,PRJ-2292,Q1-2026,58129.46,
+PO-2026-00255,2026-03-26,Polaris Metals Group,Electrical,Standard,56,2231.9,2026-05-21,2026-05-16,2026-05-16,False,False,0.0,False,,,,,PRJ-3594,Q1-2026,124986.40000000001,
+PO-2026-00137,2026-03-28,Horizon Mech Solutions,Hydraulic,Standard,15,5817.93,2026-04-21,2026-04-27,2026-05-01,False,False,4.0,True,Damaged in Transit,True,10703.55,18.0,PRJ-2427,Q1-2026,87268.95000000001,
+PO-2026-00042,2026-03-30,Keystone Bearing Systems,Mechanical,Standard,4,3468.22,2026-05-31,2026-06-02,2026-06-04,False,False,2.0,True,Dimension Non-Conformance,False,,9.0,PRJ-3594,Q1-2026,13872.88,
