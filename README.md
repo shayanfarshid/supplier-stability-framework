@@ -26,9 +26,9 @@ A precision tracking system for material quality and logistical setbacks.
 
 | Feature | Description |
 | :--- | :--- |
-| ** Real-Time Visualization** | Built with **Streamlit** and **Plotly** for interactive, high-impact data storytelling and trend analysis. |
-| ** ERP Portability** | Designed to be platform-agnostic; maps seamlessly to standard exports regardless of ERP systems- **SAP, Oracle, SYSPRO or Microsoft Dynamics**. |
-| ** Deterministic Simulation** | Includes a robust synthetic data generator to demonstrate framework capabilities without exposing proprietary information. |
+| **Real-Time Visualization** | Built with **Streamlit** and **Plotly** for interactive, high-impact data storytelling and trend analysis. |
+| **ERP Portability** | Designed to be platform-agnostic; maps seamlessly to standard exports regardless of ERP systems- **SAP, Oracle, SYSPRO or Microsoft Dynamics**. |
+| **Deterministic Simulation** | Includes a robust synthetic data generator to demonstrate framework capabilities without exposing proprietary information. |
 
 ---
 
@@ -58,4 +58,4 @@ streamlit run app.py
 - `styles.py` — theme, CSS, badges, KPI card helpers
 - `requirements.txt` — Python dependencies
 
-Note: Scoring weights and logic are based on industry-standard manufacturing lead-time variables and are designed to amplify visibility into high-risk supplier behaviors. All data currently displayed in the default application is synthetically generated for demonstration purposes.
+**Note:** Scoring weights and logic are based on industry-standard manufacturing lead-time variables and are designed to amplify visibility into high-risk supplier behaviors. All data currently displayed in the default application is synthetically generated for demonstration purposes.
