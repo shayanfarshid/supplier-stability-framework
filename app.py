@@ -93,7 +93,7 @@ def supplier_profile_page(df, metrics_df, md_df):
 
     m1, m2, m3 = st.columns(3)
     with m1:
-        st.markdown(kpi_card("Late Arrival Rate", f"{s_metrics['pct_late_arrived']:.1f}%", "Proportion of received lines past commit date"), unsafe_allow_html=True)
+        st.markdown(kpi_card("Late Arrival Rate", f"{s_metrics['pct_late_arrived']:.1f}%", "Lines received after commit date"), unsafe_allow_html=True)
     with m2:
         subtitle = "No open-late exposure in current period"
         if s_metrics['count_open_late'] > 0:
@@ -109,7 +109,7 @@ def supplier_profile_page(df, metrics_df, md_df):
     st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
-    section_header("Order History", "Full order-line detail. Rows highlighted in red indicate open-late exposure; orange indicates a material discrepancy event.")
+    section_header("Order History", "Full order-line detail. Red rows = open-late; orange = material discrepancy event; yellow = late arrival.")
     view = sdf[["order_id", "component_category", "component_criticality", "request_date", "commit_date", "received_date",
                 "days_late", "has_md_event", "md_fault_type", "is_late_arrived", "is_open_late"]].copy()
     for c in ["request_date", "commit_date", "received_date"]:
@@ -132,53 +132,96 @@ def supplier_profile_page(df, metrics_df, md_df):
 
 
 def period_analysis_page(df):
+    # ── Sidebar: clean, minimal filters ──────────────────────────────────────
     st.sidebar.markdown("---")
-    period_type = st.sidebar.radio("Period Type", ["Quarter", "Custom Date Range"])
-    categories = st.sidebar.multiselect("Component Category", sorted(df['component_category'].unique()), default=sorted(df['component_category'].unique()))
-    criticalities = st.sidebar.multiselect("Component Criticality", sorted(df['component_criticality'].unique()), default=sorted(df['component_criticality'].unique()))
-    projects = st.sidebar.multiselect("Project Number", sorted(df['project_number'].unique()), default=sorted(df['project_number'].unique()))
+    st.sidebar.markdown("#### Period")
+    period_type = st.sidebar.radio("", ["Quarter", "Custom Date Range"], label_visibility="collapsed")
 
+    all_categories    = sorted(df['component_category'].unique())
+    all_criticalities = sorted(df['component_criticality'].unique())
+    all_projects      = sorted(df['project_number'].unique())
+    all_quarters      = sorted(df['quarter'].unique())
+
+    st.sidebar.markdown("#### Filters")
+
+    # Category — single selectbox with "All" option
+    cat_options = ["All categories"] + all_categories
+    cat_sel = st.sidebar.selectbox("Category", cat_options)
+    categories = all_categories if cat_sel == "All categories" else [cat_sel]
+
+    # Criticality — single selectbox with "All" option
+    crit_options = ["All criticalities"] + all_criticalities
+    crit_sel = st.sidebar.selectbox("Criticality", crit_options)
+    criticalities = all_criticalities if crit_sel == "All criticalities" else [crit_sel]
+
+    # Project — single selectbox with "All" option
+    proj_options = ["All projects"] + all_projects
+    proj_sel = st.sidebar.selectbox("Project", proj_options)
+    projects = all_projects if proj_sel == "All projects" else [proj_sel]
+
+    # Period selector
+    st.sidebar.markdown("#### Quarter / Date")
     if period_type == "Quarter":
-        quarters = sorted(df['quarter'].unique())
-        selected_quarters = st.sidebar.multiselect("Select Quarter(s)", quarters, default=[quarters[-1]])
-        filtered = df[df['quarter'].isin(selected_quarters)]
+        quarter_sel = st.sidebar.selectbox("Quarter", all_quarters, index=len(all_quarters) - 1)
+        selected_quarters = [quarter_sel]
+        filtered = df[df['quarter'] == quarter_sel]
     else:
         d1, d2 = st.sidebar.date_input("Date Range", [df['order_date'].min().date(), df['order_date'].max().date()])
         filtered = df[(df['order_date'].dt.date >= d1) & (df['order_date'].dt.date <= d2)]
         selected_quarters = []
 
+    # Apply category / criticality / project filters
     filtered = filtered[filtered['component_category'].isin(categories)]
     filtered = filtered[filtered['component_criticality'].isin(criticalities)]
     filtered = filtered[filtered['project_number'].isin(projects)]
 
-    fr = compute_friction_metrics(filtered)
-    md = compute_md_metrics(filtered)
-    summary = fr.merge(md[['supplier_name', 'open_mdas', 'md_flag']] if not md.empty else pd.DataFrame(columns=['supplier_name','open_mdas','md_flag']),
-                       on='supplier_name', how='left')
+    fr  = compute_friction_metrics(filtered)
+    md  = compute_md_metrics(filtered)
+    summary = fr.merge(
+        md[['supplier_name', 'open_mdas', 'md_flag']] if not md.empty else pd.DataFrame(columns=['supplier_name','open_mdas','md_flag']),
+        on='supplier_name', how='left'
+    )
     summary['open_mdas'] = summary['open_mdas'].fillna(0).astype(int)
-    summary['md_flag'] = summary['md_flag'].fillna('PASS')
+    summary['md_flag']   = summary['md_flag'].fillna('PASS')
     summary = summary.rename(columns={
-        'total_lines_ordered':'Lines', 'pct_late_arrived':'% Late', 'count_open_late':'Open Late',
-        'planning_score':'Planning Score', 'friction_index':'Friction Index', 'grade':'Grade',
-        'total_spend_usd':'Spend', 'at_risk_spend_usd':'At-Risk Spend', 'open_mdas':'Discrepancy Events', 'md_flag':'Quality Flag'
+        'total_lines_ordered': 'Lines',
+        'pct_late_arrived':    '% Late',
+        'count_open_late':     'Open Late',
+        'planning_score':      'Planning Score',
+        'friction_index':      'Friction Index',
+        'grade':               'Grade',
+        'total_spend_usd':     'Spend',
+        'at_risk_spend_usd':   'At-Risk Spend',
+        'open_mdas':           'Discrepancy Events',
+        'md_flag':             'Quality Flag',
     })
     show = summary[['supplier_name','Lines','% Late','Open Late','Planning Score','Friction Index','Grade','Spend','At-Risk Spend','Discrepancy Events','Quality Flag']].copy()
-    show = show.rename(columns={'supplier_name':'Supplier'})
+    show = show.rename(columns={'supplier_name': 'Supplier'})
 
-    section_header("Period Analysis", "Supplier performance summary for the selected period. Use filters in the sidebar to scope by quarter, category, or project.")
+    section_header("Period Analysis", "Supplier performance summary for the selected period.")
     st.dataframe(show, use_container_width=True, height=520)
     csv = show.to_csv(index=False).encode('utf-8')
     st.download_button("Export to CSV", csv, file_name="supplier_period_analysis.csv", mime="text/csv")
 
-    if period_type == "Quarter" and len(selected_quarters) >= 2:
+    # QoQ comparison — only show when period type is Quarter and user picks a second quarter
+    if period_type == "Quarter":
         st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
-        section_header("Quarter-over-Quarter Comparison", "Friction Index by supplier across selected quarters. Persistent elevation indicates a structural performance issue.")
-        metrics_by_quarter = {q: compute_friction_metrics(df[(df['quarter'] == q) &
-                                (df['component_category'].isin(categories)) &
-                                (df['component_criticality'].isin(criticalities)) &
-                                (df['project_number'].isin(projects))]) for q in selected_quarters}
-        fig = qoq_comparison_bar(metrics_by_quarter)
-        st.plotly_chart(fig, use_container_width=True)
+        section_header("Quarter-over-Quarter Comparison", "Select a second quarter below to compare Friction Index trajectories.")
+        compare_options = [q for q in all_quarters if q != quarter_sel]
+        if compare_options:
+            compare_q = st.selectbox("Compare with", [""] + compare_options)
+            if compare_q:
+                q_list = [quarter_sel, compare_q]
+                metrics_by_quarter = {
+                    q: compute_friction_metrics(
+                        df[(df['quarter'] == q) &
+                           (df['component_category'].isin(categories)) &
+                           (df['component_criticality'].isin(criticalities)) &
+                           (df['project_number'].isin(projects))]
+                    ) for q in q_list
+                }
+                fig = qoq_comparison_bar(metrics_by_quarter)
+                st.plotly_chart(fig, use_container_width=True)
 
 
 def methodology_page():
@@ -214,16 +257,16 @@ def dashboard_page(df, metrics_df):
     section_header("Portfolio Overview",
         "Delivery performance, commitment integrity, and spend exposure across the full supplier portfolio.")
 
-    total_suppliers = metrics_df['supplier_name'].nunique()
+    total_suppliers  = metrics_df['supplier_name'].nunique()
     critical_at_risk = (metrics_df['friction_index'] > 20).sum()
-    portfolio_avg = np.average(metrics_df['friction_index'], weights=metrics_df['total_lines_ordered'])
-    total_at_risk = metrics_df['at_risk_spend_usd'].sum()
+    portfolio_avg    = np.average(metrics_df['friction_index'], weights=metrics_df['total_lines_ordered'])
+    total_at_risk    = metrics_df['at_risk_spend_usd'].sum()
 
     k1, k2, k3, k4 = st.columns(4)
-    k1.markdown(kpi_card("Suppliers Monitored", total_suppliers, "Active suppliers in the synthetic portfolio"), unsafe_allow_html=True)
-    k2.markdown(kpi_card("Elevated Risk Suppliers", critical_at_risk, "Friction Index exceeding threshold of 20"), unsafe_allow_html=True)
-    k3.markdown(kpi_card("Portfolio Friction Index", f"{portfolio_avg:.2f}", "Volume-weighted composite score across all suppliers"), unsafe_allow_html=True)
-    k4.markdown(kpi_card("At-Risk Spend Exposure", fmt_money(total_at_risk), "Spend on open-late and late-arrived order lines"), unsafe_allow_html=True)
+    k1.markdown(kpi_card("Suppliers Monitored",   total_suppliers,               "Active suppliers in the synthetic portfolio"), unsafe_allow_html=True)
+    k2.markdown(kpi_card("Elevated Risk Suppliers", critical_at_risk,             "Friction Index exceeding threshold of 20"), unsafe_allow_html=True)
+    k3.markdown(kpi_card("Portfolio Friction Index", f"{portfolio_avg:.2f}",       "Volume-weighted composite score across all suppliers"), unsafe_allow_html=True)
+    k4.markdown(kpi_card("At-Risk Spend Exposure",  fmt_money(total_at_risk),     "Spend on open-late and late-arrived order lines"), unsafe_allow_html=True)
 
     st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
     section_header("Supplier Friction Ranking",
@@ -264,7 +307,7 @@ def main():
     sidebar_intro()
     page = st.sidebar.radio("Navigation", ["Portfolio Overview", "Supplier Deep-Dive", "Period Analysis", "Methodology"])
     st.sidebar.markdown("---")
-    st.sidebar.caption("v1.1 · sfarshid.me · Synthetic Data Only")
+    st.sidebar.caption("v1.2 · sfarshid.me · Synthetic Data Only")
 
     if page == "Portfolio Overview":
         dashboard_page(df, metrics_df)
