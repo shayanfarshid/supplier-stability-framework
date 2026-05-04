@@ -35,7 +35,7 @@ def friction_bar_chart(metrics_df):
             "Lines Ordered: %{customdata[1]}<extra></extra>"
         )
     ))
-    fig.update_xaxes(title="Friction Index →")
+    fig.update_xaxes(title="Friction Index \u2192")
     fig.update_yaxes(tickfont=dict(size=9))
     _apply_layout(fig, "Supplier Friction Index Ranking", height=max(500, len(df) * 20))
     return fig
@@ -52,12 +52,12 @@ def scatter_planning_vs_friction(metrics_df):
     fig.add_shape(type="rect", x0=0, x1=0.5, y0=1, y1=df["friction_index"].max() * 1.2,
                   fillcolor="rgba(220,38,38,0.08)", line=dict(color="rgba(220,38,38,0.25)", width=1))
     fig.add_annotation(x=0.25, y=df["friction_index"].max() * 0.9,
-                       text="⚠ High Risk Zone<br>Low Commitment Integrity + High Friction",
+                       text="\u26a0 High Risk Zone<br>Low Commitment Integrity + High Friction",
                        showarrow=False, font=dict(color="#dc2626", size=10),
                        align="center", bgcolor="rgba(15,23,42,0.7)", bordercolor="#dc2626",
                        borderwidth=1, borderpad=6)
 
-    for grade in ["OUTSTANDING", "EXCELLENT", "ACCEPTABLE", "WATCH", "AT RISK", "CRITICAL"]:
+    for grade in ["OUTSTANDING", "EXCELLENT", "ACCEPTABLE", "AT RISK", "CRITICAL"]:
         sub = df[df["grade"] == grade]
         if sub.empty:
             continue
@@ -87,24 +87,28 @@ def scatter_planning_vs_friction(metrics_df):
 def spend_treemap(metrics_df):
     df = metrics_df.copy()
     df["color_val"] = df["grade"].map({g: i for i, g in enumerate(
-        ["OUTSTANDING", "EXCELLENT", "ACCEPTABLE", "WATCH", "AT RISK", "CRITICAL"])})
+        ["OUTSTANDING", "EXCELLENT", "ACCEPTABLE", "AT RISK", "CRITICAL"])})
     df["label"] = df["supplier_name"] + "<br>" + df["grade"]
 
     fig = px.treemap(
         df, path=[px.Constant("All Suppliers"), "grade", "supplier_name"],
         values="total_spend_usd",
-        color="grade",
-        color_discrete_map=COLORS,
-        hover_data={"total_spend_usd": ":,.0f", "friction_index": ":.2f"},
-        custom_data=["supplier_name", "grade", "friction_index"],
+        color="color_val",
+        color_continuous_scale=[
+            [0.0,  "#0d9488"],
+            [0.25, "#16a34a"],
+            [0.5,  "#d97706"],
+            [0.75, "#dc2626"],
+            [1.0,  "#7f1d1d"],
+        ],
+        custom_data=["grade", "friction_index", "total_spend_usd"],
     )
     fig.update_traces(
-        texttemplate="<b>%{label}</b><br>$%{value:,.0f}",
-        hovertemplate="<b>%{customdata[0]}</b><br>Grade: %{customdata[1]}<br>"
-                      "FI: %{customdata[2]:.2f}<br>Spend: $%{value:,.0f}<extra></extra>",
-        textfont=dict(size=10)
+        hovertemplate="<b>%{label}</b><br>Grade: %{customdata[0]}<br>FI: %{customdata[1]:.2f}<br>Spend: $%{customdata[2]:,.0f}<extra></extra>",
+        textfont_color="white",
     )
-    _apply_layout(fig, "Portfolio Spend at Risk by Supplier Grade", height=480)
+    fig.update_coloraxes(showscale=False)
+    _apply_layout(fig, "Spend Distribution by Supplier Grade", height=440)
     return fig
 
 
@@ -124,7 +128,7 @@ def monthly_friction_line(monthly_df, supplier_name):
     ))
     fig.update_xaxes(title="Month", tickangle=-30)
     fig.update_yaxes(title="Friction Index")
-    _apply_layout(fig, f"Monthly Friction Index — {supplier_name}", height=350)
+    _apply_layout(fig, f"Monthly Friction Index \u2014 {supplier_name}", height=350)
     return fig
 
 
@@ -133,10 +137,20 @@ def md_fault_bar(fault_breakdown: dict):
         return None
     labels = list(fault_breakdown.keys())
     values = list(fault_breakdown.values())
-    colors = ["#0d9488", "#16a34a", "#d97706", "#ea580c", "#dc2626", "#7f1d1d"]
+
+    # Supplier-attributed faults → red spectrum; non-supplier → green/teal
+    SUPPLIER_FAULTS = {
+        "Poor Workmanship", "Wrong Part Delivered", "Supplier BOM Error",
+        "Dimension Non-Conformance", "Surface Finish Defect"
+    }
+    colors = [
+        "#dc2626" if label in SUPPLIER_FAULTS else "#0d9488"
+        for label in labels
+    ]
+
     fig = go.Figure(go.Bar(
         x=values, y=labels, orientation="h",
-        marker_color=colors[:len(labels)],
+        marker_color=colors,
         text=values, textposition="outside",
         textfont=dict(color="#f1f5f9"),
         hovertemplate="%{y}: %{x} events<extra></extra>"

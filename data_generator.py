@@ -1,3 +1,5 @@
+# NOTE: The live application reads from supplier_order_lines.csv (static file).
+# This script was used to generate that CSV and is retained for reproducibility documentation.
 import numpy as np
 import pandas as pd
 from datetime import date, timedelta
@@ -21,9 +23,7 @@ def generate_dataset(seed=42, n_rows=500):
             "BlueSky Structural Inc", "Coastal Precision Parts", "Granite Valley Mfg",
             "Ironwood Tooling Group", "Prairie Industrial Supply", "Western Alloy Fab",
             "Canyon Fabricators LLC", "Eagle Ridge Components", "Horizon Mech Solutions",
-            "Lakewood Electro Systems", "Timberline Fasteners"
-        ],
-        "WATCH": [
+            "Lakewood Electro Systems", "Timberline Fasteners",
             "Foxridge Assemblies", "Dusk Manufacturing Co", "Bayside Precision LLC",
             "Trident Industrial Parts", "Crestfall Components", "Lowland Metal Works",
             "Greystone Fabrications"
@@ -47,8 +47,6 @@ def generate_dataset(seed=42, n_rows=500):
             volume_weights[name] = rng.integers(8, 20)
         elif profile == "ACCEPTABLE":
             volume_weights[name] = rng.integers(5, 18)
-        elif profile == "WATCH":
-            volume_weights[name] = rng.integers(10, 35)
         else:
             volume_weights[name] = rng.integers(15, 50)
 
@@ -89,8 +87,6 @@ def generate_dataset(seed=42, n_rows=500):
             commit_offset = int(rng.integers(-5, 6))
         elif profile == "ACCEPTABLE":
             commit_offset = int(rng.integers(0, 16))
-        elif profile == "WATCH":
-            commit_offset = int(rng.integers(5, 31))
         else:
             commit_offset = int(rng.integers(10, 51))
 
@@ -126,14 +122,6 @@ def generate_dataset(seed=42, n_rows=500):
             on_time = rng.random() < 0.75
             recv_offset = int(rng.integers(0, 9)) if not on_time else int(rng.integers(-1, 2))
             received_date = commit_date + timedelta(days=recv_offset)
-        elif profile == "WATCH":
-            if rng.random() < 0.03:
-                open_late = True
-                received_date = None
-            else:
-                on_time = rng.random() < 0.55
-                recv_offset = int(rng.integers(0, 21)) if not on_time else int(rng.integers(-1, 3))
-                received_date = commit_date + timedelta(days=recv_offset)
         else:  # CRITICAL
             if rng.random() < 0.08:
                 open_late = True
@@ -152,7 +140,7 @@ def generate_dataset(seed=42, n_rows=500):
 
         is_open_late = open_late and (today > commit_date + timedelta(days=4))
 
-        md_probs = {"EXCELLENT": 0.03, "ACCEPTABLE": 0.10, "WATCH": 0.28, "CRITICAL": 0.42}
+        md_probs = {"EXCELLENT": 0.03, "ACCEPTABLE": 0.10, "CRITICAL": 0.42}
         has_md = rng.random() < md_probs[profile]
         md_fault_type = None
         is_supplier_fault = None
