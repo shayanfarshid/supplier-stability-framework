@@ -8,7 +8,6 @@ COLORS = {
     "OUTSTANDING": "#0d9488",
     "EXCELLENT":   "#16a34a",
     "ACCEPTABLE":  "#d97706",
-    "WATCH":       "#ea580c",
     "AT RISK":     "#dc2626",
     "CRITICAL":    "#7f1d1d",
     # Surface / UI

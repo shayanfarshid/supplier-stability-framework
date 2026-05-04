@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-GRADE_ORDER = ["OUTSTANDING", "EXCELLENT", "ACCEPTABLE", "WATCH", "AT RISK", "CRITICAL"]
+GRADE_ORDER = ["OUTSTANDING", "EXCELLENT", "ACCEPTABLE", "AT RISK", "CRITICAL"]
 
 def friction_grade(fi):
     if fi == 0:
@@ -10,8 +10,6 @@ def friction_grade(fi):
         return "EXCELLENT"
     elif fi <= 8.0:
         return "ACCEPTABLE"
-    elif fi <= 20.0:
-        return "WATCH"
     elif fi <= 50.0:
         return "AT RISK"
     else:
@@ -108,7 +106,7 @@ def compute_md_metrics(df, start_date=None, end_date=None, categories=None,
         rework_cost = grp["cost_of_rework_usd"].sum()
         days_lost  = grp["days_lost_to_md"].sum()
         fault_breakdown = grp["md_fault_type"].value_counts().to_dict()
-        md_flag = "⚠️ FLAG" if pct_sf > 50 else "✅ PASS"
+        md_flag = "\u26a0\ufe0f FLAG" if pct_sf > 50 else "\u2705 PASS"
         records.append({
             "supplier_name":          supplier,
             "open_mdas":              total_mda,
