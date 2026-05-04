@@ -1,8 +1,20 @@
-# Supplier Stability Scoring Framework
+# Supplier Stability Framework
 
 **A high-fidelity analytical tool for quantifying and optimizing supply chain reliability in advanced manufacturing.**
 
 This framework provides a data-driven approach to evaluating supplier performance by moving beyond just surface-level metrics. It transforms standard ERP data into actionable stability scores using distinct analytical systems to ensure production continuity.
+
+## Research Paper
+
+This repository is the open-source implementation described in:
+
+> Farshid, S. (2026). *Supplier Stability Framework: A Composite Risk 
+> Scoring Methodology for Direct-Tier Supply Chain Resilience in Advanced 
+> Manufacturing*. SSRN. [https://ssrn.com/abstract=XXXXXXX](https://ssrn.com/abstract=XXXXXXX)
+
+The paper documents the full methodology, formula derivation, grade 
+boundary rationale, and field deployment guidance.
+(Replace XXXXXXX with your actual SSRN ID after you publish)
 
 ---
 
@@ -13,7 +25,7 @@ The framework utilizes a composite scoring logic to identify performance trends 
 ### 1. The Friction Index System
 A multi-variable performance scoring methodology designed to prioritize and mitigate line-stop risks.
 * **Weighted Urgency:** Strategically weights missing parts $8\times$ more heavily than late arrivals to reflect the actual impact on production throughput.
-* **Reliability Amplification:** Dynamically adjusts scores based on **Commitment Integrity**. This ensures suppliers with consistent delivery patterns are recognized over those with volatile or unpredictable schedules.
+* **Planning Score:** Dynamically amplifies the Friction Index based on **Commitment Integrity**, penalizing suppliers whose commit dates systematically exceed buyer request dates.
 
 ### 2. MD (Material Discrepancy) Fault Attribution
 A precision tracking system for material quality and logistical setbacks.
@@ -27,7 +39,7 @@ A precision tracking system for material quality and logistical setbacks.
 | Feature | Description |
 | :--- | :--- |
 | **Real-Time Visualization** | Built with **Streamlit** and **Plotly** for interactive, high-impact data storytelling and trend analysis. |
-| **ERP Portability** | Designed to be platform-agnostic; maps seamlessly to standard exports regardless of ERP systems- **SAP, Oracle, SYSPRO or Microsoft Dynamics**. |
+| **ERP Portability** | Designed to be platform-agnostic; maps seamlessly to standard exports regardless of ERP systems- **SAP, Oracle, SYSPRO or NetSuite**. |
 | **Deterministic Simulation** | Includes a robust synthetic data generator to demonstrate framework capabilities without exposing proprietary information. |
 
 ---

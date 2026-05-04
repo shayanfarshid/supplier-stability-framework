@@ -40,7 +40,7 @@ def compute_friction_metrics(df, start_date=None, end_date=None, categories=None
         n = len(grp)
         commit_minus_request = (pd.to_datetime(grp["commit_date"]) - pd.to_datetime(grp["request_date"])).dt.days
         avg_commit_gap = commit_minus_request.mean()
-        planning_score = max(0.0, 1.0 - avg_commit_gap * 0.02)
+        planning_score = max(0.01, 1.0 - avg_commit_gap * 0.02)
 
         volume_weight = (n / max_lines) * 0.5 + 0.5
 
