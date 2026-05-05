@@ -14,7 +14,6 @@ This repository is the open-source implementation described in:
 
 The paper documents the full methodology, formula derivation, grade 
 boundary rationale, and field deployment guidance.
-(Replace XXXXXXX with your actual SSRN ID after you publish)
 
 ---
 
