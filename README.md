@@ -10,7 +10,7 @@ This repository is the open-source implementation described in:
 
 > Farshid, S. (2026). *Supplier Stability Framework: A Composite Risk 
 > Scoring Methodology for Direct-Tier Supply Chain Resilience in Advanced 
-> Manufacturing*. SSRN. [https://ssrn.com/abstract=XXXXXXX](https://ssrn.com/abstract=XXXXXXX)
+> Manufacturing*. SSRN. [https://ssrn.com/abstract=6714259](https://ssrn.com/abstract=6714259)
 
 The paper documents the full methodology, formula derivation, grade 
 boundary rationale, and field deployment guidance.
