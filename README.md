@@ -15,6 +15,9 @@ This repository is the open-source implementation described in:
 The paper documents the full methodology, formula derivation, grade 
 boundary rationale, and field deployment guidance.
 
+<img width="1774" height="887" alt="ghub_img (1)" src="https://github.com/user-attachments/assets/141746d8-991d-4838-83b1-0e3507029c44" />
+
+
 ---
 
 ## Core Methodology
